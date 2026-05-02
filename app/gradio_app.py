@@ -12,12 +12,12 @@ import gradio as gr
 from .api import app as api_app
 from .api import pipeline
 
-EXAMPLES = [
-    ["CCO"],
-    ["CC(=O)Oc1ccccc1C(=O)O"],
-    ["CN1C=NC2=C1C(=O)N(C(=O)N2C)C"],
-    ["C1=CC=C(C=C1)C2=CN(C=N2)C"],
-    ["OC(=O)C(N)Cc1ccc(O)cc1"],
+EXAMPLES: list[tuple[str, str]] = [
+    ("ethanol", "CCO"),
+    ("aspirin", "CC(=O)Oc1ccccc1C(=O)O"),
+    ("caffeine", "CN1C=NC2=C1C(=O)N(C(=O)N2C)C"),
+    ("L-tyrosine", "OC(=O)C(N)Cc1ccc(O)cc1"),
+    ("sodium acetate (salt)", "CC(=O)[O-].[Na+]"),
 ]
 
 
@@ -74,6 +74,22 @@ def _render_trace_block(trace: list[str]) -> str:
     return f"<details><summary><b>How we got this answer</b></summary>\n\n{body}\n\n</details>"
 
 
+def _wrap_svg_responsive(svg: str) -> str:
+    """Wrap an RDKit-emitted SVG so it scales with its container.
+
+    RDKit emits fixed width/height attributes (e.g. width="300px" height="300px"),
+    which on narrow viewports overflow the column and overlap the adjacent
+    metadata pane. Wrapping in a max-width-100% container with a centered cap
+    keeps it readable on mobile and bounded on desktop.
+    """
+    return (
+        '<div style="max-width:300px;margin:0 auto;">'
+        '<style>div > svg { width:100% !important; height:auto !important; }</style>'
+        f'{svg}'
+        '</div>'
+    )
+
+
 def _convert(smiles: str) -> tuple[str, str]:
     if not smiles or not smiles.strip():
         return ("", "_Enter a SMILES string above and click Convert._")
@@ -82,7 +98,10 @@ def _convert(smiles: str) -> tuple[str, str]:
     # in a threadpool, same race issue as FastAPI).
     result = pipeline.convert(smiles.strip(), include_svg=True)
 
-    svg_html = result.structure_svg or "<p><em>No structure preview available.</em></p>"
+    if result.structure_svg:
+        svg_html = _wrap_svg_responsive(result.structure_svg)
+    else:
+        svg_html = "<p><em>No structure preview available.</em></p>"
     return (svg_html, _format_metadata(result))
 
 
@@ -101,14 +120,30 @@ with gr.Blocks(title="smiles2iupac") as demo:
         )
         submit = gr.Button("Convert", variant="primary", scale=1)
 
-    with gr.Row():
-        svg_out = gr.HTML(label="Structure")
-        meta_out = gr.Markdown(label="Result", value="_Results will appear here._")
+    # gr.Column accepts min_width — phones (~375px wide) end up under the combined
+    # min_width and Gradio stacks the columns vertically. Tablet+ keeps them in a row.
+    with gr.Row(equal_height=False):
+        with gr.Column(min_width=320):
+            svg_out = gr.HTML(label="Structure")
+        with gr.Column(min_width=320):
+            meta_out = gr.Markdown(label="Result", value="_Results will appear here._")
 
-    gr.Examples(examples=EXAMPLES, inputs=[smiles_in])
+    # Manual chip buttons (vs gr.Examples which rendered phantom skeleton rows
+    # in gradio 6.14). Each button fills the textbox and triggers convert.
+    gr.Markdown("**Examples** — click to try")
+    with gr.Row():
+        example_buttons = [
+            gr.Button(label, size="sm", scale=0) for label, _smi in EXAMPLES
+        ]
 
     submit.click(_convert, inputs=[smiles_in], outputs=[svg_out, meta_out])
     smiles_in.submit(_convert, inputs=[smiles_in], outputs=[svg_out, meta_out])
+
+    # Wire each example button: fill textbox with the SMILES, then run convert.
+    for btn, (_label, smi) in zip(example_buttons, EXAMPLES):
+        btn.click(
+            lambda s=smi: s, inputs=None, outputs=[smiles_in]
+        ).then(_convert, inputs=[smiles_in], outputs=[svg_out, meta_out])
 
 
 # Mount Gradio on top of FastAPI so /, /convert, /health, /batch all live
