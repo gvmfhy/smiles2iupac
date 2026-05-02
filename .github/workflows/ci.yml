@@ -31,7 +31,7 @@ jobs:
       # off on Python 3.12 via env marker, so .[dev,ml] installs ONLY py2opsin
       # from [ml] (no TensorFlow bloat).
       - name: Setup Java 17 (for py2opsin)
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
