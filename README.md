@@ -44,6 +44,16 @@ s2i 'CC(=O)Oc1ccccc1C(=O)O'                    # aspirin
 s2i 'CC(=O)[O-].[Na+]'                          # sodium acetate (salt)
 # acetate  (confidence: 1.00, source: pubchem)
 #   warnings: stripped 1 counter-ion
+#   verify: https://pubchem.ncbi.nlm.nih.gov/#query=QTBSBXVTEAMEQO-UHFFFAOYSA-M
+
+s2i 'CC(=O)[O-].[Na+]' --trace                  # see exactly what the pipeline did
+# acetate  (confidence: 1.00, source: pubchem)
+#   ...
+# Pipeline reasoning:
+#   1. Identified as salt — parent: CC(=O)[O-]; stripped 1 counter-ion(s): [Na+]
+#   2. Computed InChIKey: QTBSBXVTEAMEQO-UHFFFAOYSA-M
+#   3. Cache miss
+#   4. PubChem InChIKey lookup → matched: 'acetate'
 
 s2i 'CCO>>CC=O'                                 # rejected: reactions out of scope
 # <error: reaction SMILES not supported for naming>

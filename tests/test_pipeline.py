@@ -209,6 +209,55 @@ def test_enantiomers_dont_collide_in_cache(tmp_cache: Cache):
     assert rL.inchikey[:14] == rD.inchikey[:14]
 
 
+def test_trace_populated_for_salt(tmp_cache: Cache):
+    """Salt input must record what was stripped + why in result.trace."""
+    tmp_cache.store("CC(=O)[O-]", "acetate", "pubchem", 1.0)
+    pipeline = Pipeline(cache=tmp_cache, use_pubchem=False)
+    r = pipeline.convert("CC(=O)[O-].[Na+]")
+
+    assert r.kind == "salt"
+    # First trace entry must explain the stripping (this is the load-bearing one
+    # for transparency — without it, "acetate" looks like the pipeline silently
+    # dropped the sodium).
+    assert any("salt" in s.lower() and "[Na+]" in s for s in r.trace), (
+        f"expected salt-stripping note in trace, got: {r.trace}"
+    )
+
+
+def test_trace_populated_for_cache_hit(tmp_cache: Cache):
+    """Cache-hit path must say so explicitly so user knows answer is cached, not freshly fetched."""
+    tmp_cache.store("CCO", "ethanol", "pubchem", 1.0)
+    pipeline = Pipeline(cache=tmp_cache, use_pubchem=False)
+    r = pipeline.convert("CCO")
+    assert any("cache hit" in s.lower() for s in r.trace), f"trace: {r.trace}"
+
+
+def test_trace_populated_for_pubchem_lookup(tmp_cache: Cache):
+    """Successful PubChem InChIKey lookup must show up in trace."""
+    pipeline = Pipeline(cache=tmp_cache, use_pubchem=True)
+    with patch("smiles2iupac.pipeline.iupac_via_inchikey", return_value="ethanol"):
+        r = pipeline.convert("CCO")
+    # Cache miss + successful lookup are both traced
+    assert any("cache miss" in s.lower() for s in r.trace)
+    assert any("inchikey lookup" in s.lower() and "ethanol" in s for s in r.trace)
+
+
+def test_pubchem_url_is_built_from_inchikey(tmp_cache: Cache):
+    tmp_cache.store("CCO", "ethanol", "pubchem", 1.0)
+    pipeline = Pipeline(cache=tmp_cache, use_pubchem=False)
+    r = pipeline.convert("CCO")
+    assert r.pubchem_url is not None
+    assert r.inchikey in r.pubchem_url
+    assert r.pubchem_url.startswith("https://pubchem.ncbi.nlm.nih.gov/")
+
+
+def test_pubchem_url_is_none_when_no_inchikey(tmp_cache: Cache):
+    """Failed conversions (no InChIKey computed) must have pubchem_url=None, not crash."""
+    pipeline = Pipeline(cache=tmp_cache, use_pubchem=False)
+    r = pipeline.convert("CCO>>CC=O")  # reaction → rejected before InChIKey
+    assert r.pubchem_url is None
+
+
 def test_stout_unavailable_when_opsin_missing(tmp_cache: Cache):
     """If OPSIN can't be imported, STOUT result is unvalidated."""
     from smiles2iupac.opsin_check import OpsinError

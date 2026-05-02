@@ -22,12 +22,19 @@ EXAMPLES = [
 
 
 def _format_metadata(result) -> str:
-    """Render the right-hand metadata pane as Markdown."""
+    """Render the right-hand metadata pane as Markdown.
+
+    Always include a 'Verify on PubChem' link and a step-by-step reasoning
+    trace so the user can see what the pipeline did and check the answer
+    against an independent source.
+    """
     if result.error:
-        lines = [f"### Error\n\n`{result.error}`"]
+        rows = [f"### Error\n\n`{result.error}`"]
         if result.warnings:
-            lines.append("**Warnings:** " + "; ".join(result.warnings))
-        return "\n\n".join(lines)
+            rows.append("**Warnings:** " + "; ".join(result.warnings))
+        if result.trace:
+            rows.append(_render_trace_block(result.trace))
+        return "\n\n".join(rows)
 
     if not result.name:
         return "### No name found\n\nThe pipeline returned no name and no error."
@@ -47,7 +54,24 @@ def _format_metadata(result) -> str:
         rows.append("**Synonyms:** " + ", ".join(result.alternatives[:5]))
     if result.warnings:
         rows.append("**Warnings:** " + "; ".join(result.warnings))
+    if result.pubchem_url:
+        rows.append(
+            f"[🔗 Verify on PubChem]({result.pubchem_url}) "
+            "— compare structure + canonical name independently"
+        )
+    if result.trace:
+        rows.append(_render_trace_block(result.trace))
     return "\n\n".join(rows)
+
+
+def _render_trace_block(trace: list[str]) -> str:
+    """Render the reasoning trace as a Markdown <details> block.
+
+    Collapsed by default so the result name stays prominent; expandable for
+    users who want to see exactly what the pipeline did.
+    """
+    body = "\n".join(f"{i}. {step}" for i, step in enumerate(trace, 1))
+    return f"<details><summary><b>How we got this answer</b></summary>\n\n{body}\n\n</details>"
 
 
 def _convert(smiles: str) -> tuple[str, str]:

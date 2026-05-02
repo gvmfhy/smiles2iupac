@@ -58,6 +58,12 @@ from .pipeline import Pipeline
     is_flag=True,
     help="Look up CAS Registry Number from PubChem (extra request per molecule).",
 )
+@click.option(
+    "--trace",
+    "show_trace",
+    is_flag=True,
+    help="Print step-by-step pipeline reasoning (transparency mode).",
+)
 @click.version_option(package_name="smiles2iupac")
 def main(
     smiles: str | None,
@@ -72,6 +78,7 @@ def main(
     synonyms: bool,
     include_svg: bool,
     include_cas: bool,
+    show_trace: bool,
 ):
     """Convert a SMILES string to its IUPAC name (or vice-versa).
 
@@ -121,6 +128,10 @@ def main(
         click.echo(result.model_dump_json(indent=2))
     else:
         click.echo(_format_text(result))
+        if show_trace and result.trace:
+            click.echo("\nPipeline reasoning:")
+            for i, step in enumerate(result.trace, 1):
+                click.echo(f"  {i}. {step}")
     sys.exit(0 if result.ok else 1)
 
 
@@ -144,6 +155,8 @@ def _format_text(result) -> str:
         lines.append(f"  also known as: {', '.join(result.alternatives[:3])}")
     if result.warnings:
         lines.append("  warnings: " + "; ".join(result.warnings))
+    if result.pubchem_url:
+        lines.append(f"  verify: {result.pubchem_url}")
     return "\n".join(lines)
 
 

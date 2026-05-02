@@ -72,6 +72,21 @@ class Pipeline:
         result.kind = classification.kind
         result.warnings = list(classification.warnings)
 
+        # Step 1: classification reasoning, recorded for any non-trivial outcome.
+        if classification.kind == "salt":
+            ions = ", ".join(classification.counterions) or "none"
+            result.trace.append(
+                f"Identified as salt — parent: {classification.parent_smiles}; "
+                f"stripped {len(classification.counterions)} counter-ion(s): {ions}"
+            )
+        elif classification.kind == "mixture":
+            result.trace.append(
+                f"Identified as mixture — named largest of {len(classification.components)} "
+                f"components: {classification.parent_smiles}"
+            )
+        elif classification.kind in REJECTED_KINDS:
+            result.trace.append(f"Rejected: {classification.kind} — see warnings")
+
         if classification.kind in REJECTED_KINDS or classification.parent_smiles is None:
             result.error = (
                 classification.warnings[0]
@@ -85,6 +100,7 @@ class Pipeline:
 
         supported, reason = is_supported(canonical)
         if not supported:
+            result.trace.append(f"Rejected by support check: {reason}")
             result.error = reason
             return result
 
@@ -93,6 +109,7 @@ class Pipeline:
             result.inchikey = enrich.inchikey(canonical)
             result.formula = enrich.formula(canonical)
             result.mol_weight = enrich.mol_weight(canonical)
+            result.trace.append(f"Computed InChIKey: {result.inchikey}")
         except ValueError as e:
             result.error = f"enrichment failed: {e}"
             return result
@@ -103,10 +120,12 @@ class Pipeline:
             result.name = name
             result.source = Source(source)
             result.confidence = confidence
+            result.trace.append(f"Cache hit (originally from {source})")
             return self._opt_enrich(result, canonical, eff_svg, eff_cas)
+        result.trace.append("Cache miss")
 
         if self.use_pubchem:
-            name = self._pubchem_lookup(result.inchikey, canonical, result)
+            name = self._pubchem_lookup_with_trace(result.inchikey, canonical, result)
             if name:
                 conf = CONFIDENCE[Source.PUBCHEM]
                 self.cache.store(canonical, name, Source.PUBCHEM.value, conf)
@@ -116,6 +135,10 @@ class Pipeline:
                 if eff_syn:
                     try:
                         result.alternatives = smiles_to_synonyms(canonical)
+                        if result.alternatives:
+                            result.trace.append(
+                                f"Fetched {len(result.alternatives)} synonyms from PubChem"
+                            )
                     except PubChemError:
                         pass
                 return self._opt_enrich(result, canonical, eff_svg, eff_cas)
@@ -125,49 +148,67 @@ class Pipeline:
 
         if not result.error:
             result.error = "no name found (pubchem miss; STOUT not enabled)"
+            result.trace.append("No name found — PubChem missed and STOUT disabled")
         return result
 
-    def _pubchem_lookup(self, inchikey: str | None, canonical: str, result: Result) -> str | None:
-        """Try InChIKey lookup first, fall back to canonical SMILES. Records errors on result."""
+    def _pubchem_lookup_with_trace(self, inchikey: str | None, canonical: str, result: Result) -> str | None:
+        """Try InChIKey lookup first, fall back to canonical SMILES. Records trace + errors."""
         try:
             if inchikey:
                 name = iupac_via_inchikey(inchikey)
                 if name:
+                    result.trace.append(f"PubChem InChIKey lookup → matched: {name!r}")
                     return name
-            return smiles_to_iupac(canonical)
+                result.trace.append("PubChem InChIKey lookup → no match")
+            name = smiles_to_iupac(canonical)
+            if name:
+                result.trace.append(f"PubChem SMILES fallback → matched: {name!r}")
+            else:
+                result.trace.append("PubChem SMILES fallback → no match")
+            return name
         except PubChemError as e:
+            result.trace.append(f"PubChem unavailable: {e}")
             result.error = f"pubchem unavailable: {e}"
             return None
 
     def _stout_layer(
         self, canonical: str, result: Result, eff_svg: bool, eff_cas: bool
     ) -> Result:
+        result.trace.append("Querying STOUT v2 (novel-structure ML model)")
         try:
             stout_name = stout_iupac(canonical)
         except StoutError as e:
+            result.trace.append(f"STOUT unavailable: {e}")
             result.error = f"stout unavailable: {e}"
             return result
         if not stout_name:
+            result.trace.append("STOUT could not generate a name")
             result.error = "STOUT could not generate a name"
             return result
+        result.trace.append(f"STOUT generated: {stout_name!r}")
 
         try:
             rt = round_trip(stout_name, canonical)
         except OpsinError:
             source = Source.STOUT_UNVALIDATED
             result.warnings.append("OPSIN unavailable; name not round-trip-validated")
+            result.trace.append("OPSIN unavailable; cannot validate")
         else:
             if rt.full_match:
                 source = Source.STOUT_VALIDATED
+                result.trace.append("OPSIN round-trip: full match (skeleton + stereo verified)")
             elif rt.skeleton_match:
                 source = Source.STOUT_UNVALIDATED
                 result.warnings.append("OPSIN round-trip: skeleton matches but stereo differs")
+                result.trace.append("OPSIN round-trip: skeleton match, stereo lost")
             elif rt.parsed_ok:
                 source = Source.STOUT_LOW_CONFIDENCE
                 result.warnings.append("OPSIN round-trip: name parses to a different structure")
+                result.trace.append("OPSIN round-trip: structure mismatch (low confidence)")
             else:
                 source = Source.STOUT_UNVALIDATED
                 result.warnings.append("OPSIN could not parse generated name")
+                result.trace.append("OPSIN could not parse the generated name")
 
         conf = CONFIDENCE[source]
         self.cache.store(canonical, stout_name, source.value, conf)
