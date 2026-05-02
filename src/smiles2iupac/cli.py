@@ -35,7 +35,22 @@ from .pipeline import Pipeline
 @click.option("--info", is_flag=True, help="Show pipeline info and cache stats.")
 @click.option("--no-pubchem", is_flag=True, help="Skip PubChem lookup (cache only).")
 @click.option(
+    "--use-stout",
+    is_flag=True,
+    help="Enable STOUT v2 generation for molecules not found in PubChem (requires [ml] extras).",
+)
+@click.option(
     "--synonyms", is_flag=True, help="Include common-name synonyms as alternatives."
+)
+@click.option(
+    "--include-svg",
+    is_flag=True,
+    help="Include structure SVG in JSON output (large; off by default).",
+)
+@click.option(
+    "--include-cas",
+    is_flag=True,
+    help="Look up CAS Registry Number from PubChem (extra request per molecule).",
 )
 @click.version_option(package_name="smiles2iupac")
 def main(
@@ -46,7 +61,10 @@ def main(
     column: str,
     info: bool,
     no_pubchem: bool,
+    use_stout: bool,
     synonyms: bool,
+    include_svg: bool,
+    include_cas: bool,
 ):
     """Convert a SMILES string to its IUPAC name.
 
@@ -54,7 +72,8 @@ def main(
     Examples:
       s2i CCO                          → ethanol
       s2i 'CC(=O)Oc1ccccc1C(=O)O'      → 2-acetyloxybenzoic acid (aspirin)
-      s2i CCO --json                   → JSON output
+      s2i CCO --json                   → full JSON (InChIKey, formula, MW, ...)
+      s2i 'CC(=O)[O-].[Na+]'           → acetate (salt parent named, counter-ion stripped)
       s2i --batch input.csv -o out.csv → batch convert
       s2i --info                       → cache stats
     """
@@ -62,7 +81,13 @@ def main(
         _emit_info()
         return
 
-    pipeline = Pipeline(use_pubchem=not no_pubchem, fetch_synonyms=synonyms)
+    pipeline = Pipeline(
+        use_pubchem=not no_pubchem,
+        use_stout=use_stout,
+        fetch_synonyms=synonyms,
+        include_svg=include_svg,
+        include_cas=include_cas,
+    )
 
     if batch_input is not None:
         out_path = batch_output or batch_input.with_suffix(".named.csv")
@@ -78,8 +103,31 @@ def main(
     if as_json:
         click.echo(result.model_dump_json(indent=2))
     else:
-        click.echo(str(result))
+        click.echo(_format_text(result))
     sys.exit(0 if result.ok else 1)
+
+
+def _format_text(result) -> str:
+    """Multi-line human-readable output. The base __str__ shows just name+conf+warnings;
+    here we add enrichment fields when present."""
+    if result.error:
+        return f"<error: {result.error}>"
+    if not result.name:
+        return "<no name found>"
+    lines = [
+        f"{result.name}  (confidence: {result.confidence:.2f}, source: {result.source.value})",
+    ]
+    if result.formula:
+        lines.append(f"  formula: {result.formula}    MW: {result.mol_weight:.3f}")
+    if result.inchikey:
+        lines.append(f"  InChIKey: {result.inchikey}")
+    if result.cas:
+        lines.append(f"  CAS: {result.cas}")
+    if result.alternatives:
+        lines.append(f"  also known as: {', '.join(result.alternatives[:3])}")
+    if result.warnings:
+        lines.append("  warnings: " + "; ".join(result.warnings))
+    return "\n".join(lines)
 
 
 def _emit_info() -> None:
@@ -109,21 +157,25 @@ def _run_batch(pipeline: Pipeline, input_path: Path, output_path: Path, column: 
         click.echo(f"error: no rows in {input_path}", err=True)
         sys.exit(2)
 
-    output_fields = list(rows[0].keys()) + ["iupac_name", "confidence", "source", "error"]
+    extra_fields = ["iupac_name", "confidence", "source", "inchikey", "formula", "mol_weight", "kind", "warnings", "error"]
+    output_fields = list(rows[0].keys()) + extra_fields
     with open(output_path, "w") as f:
         writer = csv.DictWriter(f, fieldnames=output_fields)
         writer.writeheader()
         with click.progressbar(rows, label="Converting") as bar:
             for row in bar:
                 result = pipeline.convert(row[column])
-                row.update(
-                    {
-                        "iupac_name": result.name or "",
-                        "confidence": f"{result.confidence:.2f}",
-                        "source": result.source.value,
-                        "error": result.error or "",
-                    }
-                )
+                row.update({
+                    "iupac_name": result.name or "",
+                    "confidence": f"{result.confidence:.2f}",
+                    "source": result.source.value,
+                    "inchikey": result.inchikey or "",
+                    "formula": result.formula or "",
+                    "mol_weight": f"{result.mol_weight:.4f}" if result.mol_weight else "",
+                    "kind": result.kind,
+                    "warnings": "; ".join(result.warnings),
+                    "error": result.error or "",
+                })
                 writer.writerow(row)
     click.echo(f"wrote {len(rows)} rows to {output_path}")
 
