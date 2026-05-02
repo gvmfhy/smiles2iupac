@@ -43,6 +43,31 @@ def _inchikey(smiles: str) -> str | None:
     return key or None
 
 
+def parse_iupac_name(name: str) -> str | None:
+    """Parse an IUPAC name to canonical SMILES via OPSIN.
+
+    Returns canonical SMILES (RDKit-canonicalized) on success. Returns None if
+    OPSIN can't parse the name (most common cause: it's a common name like
+    'aspirin', not a systematic IUPAC name — fall back to PubChem name search
+    for those). Raises OpsinError if py2opsin isn't installed.
+    """
+    try:
+        from py2opsin import py2opsin  # lazy: keep module importable without [ml] extras
+    except ImportError as e:
+        raise OpsinError("py2opsin not installed; install smiles2iupac[ml]") from e
+
+    try:
+        back = py2opsin(name, output_format="SMILES")
+    except Exception:
+        return None
+    if not back:
+        return None
+    mol = Chem.MolFromSmiles(back)
+    if mol is None:
+        return None
+    return Chem.MolToSmiles(mol, canonical=True)
+
+
 def round_trip(name: str, original_canonical_smiles: str) -> RoundTripResult:
     """Round-trip an IUPAC `name` through OPSIN and compare to `original_canonical_smiles`.
 

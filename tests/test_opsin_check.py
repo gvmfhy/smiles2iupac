@@ -106,3 +106,38 @@ def test_module_imports_without_py2opsin():
     assert hasattr(opsin_check, "round_trip")
     assert hasattr(opsin_check, "RoundTripResult")
     assert hasattr(opsin_check, "OpsinError")
+    assert hasattr(opsin_check, "parse_iupac_name")
+
+
+def test_parse_iupac_name_returns_canonical(monkeypatch: pytest.MonkeyPatch):
+    """parse_iupac_name returns RDKit-canonicalized SMILES from OPSIN output."""
+    from smiles2iupac.opsin_check import parse_iupac_name
+
+    # Non-canonical SMILES from OPSIN should be re-canonicalized
+    _install_fake_py2opsin(monkeypatch, lambda name, output_format="SMILES": "OCC")
+    assert parse_iupac_name("ethanol") == "CCO"
+
+
+def test_parse_iupac_name_failure_returns_none(monkeypatch: pytest.MonkeyPatch):
+    """OPSIN can't parse → returns None (not error)."""
+    from smiles2iupac.opsin_check import parse_iupac_name
+
+    _install_fake_py2opsin(monkeypatch, lambda name, output_format="SMILES": "")
+    assert parse_iupac_name("gibberish") is None
+
+
+def test_parse_iupac_name_unparseable_smiles_returns_none(monkeypatch: pytest.MonkeyPatch):
+    """OPSIN somehow returns an invalid SMILES → returns None instead of crashing."""
+    from smiles2iupac.opsin_check import parse_iupac_name
+
+    _install_fake_py2opsin(monkeypatch, lambda name, output_format="SMILES": "not_a_smiles")
+    assert parse_iupac_name("anything") is None
+
+
+def test_parse_iupac_name_no_py2opsin_raises(monkeypatch: pytest.MonkeyPatch):
+    """No py2opsin → OpsinError."""
+    from smiles2iupac.opsin_check import parse_iupac_name
+
+    monkeypatch.setitem(sys.modules, "py2opsin", None)
+    with pytest.raises(OpsinError, match="py2opsin not installed"):
+        parse_iupac_name("ethanol")

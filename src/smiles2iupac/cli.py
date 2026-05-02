@@ -17,6 +17,12 @@ from .pipeline import Pipeline
 
 @click.command(context_settings={"help_option_names": ["-h", "--help"]})
 @click.argument("smiles", required=False)
+@click.option(
+    "-r", "--reverse",
+    "reverse_name",
+    metavar="NAME",
+    help="Reverse lookup: resolve a chemical name (IUPAC or common) to SMILES.",
+)
 @click.option("-j", "--json", "as_json", is_flag=True, help="Emit JSON instead of text.")
 @click.option(
     "--batch",
@@ -55,6 +61,7 @@ from .pipeline import Pipeline
 @click.version_option(package_name="smiles2iupac")
 def main(
     smiles: str | None,
+    reverse_name: str | None,
     as_json: bool,
     batch_input: Path | None,
     batch_output: Path | None,
@@ -66,7 +73,7 @@ def main(
     include_svg: bool,
     include_cas: bool,
 ):
-    """Convert a SMILES string to its IUPAC name.
+    """Convert a SMILES string to its IUPAC name (or vice-versa).
 
     \b
     Examples:
@@ -74,12 +81,22 @@ def main(
       s2i 'CC(=O)Oc1ccccc1C(=O)O'      → 2-acetyloxybenzoic acid (aspirin)
       s2i CCO --json                   → full JSON (InChIKey, formula, MW, ...)
       s2i 'CC(=O)[O-].[Na+]'           → acetate (salt parent named, counter-ion stripped)
+      s2i --reverse 'aspirin'          → CC(=O)Oc1ccccc1C(=O)O  (reverse: name → SMILES)
       s2i --batch input.csv -o out.csv → batch convert
       s2i --info                       → cache stats
     """
     if info:
         _emit_info()
         return
+
+    if reverse_name is not None:
+        from .pipeline import lookup
+        smi = lookup(reverse_name, use_pubchem=not no_pubchem)
+        if smi is None:
+            click.echo(f"<no SMILES found for {reverse_name!r}>", err=True)
+            sys.exit(1)
+        click.echo(smi)
+        sys.exit(0)
 
     pipeline = Pipeline(
         use_pubchem=not no_pubchem,

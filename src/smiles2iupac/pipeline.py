@@ -13,10 +13,11 @@ Layers, in order:
 from . import enrich
 from .cache import Cache
 from .confidence import CONFIDENCE
-from .opsin_check import OpsinError, round_trip
+from .opsin_check import OpsinError, parse_iupac_name, round_trip
 from .pubchem import (
     PubChemError,
     iupac_via_inchikey,
+    name_to_smiles as _pubchem_name_to_smiles,
     smiles_to_iupac,
     smiles_to_synonyms,
 )
@@ -171,3 +172,35 @@ class Pipeline:
 def convert(smiles: str) -> Result:
     """Convenience function using a default Pipeline."""
     return Pipeline().convert(smiles)
+
+
+def lookup(name: str, use_pubchem: bool = True) -> str | None:
+    """Reverse lookup: chemical name → canonical SMILES.
+
+    Tries OPSIN first (handles IUPAC names rigorously, no network call) and
+    falls back to PubChem name search (handles common names like 'aspirin'
+    or 'caffeine'). Returns RDKit-canonical SMILES so the result matches
+    what `convert()` would canonicalize the same molecule to. Returns None
+    if neither resolver finds a match.
+    """
+    if not name or not name.strip():
+        return None
+
+    try:
+        s = parse_iupac_name(name)
+        if s:
+            return s
+    except OpsinError:
+        pass  # OPSIN not installed; fall through to PubChem
+
+    if use_pubchem:
+        try:
+            raw = _pubchem_name_to_smiles(name)
+        except PubChemError:
+            return None
+        if raw:
+            from rdkit import Chem
+            mol = Chem.MolFromSmiles(raw)
+            if mol is not None:
+                return Chem.MolToSmiles(mol, canonical=True)
+    return None

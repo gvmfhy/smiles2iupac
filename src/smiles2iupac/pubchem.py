@@ -111,6 +111,36 @@ def iupac_via_inchikey(inchikey: str) -> str | None:
     return props[0].get("IUPACName")
 
 
+def name_to_smiles(name: str) -> str | None:
+    """Resolve a chemical name (common or IUPAC) to canonical SMILES via PubChem.
+
+    Catches both common names ("aspirin", "ibuprofen") and most IUPAC names —
+    PubChem's compound/name endpoint is name-format-agnostic. Returns None when
+    the name isn't found. Raises PubChemError on network failure.
+    """
+    if not name or not name.strip():
+        return None
+    encoded = quote(name.strip(), safe="")
+    cid_data = _get(f"{BASE_URL}/compound/name/{encoded}/cids/JSON")
+    if not cid_data:
+        return None
+    cids = cid_data.get("IdentifierList", {}).get("CID", [])
+    if not cids or cids == [0]:
+        return None
+    cid = cids[0]
+
+    # PubChem deprecated the `CanonicalSMILES` property name; the current field is
+    # `SMILES` (which includes stereo) or `ConnectivitySMILES` (without). We want
+    # `SMILES` since RDKit will recanonicalize anyway and stereo is worth keeping.
+    smi_data = _get(f"{BASE_URL}/compound/cid/{cid}/property/SMILES/JSON")
+    if not smi_data:
+        return None
+    props = smi_data.get("PropertyTable", {}).get("Properties", [])
+    if not props:
+        return None
+    return props[0].get("SMILES")
+
+
 def smiles_to_synonyms(canonical_smiles: str, limit: int = 5) -> list[str]:
     """Fetch up to `limit` common-name synonyms for a SMILES (used as alternatives)."""
     encoded = quote(canonical_smiles, safe="")
