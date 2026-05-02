@@ -7,7 +7,7 @@ sdk: docker
 app_port: 7860
 pinned: false
 license: mit
-short_description: Reliable SMILES → IUPAC name conversion (PubChem + OPSIN + STOUT v2)
+short_description: Reliable SMILES to IUPAC name conversion
 ---
 
 <!-- The YAML block above is HF Spaces config; it must be the very first thing
