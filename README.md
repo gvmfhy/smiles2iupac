@@ -1,8 +1,3 @@
-<!--
-  HF Spaces config block — required so the Space builds. HF parses the YAML
-  frontmatter to know this is a Docker Space serving on port 7860. Stripped
-  out of the rendered README on GitHub; visible only on the HF Space card.
--->
 ---
 title: smiles2iupac
 emoji: 🧪
@@ -14,6 +9,10 @@ pinned: false
 license: mit
 short_description: Reliable SMILES → IUPAC name conversion (PubChem + OPSIN + STOUT v2)
 ---
+
+<!-- The YAML block above is HF Spaces config; it must be the very first thing
+     in the file. GitHub renders it as a thematic-break + paragraph, which is
+     ugly but harmless. HF Spaces requires it to discover sdk=docker / port=7860. -->
 
 # smiles2iupac
 
