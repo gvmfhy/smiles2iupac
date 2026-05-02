@@ -84,6 +84,33 @@ def smiles_to_iupac(canonical_smiles: str) -> str | None:
     return props[0].get("IUPACName")
 
 
+def iupac_via_inchikey(inchikey: str) -> str | None:
+    """Look up the IUPAC name via PubChem keyed by InChIKey.
+
+    PubChem and RDKit canonicalize SMILES differently, so a SMILES-keyed
+    lookup occasionally misses molecules that PubChem actually has.
+    InChIKey is IUPAC-standardized — both sides agree. Prefer this when an
+    InChIKey is available; fall back to `smiles_to_iupac` otherwise.
+    """
+    if not inchikey or len(inchikey) != 27:
+        return None
+    cid_data = _get(f"{BASE_URL}/compound/inchikey/{inchikey}/cids/JSON")
+    if not cid_data:
+        return None
+    cids = cid_data.get("IdentifierList", {}).get("CID", [])
+    if not cids or cids == [0]:
+        return None
+    cid = cids[0]
+
+    name_data = _get(f"{BASE_URL}/compound/cid/{cid}/property/IUPACName/JSON")
+    if not name_data:
+        return None
+    props = name_data.get("PropertyTable", {}).get("Properties", [])
+    if not props:
+        return None
+    return props[0].get("IUPACName")
+
+
 def smiles_to_synonyms(canonical_smiles: str, limit: int = 5) -> list[str]:
     """Fetch up to `limit` common-name synonyms for a SMILES (used as alternatives)."""
     encoded = quote(canonical_smiles, safe="")

@@ -1,10 +1,31 @@
-"""Conversion pipeline: validate → cache → PubChem → (STOUT + OPSIN, weekend 2)."""
+"""Conversion pipeline.
 
+Layers, in order:
+    1. Classify (validator_strict): reject reactions/polymers, strip salts, pick parent.
+    2. Heavy-atom limit (validator.is_supported).
+    3. Cheap enrichment (InChI, InChIKey, formula, MW).
+    4. Cache lookup (canonical SMILES → name).
+    5. PubChem lookup — InChIKey first, SMILES fallback.
+    6. STOUT v2 generation + OPSIN round-trip validation (opt-in via use_stout).
+    7. Optional enrichment (structure SVG, CAS) gated by flags.
+"""
+
+from . import enrich
 from .cache import Cache
 from .confidence import CONFIDENCE
-from .pubchem import PubChemError, smiles_to_iupac, smiles_to_synonyms
+from .opsin_check import OpsinError, round_trip
+from .pubchem import (
+    PubChemError,
+    iupac_via_inchikey,
+    smiles_to_iupac,
+    smiles_to_synonyms,
+)
 from .result import Result, Source
-from .validator import SMILESError, canonicalize, is_supported
+from .stout_engine import StoutError, stout_iupac
+from .validator import is_supported
+from .validator_strict import classify
+
+REJECTED_KINDS = {"empty", "reaction", "polymer"}
 
 
 class Pipeline:
@@ -14,25 +35,46 @@ class Pipeline:
         use_pubchem: bool = True,
         use_stout: bool = False,
         fetch_synonyms: bool = False,
+        include_svg: bool = False,
+        include_cas: bool = False,
     ):
         self.cache = cache if cache is not None else Cache()
         self.use_pubchem = use_pubchem
         self.use_stout = use_stout
         self.fetch_synonyms = fetch_synonyms
+        self.include_svg = include_svg
+        self.include_cas = include_cas
 
     def convert(self, smiles: str) -> Result:
         result = Result(smiles=smiles)
 
-        try:
-            canonical = canonicalize(smiles)
-        except SMILESError as e:
-            result.error = str(e)
+        classification = classify(smiles)
+        result.kind = classification.kind
+        result.warnings = list(classification.warnings)
+
+        if classification.kind in REJECTED_KINDS or classification.parent_smiles is None:
+            result.error = (
+                classification.warnings[0]
+                if classification.warnings
+                else f"unsupported SMILES kind: {classification.kind}"
+            )
             return result
+
+        canonical = classification.parent_smiles
         result.canonical_smiles = canonical
 
         supported, reason = is_supported(canonical)
         if not supported:
             result.error = reason
+            return result
+
+        try:
+            result.inchi = enrich.inchi(canonical)
+            result.inchikey = enrich.inchikey(canonical)
+            result.formula = enrich.formula(canonical)
+            result.mol_weight = enrich.mol_weight(canonical)
+        except ValueError as e:
+            result.error = f"enrichment failed: {e}"
             return result
 
         cached = self.cache.lookup(canonical)
@@ -41,14 +83,10 @@ class Pipeline:
             result.name = name
             result.source = Source(source)
             result.confidence = confidence
-            return result
+            return self._opt_enrich(result, canonical)
 
         if self.use_pubchem:
-            try:
-                name = smiles_to_iupac(canonical)
-            except PubChemError as e:
-                result.error = f"pubchem unavailable: {e}"
-                name = None
+            name = self._pubchem_lookup(result.inchikey, canonical, result)
             if name:
                 conf = CONFIDENCE[Source.PUBCHEM]
                 self.cache.store(canonical, name, Source.PUBCHEM.value, conf)
@@ -60,7 +98,7 @@ class Pipeline:
                         result.alternatives = smiles_to_synonyms(canonical)
                     except PubChemError:
                         pass
-                return result
+                return self._opt_enrich(result, canonical)
 
         if self.use_stout:
             return self._stout_layer(canonical, result)
@@ -69,9 +107,64 @@ class Pipeline:
             result.error = "no name found (pubchem miss; STOUT not enabled)"
         return result
 
+    def _pubchem_lookup(self, inchikey: str | None, canonical: str, result: Result) -> str | None:
+        """Try InChIKey lookup first, fall back to canonical SMILES. Records errors on result."""
+        try:
+            if inchikey:
+                name = iupac_via_inchikey(inchikey)
+                if name:
+                    return name
+            return smiles_to_iupac(canonical)
+        except PubChemError as e:
+            result.error = f"pubchem unavailable: {e}"
+            return None
+
     def _stout_layer(self, canonical: str, result: Result) -> Result:
-        """Weekend 2: STOUT inference + OPSIN round-trip validation."""
-        result.error = "STOUT layer not yet implemented"
+        try:
+            stout_name = stout_iupac(canonical)
+        except StoutError as e:
+            result.error = f"stout unavailable: {e}"
+            return result
+        if not stout_name:
+            result.error = "STOUT could not generate a name"
+            return result
+
+        try:
+            rt = round_trip(stout_name, canonical)
+        except OpsinError:
+            source = Source.STOUT_UNVALIDATED
+            result.warnings.append("OPSIN unavailable; name not round-trip-validated")
+        else:
+            if rt.full_match:
+                source = Source.STOUT_VALIDATED
+            elif rt.skeleton_match:
+                source = Source.STOUT_UNVALIDATED
+                result.warnings.append("OPSIN round-trip: skeleton matches but stereo differs")
+            elif rt.parsed_ok:
+                source = Source.STOUT_LOW_CONFIDENCE
+                result.warnings.append("OPSIN round-trip: name parses to a different structure")
+            else:
+                source = Source.STOUT_UNVALIDATED
+                result.warnings.append("OPSIN could not parse generated name")
+
+        conf = CONFIDENCE[source]
+        self.cache.store(canonical, stout_name, source.value, conf)
+        result.name = stout_name
+        result.source = source
+        result.confidence = conf
+        return self._opt_enrich(result, canonical)
+
+    def _opt_enrich(self, result: Result, canonical: str) -> Result:
+        if self.include_svg:
+            try:
+                result.structure_svg = enrich.structure_svg(canonical)
+            except ValueError:
+                pass
+        if self.include_cas:
+            try:
+                result.cas = enrich.pubchem_cas(canonical)
+            except PubChemError:
+                pass
         return result
 
 
