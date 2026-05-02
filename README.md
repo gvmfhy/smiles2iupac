@@ -1,3 +1,20 @@
+<!--
+  HF Spaces config block — required so the Space builds. HF parses the YAML
+  frontmatter to know this is a Docker Space serving on port 7860. Stripped
+  out of the rendered README on GitHub; visible only on the HF Space card.
+-->
+---
+title: smiles2iupac
+emoji: 🧪
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+pinned: false
+license: mit
+short_description: Reliable SMILES → IUPAC name conversion (PubChem + OPSIN + STOUT v2)
+---
+
 # smiles2iupac
 
 > The reliable, free, open-source SMILES → IUPAC name converter that should have existed years ago.
