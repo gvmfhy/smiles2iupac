@@ -48,12 +48,18 @@ s2i 'CC(=O)[O-].[Na+]'                          # sodium acetate (salt)
 s2i 'CCO>>CC=O'                                 # rejected: reactions out of scope
 # <error: reaction SMILES not supported for naming>
 
+s2i --reverse 'aspirin'                         # reverse: name → SMILES (handles common + IUPAC names)
+# CC(=O)Oc1ccccc1C(=O)O
+
+s2i --reverse '(2S)-2-aminopropanoic acid'      # IUPAC names go through OPSIN (no network, stereo-aware)
+# C[C@H](N)C(=O)O
+
 s2i --batch input.csv -o named.csv              # batch with progress bar
 s2i CCO --json                                  # full JSON: InChI, InChIKey, formula, MW, alts, etc.
 ```
 
 ```python
-from smiles2iupac import convert
+from smiles2iupac import convert, lookup
 
 result = convert("CC(=O)Oc1ccccc1C(=O)O")  # aspirin
 print(result.name)         # '2-acetyloxybenzoic acid'
@@ -61,6 +67,9 @@ print(result.confidence)   # 1.0
 print(result.formula)      # 'C9H8O4'
 print(result.mol_weight)   # 180.159
 print(result.inchikey)     # 'BSYNRYMUTXBXSQ-UHFFFAOYSA-N'
+
+# Reverse direction: name (common or IUPAC) → SMILES
+print(lookup("caffeine"))  # 'Cn1c(=O)c2c(ncn2C)n(C)c1=O'
 ```
 
 ## Install
