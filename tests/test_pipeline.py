@@ -186,6 +186,29 @@ def test_stout_no_match_low_confidence(tmp_cache: Cache):
     assert r.confidence == 0.20
 
 
+def test_enantiomers_dont_collide_in_cache(tmp_cache: Cache):
+    """L- and D-alanine must get separate cache entries and separate InChIKeys.
+
+    Cache key is the canonical SMILES, which encodes stereo. InChIKey block 1
+    matches across enantiomers (same skeleton) but block 2 differs (different
+    stereo). Both invariants must hold for the OPSIN round-trip tiering to work.
+    """
+    L = "C[C@H](N)C(=O)O"   # L-alanine (S)
+    D = "C[C@@H](N)C(=O)O"  # D-alanine (R)
+    tmp_cache.store(L, "L-alanine", "pubchem", 1.0)
+    tmp_cache.store(D, "D-alanine", "pubchem", 1.0)
+
+    pipeline = Pipeline(cache=tmp_cache, use_pubchem=False)
+    rL = pipeline.convert(L)
+    rD = pipeline.convert(D)
+
+    assert rL.name == "L-alanine"
+    assert rD.name == "D-alanine"
+    # Different stereoisomers → different full InChIKeys, but matching skeletons
+    assert rL.inchikey != rD.inchikey
+    assert rL.inchikey[:14] == rD.inchikey[:14]
+
+
 def test_stout_unavailable_when_opsin_missing(tmp_cache: Cache):
     """If OPSIN can't be imported, STOUT result is unvalidated."""
     from smiles2iupac.opsin_check import OpsinError
