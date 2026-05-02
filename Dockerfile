@@ -1,5 +1,7 @@
-# smiles2iupac production image — used by HF Spaces (root Dockerfile auto-detected)
-# and Render. Local: `docker build -t s2i . && docker run -p 7860:7860 s2i`.
+# smiles2iupac container image. Builds locally; intended for HF Spaces (which
+# auto-detects a root Dockerfile) and Render once a deployment is wired up.
+# No public deployment exists yet — see deploy/README.md for setup steps.
+# Local test: `docker build -t s2i . && docker run -p 7860:7860 s2i`.
 #
 # Python 3.11 is intentional: STOUT-pypi 2.0.5 pins tensorflow==2.10.1 which has
 # no Python 3.12 wheels. Bumping past 3.11 here breaks the [ml] install. Once

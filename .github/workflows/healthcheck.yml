@@ -1,11 +1,13 @@
-# Free uptime monitor: pings HF Spaces /health every 10 minutes.
-# Failures appear in the Actions tab — no third-party service needed.
+# Free uptime monitor: would ping HF Spaces /health every 10 minutes.
+# DISABLED until the HF Space at https://gvmfhy-smiles2iupac.hf.space exists.
+# Re-enable by uncommenting the `schedule` block below; failures will then
+# appear in the Actions tab as a free uptime monitor.
 name: Healthcheck
 
 on:
-  schedule:
-    - cron: "*/10 * * * *"
-  workflow_dispatch:
+  workflow_dispatch:  # manual only until the Space exists
+  # schedule:
+  #   - cron: "*/10 * * * *"
 
 jobs:
   ping:

@@ -56,7 +56,10 @@ def parse_iupac_name(name: str) -> str | None:
     try:
         from py2opsin import py2opsin  # lazy: keep module importable without [ml] extras
     except ImportError as e:
-        raise OpsinError("py2opsin not installed; install smiles2iupac[ml]") from e
+        raise OpsinError(
+    "py2opsin not installed; install with `uv pip install -e '.[ml]'` "
+    "(development checkout) or `pip install smiles2iupac[ml]` once published"
+) from e
 
     try:
         back = py2opsin(name, output_format="SMILES")
@@ -82,7 +85,10 @@ def round_trip(name: str, original_canonical_smiles: str) -> RoundTripResult:
     try:
         from py2opsin import py2opsin  # lazy: keep module importable without [ml] extras
     except ImportError as e:
-        raise OpsinError("py2opsin not installed; install smiles2iupac[ml]") from e
+        raise OpsinError(
+    "py2opsin not installed; install with `uv pip install -e '.[ml]'` "
+    "(development checkout) or `pip install smiles2iupac[ml]` once published"
+) from e
 
     failed = RoundTripResult(
         name=name,

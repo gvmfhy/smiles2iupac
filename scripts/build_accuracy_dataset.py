@@ -267,7 +267,7 @@ def opsin_batch_filter(candidates: list[dict], chunk_size: int = 100) -> list[di
     try:
         from py2opsin import py2opsin
     except ImportError:
-        print("ERROR: py2opsin not installed. Run `pip install smiles2iupac[ml]`.")
+        print("ERROR: py2opsin not installed. Run `uv pip install -e '.[ml]'`.")
         return []
 
     survivors: list[dict] = []

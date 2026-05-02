@@ -1,13 +1,15 @@
-# Deploys to Hugging Face Spaces on push to main.
-# REQUIRES: repo secret HF_TOKEN (write scope) — Settings → Secrets and variables → Actions.
-# Token: https://huggingface.co/settings/tokens
-# Space:  https://huggingface.co/spaces/gvmfhy/smiles2iupac (must exist, SDK=Docker)
+# Deploys to Hugging Face Spaces. MANUAL TRIGGER ONLY until the Space exists.
+#
+# Before this workflow can succeed:
+#   1. Create the Space at https://huggingface.co/new-space (gvmfhy/smiles2iupac, SDK=Docker)
+#   2. Add repo secret HF_TOKEN with write scope (Settings → Secrets → Actions)
+#   3. Generate token: https://huggingface.co/settings/tokens
+#
+# After step 1 + 2, change `on:` to add `push: branches: [main]` to enable auto-deploy.
 name: Deploy to Hugging Face Spaces
 
 on:
-  push:
-    branches: [main]
-  workflow_dispatch:
+  workflow_dispatch:  # manual trigger only — would 401 without HF_TOKEN secret
 
 jobs:
   deploy:

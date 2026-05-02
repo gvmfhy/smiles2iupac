@@ -16,21 +16,11 @@ Tools exposed:
 Run as a stdio server (the standard MCP transport for local servers):
 
     python -m smiles2iupac.mcp_server
-    # or after `pip install smiles2iupac[mcp]`:
+    # or after `uv pip install -e '.[mcp]'`:
     s2i-mcp
 
-Add to a Claude Desktop config (`~/Library/Application Support/Claude/
-claude_desktop_config.json`):
-
-    {
-      "mcpServers": {
-        "smiles2iupac": {
-          "command": "s2i-mcp"
-        }
-      }
-    }
-
-Or for a development checkout via uv (no install required):
+The package is not yet on PyPI. The working Claude Desktop config today uses
+the development checkout via uv:
 
     {
       "mcpServers": {
@@ -50,6 +40,7 @@ from __future__ import annotations
 
 from mcp.server.fastmcp import FastMCP
 
+from smiles2iupac import __version__
 from smiles2iupac import enrich as _enrich
 from smiles2iupac import lookup as _lookup
 from smiles2iupac.pipeline import Pipeline
@@ -57,6 +48,11 @@ from smiles2iupac.validator import canonicalize
 from smiles2iupac.validator_strict import classify as _classify
 
 mcp = FastMCP("smiles2iupac")
+# Set the underlying Server's version so the initialize handshake reports
+# OUR package version, not the MCP SDK version (which is what gets returned
+# when this attribute is None — e.g. "1.27.0" from `importlib.metadata` on
+# the `mcp` distribution itself, which would mislead clients).
+mcp._mcp_server.version = __version__
 
 # Shared pipeline so the SQLite cache warms up across calls within a session.
 # Per-call kwargs (include_svg, fetch_synonyms) are passed at convert time, not

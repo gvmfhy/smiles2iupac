@@ -7,7 +7,7 @@ scripts/build_accuracy_dataset.py    # build the verified reference library
 scripts/record_pubchem_cassettes.py  # snapshot PubChem responses for offline replay
 tests/_accuracy.py                   # tier scorer (non-test helper)
 tests/test_accuracy_offline.py       # per-PR test using cassettes
-tests/fixtures/accuracy_dataset.csv  # 1000-row reference library
+tests/fixtures/accuracy_dataset.csv  # 850-row reference library
 tests/fixtures/pubchem_cassettes.json # cached PubChem responses
 tests/fixtures/accuracy_baseline.json # per-tier rates the CI gates against
 ```
@@ -16,7 +16,7 @@ tests/fixtures/accuracy_baseline.json # per-tier rates the CI gates against
 
 PubChem's `IUPACName` field is computed by ChemAxon's algorithm. We **cross-validate** every entry by running the name back through OPSIN (a different IUPAC implementation by the Cambridge group). If OPSIN parses the name to a SMILES whose InChIKey matches the input across **both** block-1 (skeleton) and block-2 (stereo + protonation), two independent IUPAC algorithms agree on the molecule. That cross-implementation agreement is what makes the entry "verified."
 
-Names that round-trip via OPSIN are dropped at build time. The dataset CSV contains only entries that have passed both the PubChem and OPSIN tests.
+Names that **fail** to round-trip via OPSIN are dropped at build time. The dataset CSV contains only entries that have passed both the PubChem-name fetch and the OPSIN structural-equivalence check.
 
 ## The four tiers
 
@@ -68,7 +68,8 @@ The dataset is sticky — re-run only when:
 - You want a different sample seed
 
 ```bash
-# Full rebuild — hits PubChem live, takes ~10 minutes for 1000 rows
+# Full rebuild — hits PubChem live, takes ~10 minutes. Per-category targets in
+# the script sum to 850, so passing --limit 1000 still yields ~850 verified rows.
 .venv/bin/python scripts/build_accuracy_dataset.py --limit 1000 --seed 42
 
 # Then re-record cassettes
@@ -97,6 +98,6 @@ To extend coverage of a particular category (e.g. carbohydrates):
 
 - **STOUT-path accuracy** — STOUT requires Python 3.10/3.11 + ~500MB TF; tests run under Docker
 - **NIST WebBook supplement** — independent ~500-row corpus from NIST chemistry standards
-- **Live-PubChem nightly run** — full 1000-row dataset against live PubChem, no cassettes
+- **Live-PubChem nightly run** — full 850-row dataset against live PubChem, no cassettes
 - **Drift alerting** — opens a GitHub issue if Tier 2 drops > 2pp on the nightly run
 - **Cross-source agreement** — PubChem vs STOUT vs OPSIN comparison per molecule

@@ -3,7 +3,10 @@
 > The reliable, free, open-source SMILES → IUPAC name converter that should have existed years ago.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/python-3.10--3.12-blue.svg)](https://www.python.org/downloads/)
+[![Status](https://img.shields.io/badge/status-alpha-orange.svg)]()
+
+> **Status:** alpha. Built and validated locally; not yet published to PyPI and not yet deployed to a public URL. The library, CLI, web app, and MCP server all work from a development checkout — see [Install](#install) for the actual working commands.
 
 ## What
 
@@ -24,13 +27,16 @@ Every result is tagged with **provenance** and a **confidence score**. PubChem h
 ## Quick start
 
 ```bash
-pip install smiles2iupac
-s2i 'CCO'
+git clone <this-repo>          # not yet on GitHub or PyPI
+cd smiles2iupac
+uv venv && uv pip install -e .  # or: python -m venv .venv && pip install -e .
+.venv/bin/s2i 'CCO'
 ```
 ```
 ethanol  (confidence: 1.00, source: pubchem)
   formula: C2H6O    MW: 46.069
   InChIKey: LFQSCWFLJHTTHZ-UHFFFAOYSA-N
+  verify: https://pubchem.ncbi.nlm.nih.gov/#query=LFQSCWFLJHTTHZ-UHFFFAOYSA-N
 ```
 
 Real-world cases work without ceremony:
@@ -84,12 +90,16 @@ print(lookup("caffeine"))  # 'Cn1c(=O)c2c(ncn2C)n(C)c1=O'
 
 ## Install
 
+The package is **not yet on PyPI**. Install from a development checkout:
+
 ```bash
-pip install smiles2iupac                  # core: PubChem + cache + CLI
-pip install 'smiles2iupac[ml]'            # adds OPSIN validation; STOUT requires Python 3.10/3.11
-pip install 'smiles2iupac[web]'           # adds Gradio + FastAPI for the local web app
-pip install 'smiles2iupac[mcp]'           # adds MCP server entry point (s2i-mcp)
-pip install 'smiles2iupac[all]'           # everything
+git clone <this-repo>
+cd smiles2iupac
+uv venv && uv pip install -e .              # core only (PubChem + cache + CLI)
+uv pip install -e '.[ml]'                   # add OPSIN validation
+uv pip install -e '.[web]'                  # add Gradio + FastAPI
+uv pip install -e '.[mcp]'                  # add MCP server (s2i-mcp)
+uv pip install -e '.[all]'                  # everything
 ```
 
 | Extra | What you get | Python | OS deps |
@@ -100,7 +110,7 @@ pip install 'smiles2iupac[all]'           # everything
 | `[ml]` | OPSIN round-trip validation (`py2opsin`) | 3.10–3.12 | Java 17+ JRE |
 | `[ml]` + STOUT | STOUT v2 generation for novel structures | **3.10 or 3.11 only** | Java 17+ JRE |
 
-**STOUT note:** `STOUT-pypi` 2.0.5 (latest) hard-pins `tensorflow==2.10.1` which has no Python 3.12 wheels. The `[ml]` extras install OPSIN on any supported Python; STOUT is gated by environment marker so it only resolves on 3.10/3.11 (where TF 2.10 wheels exist). The pipeline degrades gracefully — without STOUT installed, the PubChem path still gives 99.2% coverage on common chemistry. Production Docker (`Dockerfile`) uses `python:3.11-slim` so STOUT works there.
+**STOUT note:** `STOUT-pypi` 2.0.5 (latest) hard-pins `tensorflow==2.10.1` which has no Python 3.12 wheels. The `[ml]` extras install OPSIN on any supported Python; STOUT is gated by environment marker so it only resolves on 3.10/3.11 (where TF 2.10 wheels exist). The pipeline degrades gracefully — without STOUT installed, the PubChem path still hit-rates 99.2% on common chemistry (see Benchmark below). The Dockerfile uses `python:3.11-slim` so STOUT works there.
 
 ## Why this exists
 
@@ -143,13 +153,13 @@ Every successful conversion yields a fully-populated `Result`:
 
 ## Benchmark
 
-### Hit-rate (does PubChem respond?)
+### Hit rate (did PubChem return *anything*?)
 
-From `notebooks/benchmarking.ipynb`, run against 262 diverse SMILES (drugs, metabolites, heterocycles, materials, salts, stereo, edge cases):
+From `notebooks/benchmarking.ipynb`, run against 262 diverse SMILES (drugs, metabolites, heterocycles, materials, salts, stereo, edge cases). This measures *coverage*, not correctness — see the Accuracy section below for verified-correct rates.
 
 | Metric | Value |
 |---|---|
-| PubChem exact-match rate | **99.2%** (260/262) |
+| PubChem hit rate | **99.2%** (260/262) |
 | Median latency (PubChem path) | 620 ms |
 | p95 latency (PubChem path) | 1.15 s |
 | Median latency (cache hit) | **0.32 ms** (≈1900× speedup) |
@@ -196,19 +206,22 @@ jupyter nbconvert --to notebook --execute notebooks/benchmarking.ipynb
 
 ## How it compares
 
+Comparison reflects what's *built* in this repo vs what's currently public-facing in alternatives. Rows marked "(planned)" describe scaffolding that's committed but not yet deployed.
+
 | Feature | This tool | stout.decimer.ai | ChemAxon Naming |
 |---|---|---|---|
 | Free + open source | ✅ MIT | ✅ MIT | ❌ commercial |
-| Standalone URL & branding | ✅ | ❌ buried in DECIMER | N/A |
-| Public REST API | ✅ FastAPI | ❌ | ✅ |
 | Python library | ✅ `from smiles2iupac import convert` | ❌ | ✅ |
 | CLI | ✅ `s2i 'CCO'` | ❌ | ❌ |
-| Batch (CSV) | ✅ streaming | ❌ | ✅ |
-| Round-trip validation | ✅ OPSIN, 3-tier confidence | ❌ | partial |
+| MCP server (LLM tool) | ✅ 4 tools, stdio | ❌ | ❌ |
+| Batch (CSV) | ✅ streaming NDJSON | ❌ | ✅ |
+| Round-trip validation | ✅ OPSIN, 4-tier provenance | ❌ | partial |
 | Confidence scores | ✅ provenance-based | ❌ | ❌ |
 | InChI + InChIKey output | ✅ | ❌ | partial |
-| Salt stripping with explanation | ✅ | ❌ | ✅ |
-| Reliability monitoring | ✅ cron healthcheck | ❌ (down during research) | N/A |
+| Salt stripping + reasoning trace | ✅ | ❌ | ✅ |
+| Self-hosted REST API | ✅ FastAPI at `:7860` | ❌ | ✅ |
+| Public hosted URL (planned) | scaffolded for HF Spaces | ✅ (often offline) | commercial |
+| Reliability monitoring (planned) | scaffolded healthcheck workflow | ❌ | N/A |
 
 ## Architecture
 
@@ -230,14 +243,14 @@ jupyter nbconvert --to notebook --execute notebooks/benchmarking.ipynb
 
 `app/` — Gradio UI + FastAPI mounted at `:7860`. Endpoints: `GET /health`, `GET /convert?smiles=...`, `POST /batch` (NDJSON streaming).
 
-`deploy/` — Dockerfile (OpenJDK 17 + Python 3.12 + STOUT model bake-in), HF Spaces config.
+`deploy/` — Dockerfile (OpenJDK 17 + Python 3.11 + STOUT model bake-in) and HF Spaces deployment notes. The Dockerfile builds locally; nothing is deployed publicly yet.
 
-`.github/workflows/` — `ci.yml` (pytest), `deploy-hf.yml` (push to HF Space), `healthcheck.yml` (cron uptime ping).
+`.github/workflows/` — `ci.yml` (pytest + ruff, runs on every PR). `deploy-hf.yml` and `healthcheck.yml` are committed but `workflow_dispatch`-only (manual) until the HF Space exists; they reference `gvmfhy/smiles2iupac` which has not been created.
 
 ## Run the web app locally
 
 ```bash
-pip install 'smiles2iupac[web]'
+uv pip install -e '.[web]'
 python -m app.gradio_app
 # open http://localhost:7860
 ```
@@ -252,33 +265,10 @@ curl 'http://localhost:7860/convert?smiles=CCO' | jq .name
 This tool also exposes itself as a [Model Context Protocol](https://modelcontextprotocol.io) server, so MCP-aware LLM clients can call it directly. Useful when you want grounded chemistry naming inside a chat instead of letting the LLM hallucinate IUPAC names.
 
 ```bash
-pip install 'smiles2iupac[mcp]'
+uv pip install -e '.[mcp]'
 ```
 
-Add to Claude Desktop's `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "smiles2iupac": {
-      "command": "s2i-mcp"
-    }
-  }
-}
-```
-
-(Restart Claude Desktop. Then ask: "What's the IUPAC name for `CC(=O)Oc1ccccc1C(=O)O`?" — Claude will call our tool and return `2-acetyloxybenzoic acid` with provenance and a verify URL.)
-
-**Tools exposed:**
-
-| Tool | Purpose |
-|---|---|
-| `smiles_to_iupac` | Forward conversion. Returns name + confidence + source + InChIKey + reasoning trace + PubChem verify URL |
-| `iupac_to_smiles` | Reverse lookup. OPSIN first (offline, stereo-aware) → PubChem fallback (common names) |
-| `classify_smiles` | Pre-flight check: is it a salt? mixture? reaction? Returns parent + counter-ions |
-| `enrich_smiles` | Pure-RDKit metadata: InChI / InChIKey / formula / MW / SVG. No network. |
-
-For a development checkout (no install):
+Add to Claude Desktop's `claude_desktop_config.json` (development checkout — the working configuration today):
 
 ```json
 {
@@ -295,13 +285,26 @@ For a development checkout (no install):
 }
 ```
 
+(Restart Claude Desktop. Then ask: "What's the IUPAC name for `CC(=O)Oc1ccccc1C(=O)O`?" — Claude will call our tool and return `2-acetyloxybenzoic acid` with provenance and a verify URL.)
+
+Once published to PyPI, the simpler form `"command": "s2i-mcp"` will work after `pip install 'smiles2iupac[mcp]'`. Not yet.
+
+**Tools exposed:**
+
+| Tool | Purpose |
+|---|---|
+| `smiles_to_iupac` | Forward conversion. Returns name + confidence + source + InChIKey + reasoning trace + PubChem verify URL |
+| `iupac_to_smiles` | Reverse lookup. OPSIN first (offline, stereo-aware) → PubChem fallback (common names) |
+| `classify_smiles` | Pre-flight check: is it a salt? mixture? reaction? Returns parent + counter-ions |
+| `enrich_smiles` | Pure-RDKit metadata: InChI / InChIKey / formula / MW / SVG. No network. |
+
 ## Development
 
 ```bash
-git clone https://github.com/gvmfhy/smiles2iupac
+git clone <this-repo>           # repo not yet pushed publicly
 cd smiles2iupac
 uv venv && uv pip install -e '.[all]'
-pytest                                           # 99+ tests
+pytest                                           # 140 tests
 ```
 
 The cache lives at `~/.smiles2iupac/cache.db` and warms automatically. Wipe it any time — it'll repopulate on demand.

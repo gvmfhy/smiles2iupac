@@ -19,7 +19,9 @@ def _get_translator() -> Callable[[str], str]:
         from STOUT import translate_forward
     except ImportError as e:
         raise StoutError(
-            "STOUT-pypi is not installed; install with `pip install smiles2iupac[ml]`"
+            "STOUT-pypi is not installed; install with "
+            "`uv pip install -e '.[ml]'` (development checkout) "
+            "or `pip install smiles2iupac[ml]` once published to PyPI"
         ) from e
     except Exception as e:  # model-load failures surface as arbitrary exception types
         raise StoutError(f"could not load STOUT model: {e}") from e
