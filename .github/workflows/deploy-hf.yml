@@ -1,0 +1,27 @@
+# Deploys to Hugging Face Spaces on push to main.
+# REQUIRES: repo secret HF_TOKEN (write scope) — Settings → Secrets and variables → Actions.
+# Token: https://huggingface.co/settings/tokens
+# Space:  https://huggingface.co/spaces/gvmfhy/smiles2iupac (must exist, SDK=Docker)
+name: Deploy to Hugging Face Spaces
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Push to HF Space
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # HF rejects shallow pushes
+
+      - name: Push to HF
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config user.email "120282195+gvmfhy@users.noreply.github.com"
+          git config user.name "Austin Morrissey"
+          git push --force "https://gvmfhy:$HF_TOKEN@huggingface.co/spaces/gvmfhy/smiles2iupac" main

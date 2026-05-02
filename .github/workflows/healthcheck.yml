@@ -1,0 +1,25 @@
+# Free uptime monitor: pings HF Spaces /health every 10 minutes.
+# Failures appear in the Actions tab — no third-party service needed.
+name: Healthcheck
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    name: GET /health
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Ping HF Space
+        run: |
+          set -euo pipefail
+          URL="https://gvmfhy-smiles2iupac.hf.space/health"
+          # -f fails on non-2xx; -sS hides progress but shows errors; --max-time guards against hangs
+          response=$(curl -fsS --max-time 30 "$URL")
+          echo "Response: $response"
+          # Hard-fail unless body contains the expected status field.
+          echo "$response" | grep -q '"status"[[:space:]]*:[[:space:]]*"ok"' \
+            || { echo "Health endpoint did not return status=ok"; exit 1; }
