@@ -1,11 +1,13 @@
 """OPSIN round-trip validator: name → SMILES → InChIKey-tier comparison.
 
 OPSIN parses an IUPAC name back to SMILES; we compare the result against the
-original via InChIKey. Block 1 (chars 0..14) encodes the molecular skeleton —
-constitution + protonation. Block 2 (chars 15..25) encodes stereochemistry +
-isotopes. Matching block 1 means structurally identical; matching the full key
-means stereo-identical too. This drives the STOUT_VALIDATED / STOUT_UNVALIDATED
-/ STOUT_LOW_CONFIDENCE confidence tiering in the pipeline.
+original via InChIKey. The 27-char InChIKey is `XXXXXXXXXXXXXX-YYYYYYYYYY-Z`:
+chars 0..13 (the slice `[:14]`) are block 1 — molecular skeleton (constitution).
+Chars 15..24 are block 2 — stereochemistry + isotopes + protonation flags.
+Char 26 is a final standardization marker. Matching block 1 means structurally
+identical (same atoms, same connectivity); matching the full key means stereo-
+identical too. This drives the STOUT_VALIDATED / STOUT_UNVALIDATED /
+STOUT_LOW_CONFIDENCE confidence tiering in the pipeline.
 """
 
 from pydantic import BaseModel

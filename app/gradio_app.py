@@ -54,12 +54,9 @@ def _convert(smiles: str) -> tuple[str, str]:
     if not smiles or not smiles.strip():
         return ("", "_Enter a SMILES string above and click Convert._")
 
-    prev_svg = pipeline.include_svg
-    pipeline.include_svg = True
-    try:
-        result = pipeline.convert(smiles.strip())
-    finally:
-        pipeline.include_svg = prev_svg
+    # Per-call kwarg — never mutate the shared pipeline (Gradio runs handlers
+    # in a threadpool, same race issue as FastAPI).
+    result = pipeline.convert(smiles.strip(), include_svg=True)
 
     svg_html = result.structure_svg or "<p><em>No structure preview available.</em></p>"
     return (svg_html, _format_metadata(result))

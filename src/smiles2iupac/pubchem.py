@@ -1,5 +1,6 @@
 """PubChem PUG-REST client with token-bucket rate limiting and retry."""
 
+import threading
 import time
 from urllib.parse import quote
 
@@ -15,29 +16,48 @@ class PubChemError(Exception):
 
 
 class _RateLimiter:
+    """Strict 1/rate spacing rate limiter, thread-safe.
+
+    Each `acquire()` reserves the next available timestamp slot under the lock,
+    then sleeps until its reserved moment OUTSIDE the lock. This ensures N
+    concurrent acquirers serialize: each waits for all the slots ahead of it,
+    enforcing the rate limit even under heavy threadpool concurrency.
+
+    A token-bucket would allow brief bursts; we use spacing instead because
+    PubChem's limit is per-second and we'd rather under-burst than risk
+    IP-level throttling.
+    """
+
     def __init__(self, rate: float):
         self.rate = rate
-        self.tokens = rate
-        self.last = time.monotonic()
+        self.interval = 1.0 / rate
+        self._next_available = time.monotonic()
+        self._lock = threading.Lock()
 
     def acquire(self) -> None:
-        now = time.monotonic()
-        elapsed = now - self.last
-        self.tokens = min(self.rate, self.tokens + elapsed * self.rate)
-        self.last = now
-        if self.tokens < 1.0:
-            sleep_for = (1.0 - self.tokens) / self.rate
-            time.sleep(sleep_for)
-            self.tokens = 0.0
-        else:
-            self.tokens -= 1.0
+        with self._lock:
+            now = time.monotonic()
+            wait_until = max(now, self._next_available)
+            # Reserve our slot; subsequent acquirers see a later _next_available.
+            self._next_available = wait_until + self.interval
+        wait_for = wait_until - time.monotonic()
+        if wait_for > 0:
+            time.sleep(wait_for)
 
 
 _limiter = _RateLimiter(PUBCHEM_RATE)
 
 
 def _get(url: str, retries: int = 3) -> dict | None:
-    """GET with rate limiting and exponential backoff. Returns None on 404."""
+    """GET with rate limiting and exponential backoff. Returns None on 404.
+
+    Raises PubChemError on:
+        - non-recoverable HTTP errors (4xx other than 404, 5xx other than 503)
+        - network errors after `retries` attempts
+        - 429/503 still throttled after `retries` attempts (signals upstream throttling,
+          NOT "compound not found" — silently returning None there would mask outages)
+    """
+    last_throttle_status: int | None = None
     last_exc: Exception | None = None
     for attempt in range(retries):
         _limiter.acquire()
@@ -48,6 +68,7 @@ def _get(url: str, retries: int = 3) -> dict | None:
             if r.status_code == 404:
                 return None
             if r.status_code in (429, 503):
+                last_throttle_status = r.status_code
                 time.sleep(2**attempt)
                 continue
             raise PubChemError(f"HTTP {r.status_code}: {r.text[:200]}")
@@ -56,6 +77,13 @@ def _get(url: str, retries: int = 3) -> dict | None:
             if attempt == retries - 1:
                 raise PubChemError(f"network error: {e}") from e
             time.sleep(2**attempt)
+    # Loop exhausted. Either we hit 429/503 every attempt, or we ran out of
+    # network retries. The latter is impossible here (the last RequestException
+    # raises above), so the only path here is throttle exhaustion.
+    if last_throttle_status is not None:
+        raise PubChemError(
+            f"PubChem throttled after {retries} retries (last status {last_throttle_status})"
+        )
     if last_exc:
         raise PubChemError(f"exhausted retries: {last_exc}") from last_exc
     return None

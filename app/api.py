@@ -47,16 +47,19 @@ def convert(
     if not smiles:
         raise HTTPException(status_code=400, detail="missing required query parameter: smiles")
 
-    # Per-request flag overrides without rebuilding the pipeline.
-    prev_svg, prev_syn = pipeline.include_svg, pipeline.fetch_synonyms
-    pipeline.include_svg = include_svg
-    pipeline.fetch_synonyms = fetch_synonyms
-    try:
-        result = pipeline.convert(smiles)
-    finally:
-        pipeline.include_svg, pipeline.fetch_synonyms = prev_svg, prev_syn
-
+    # Per-call kwargs — never mutate shared pipeline state under concurrent requests.
+    result = pipeline.convert(
+        smiles,
+        include_svg=include_svg,
+        fetch_synonyms=fetch_synonyms,
+    )
     return JSONResponse(content=result.model_dump(mode="json"))
+
+
+# Soft cap: 10 MB / ~250k SMILES is plenty for a free public endpoint and
+# prevents trivial DoS via multi-GB upload. Hosts that need bigger batches
+# should run their own instance with this raised.
+MAX_BATCH_BYTES = 10 * 1024 * 1024
 
 
 @app.post("/batch")
@@ -64,7 +67,14 @@ def batch(
     file: UploadFile = File(...),
     column: str = Form("smiles"),
 ) -> StreamingResponse:
-    raw = file.file.read()
+    # Read with a hard size cap rather than file.read() (which would slurp
+    # the whole upload into memory regardless of how large it is).
+    raw = file.file.read(MAX_BATCH_BYTES + 1)
+    if len(raw) > MAX_BATCH_BYTES:
+        raise HTTPException(
+            status_code=413,
+            detail=f"upload exceeds {MAX_BATCH_BYTES} bytes; run your own instance for larger batches",
+        )
     try:
         text = raw.decode("utf-8")
     except UnicodeDecodeError as e:
@@ -77,14 +87,17 @@ def batch(
             detail=f"column '{column}' not found; available: {reader.fieldnames}",
         )
 
-    rows = list(reader)  # Materialize so the closed UploadFile is fine downstream.
+    # Materialize iterator into a list so the StreamingResponse generator can
+    # outlive the request handler (FastAPI closes UploadFile on return).
+    # Bounded by MAX_BATCH_BYTES above, so memory is safely capped.
+    rows = list(reader)
 
     def lines() -> Iterator[str]:
         for row in rows:
-            smiles = (row.get(column) or "").strip()
-            if not smiles:
+            smiles_in = (row.get(column) or "").strip()
+            if not smiles_in:
                 continue
-            result = pipeline.convert(smiles)
+            result = pipeline.convert(smiles_in)
             yield json.dumps(result.model_dump(mode="json")) + "\n"
 
     return StreamingResponse(lines(), media_type="application/x-ndjson")

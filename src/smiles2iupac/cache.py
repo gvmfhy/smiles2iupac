@@ -1,6 +1,13 @@
-"""SQLite cache for canonical SMILES → IUPAC name."""
+"""SQLite cache for canonical SMILES → IUPAC name.
+
+Thread-safe under concurrent FastAPI/Gradio requests: a single shared connection
+with `check_same_thread=False` is wrapped in a `threading.Lock` so cursor and
+commit operations don't interleave (which would otherwise raise OperationalError
+or "Recursive use of cursors not allowed" under load).
+"""
 
 import sqlite3
+import threading
 import time
 from pathlib import Path
 
@@ -24,30 +31,35 @@ class Cache:
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
         self._conn = sqlite3.connect(self.db_path, check_same_thread=False)
         self._conn.executescript(SCHEMA)
+        self._lock = threading.Lock()
 
     def lookup(self, canonical_smiles: str) -> tuple[str, str, float] | None:
-        cur = self._conn.execute(
-            "SELECT name, source, confidence FROM names WHERE canonical_smiles = ?",
-            (canonical_smiles,),
-        )
-        row = cur.fetchone()
+        with self._lock:
+            cur = self._conn.execute(
+                "SELECT name, source, confidence FROM names WHERE canonical_smiles = ?",
+                (canonical_smiles,),
+            )
+            row = cur.fetchone()
         return tuple(row) if row else None
 
     def store(
         self, canonical_smiles: str, name: str, source: str, confidence: float
     ) -> None:
-        self._conn.execute(
-            "INSERT OR REPLACE INTO names VALUES (?, ?, ?, ?, ?)",
-            (canonical_smiles, name, source, confidence, time.time()),
-        )
-        self._conn.commit()
+        with self._lock:
+            self._conn.execute(
+                "INSERT OR REPLACE INTO names VALUES (?, ?, ?, ?, ?)",
+                (canonical_smiles, name, source, confidence, time.time()),
+            )
+            self._conn.commit()
 
     def size(self) -> int:
-        cur = self._conn.execute("SELECT COUNT(*) FROM names")
-        return cur.fetchone()[0]
+        with self._lock:
+            cur = self._conn.execute("SELECT COUNT(*) FROM names")
+            return cur.fetchone()[0]
 
     def close(self) -> None:
-        self._conn.close()
+        with self._lock:
+            self._conn.close()
 
     def __enter__(self):
         return self

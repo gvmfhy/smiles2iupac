@@ -46,7 +46,26 @@ class Pipeline:
         self.include_svg = include_svg
         self.include_cas = include_cas
 
-    def convert(self, smiles: str) -> Result:
+    def convert(
+        self,
+        smiles: str,
+        *,
+        include_svg: bool | None = None,
+        include_cas: bool | None = None,
+        fetch_synonyms: bool | None = None,
+    ) -> Result:
+        """Convert a SMILES to an IUPAC Result.
+
+        Per-call overrides for `include_svg`, `include_cas`, and `fetch_synonyms`
+        take precedence over instance defaults. They're passed as arguments rather
+        than mutated on the instance so that concurrent callers (e.g. multiple
+        FastAPI requests sharing one Pipeline) never race on shared mutable state.
+        """
+        # Resolve effective flags (per-call > instance default)
+        eff_svg = self.include_svg if include_svg is None else include_svg
+        eff_cas = self.include_cas if include_cas is None else include_cas
+        eff_syn = self.fetch_synonyms if fetch_synonyms is None else fetch_synonyms
+
         result = Result(smiles=smiles)
 
         classification = classify(smiles)
@@ -84,7 +103,7 @@ class Pipeline:
             result.name = name
             result.source = Source(source)
             result.confidence = confidence
-            return self._opt_enrich(result, canonical)
+            return self._opt_enrich(result, canonical, eff_svg, eff_cas)
 
         if self.use_pubchem:
             name = self._pubchem_lookup(result.inchikey, canonical, result)
@@ -94,15 +113,15 @@ class Pipeline:
                 result.name = name
                 result.source = Source.PUBCHEM
                 result.confidence = conf
-                if self.fetch_synonyms:
+                if eff_syn:
                     try:
                         result.alternatives = smiles_to_synonyms(canonical)
                     except PubChemError:
                         pass
-                return self._opt_enrich(result, canonical)
+                return self._opt_enrich(result, canonical, eff_svg, eff_cas)
 
         if self.use_stout:
-            return self._stout_layer(canonical, result)
+            return self._stout_layer(canonical, result, eff_svg, eff_cas)
 
         if not result.error:
             result.error = "no name found (pubchem miss; STOUT not enabled)"
@@ -120,7 +139,9 @@ class Pipeline:
             result.error = f"pubchem unavailable: {e}"
             return None
 
-    def _stout_layer(self, canonical: str, result: Result) -> Result:
+    def _stout_layer(
+        self, canonical: str, result: Result, eff_svg: bool, eff_cas: bool
+    ) -> Result:
         try:
             stout_name = stout_iupac(canonical)
         except StoutError as e:
@@ -153,15 +174,18 @@ class Pipeline:
         result.name = stout_name
         result.source = source
         result.confidence = conf
-        return self._opt_enrich(result, canonical)
+        return self._opt_enrich(result, canonical, eff_svg, eff_cas)
 
-    def _opt_enrich(self, result: Result, canonical: str) -> Result:
-        if self.include_svg:
+    def _opt_enrich(
+        self, result: Result, canonical: str, eff_svg: bool, eff_cas: bool
+    ) -> Result:
+        """Apply opt-in enrichment based on per-call effective flags (no instance reads)."""
+        if eff_svg:
             try:
                 result.structure_svg = enrich.structure_svg(canonical)
             except ValueError:
                 pass
-        if self.include_cas:
+        if eff_cas:
             try:
                 result.cas = enrich.pubchem_cas(canonical)
             except PubChemError:
