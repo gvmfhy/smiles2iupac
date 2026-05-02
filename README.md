@@ -131,6 +131,8 @@ Every successful conversion yields a fully-populated `Result`:
 
 ## Benchmark
 
+### Hit-rate (does PubChem respond?)
+
 From `notebooks/benchmarking.ipynb`, run against 262 diverse SMILES (drugs, metabolites, heterocycles, materials, salts, stereo, edge cases):
 
 | Metric | Value |
@@ -141,10 +143,43 @@ From `notebooks/benchmarking.ipynb`, run against 262 diverse SMILES (drugs, meta
 | Median latency (cache hit) | **0.32 ms** (≈1900× speedup) |
 | Misses | 2 (cyclosporine standardizer error, doxycycline index gap) |
 
+### Accuracy (is the returned name actually correct?)
+
+From `tests/test_accuracy_offline.py`, run against a 300-molecule stratified subset of 850 PubChem-OPSIN-cross-validated reference pairs (full library at `tests/fixtures/accuracy_dataset.csv`):
+
+| Metric | Value |
+|---|---|
+| **Tier 2 — structural correctness** (OPSIN round-trip InChIKey match) | **95.0%** (285/300) |
+| Tier 1 — strict exact-string match against ground truth | 95.0% |
+| Tier 3 — name appears in PubChem synonyms list | 22.0% |
+
+**Per-category Tier 2 (structural correctness):**
+
+| Category | Rate | Note |
+|---|---|---|
+| Drugs (n=53) | **100%** | |
+| Stereochemistry (n=51) | **100%** | preserved through pipeline |
+| Solvents/aliphatics (n=36) | **100%** | |
+| Heterocycles (n=35) | **100%** | |
+| Pathological/exotic (n=25) | 96% | |
+| Large >30 atoms (n=35) | 94% | PubChem standardizer gaps |
+| Unusual elements (n=11) | 82% | B/Si/Se compounds tricky |
+| Salts/zwitterions (n=18) | 44% | pipeline names parent fragment; PubChem's `IUPACName` joins multi-component names with semicolons — different conventions, both arguably correct |
+
+The CI gate fails if Tier 2 drops more than 1 percentage point below baseline. See [`docs/ACCURACY.md`](docs/ACCURACY.md) for tier definitions, ground-truth methodology, and how to update the baseline when accuracy improves.
+
 Re-run any time:
 
 ```bash
+# Hit-rate benchmark (live PubChem)
 jupyter nbconvert --to notebook --execute notebooks/benchmarking.ipynb
+
+# Accuracy benchmark (cached cassettes; deterministic, <2 min)
+.venv/bin/python -m pytest tests/test_accuracy_offline.py -v -s
+
+# Rebuild the reference library from scratch (~10 min, hits PubChem)
+.venv/bin/python scripts/build_accuracy_dataset.py --limit 1000 --seed 42
+.venv/bin/python scripts/record_pubchem_cassettes.py --subset 300
 ```
 
 ## How it compares

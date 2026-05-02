@@ -1,0 +1,4341 @@
+{
+  "cassettes": {
+    "AAGCEVUFYXNMQF-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=S(=O)(Cc1ccc(-c2ccccc2)cc1)c1cccc[n+]1[O-]",
+      "inchikey": "AAGCEVUFYXNMQF-UHFFFAOYSA-N",
+      "iupac_name": "1-oxido-2-[(4-phenylphenyl)methylsulfonyl]pyridin-1-ium",
+      "synonyms": [
+        "CHEMBL342361",
+        "1-oxido-2-[(4-phenylphenyl)methylsulfonyl]pyridin-1-ium",
+        "SCHEMBL11109754",
+        "2-(Biphenyl-4-ylmethanesulfonyl)-pyridine, 1-oxide"
+      ]
+    },
+    "AEGRCVSESRSMGV-UHFFFAOYSA-N": {
+      "canonical_smiles": "NS(=O)(=O)c1sc(Cl)c([N+](=O)[O-])c1[N+](=O)[O-]",
+      "inchikey": "AEGRCVSESRSMGV-UHFFFAOYSA-N",
+      "iupac_name": "5-chloro-3,4-dinitrothiophene-2-sulfonamide",
+      "synonyms": [
+        "Thiophene-2-sulfonamide, 5-chloro-3,4-dinitro-",
+        "AEGRCVSESRSMGV-UHFFFAOYSA-N",
+        "5-Chloro-3,4-dinitro-2-thiophenesulfonamide #"
+      ]
+    },
+    "AFZZGVYHTHBQBS-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(=O)c1ccccc1NC(=O)C(=O)Nc1ccccc1C(C)=O",
+      "inchikey": "AFZZGVYHTHBQBS-UHFFFAOYSA-N",
+      "iupac_name": "N,N'-bis(2-acetylphenyl)oxamide",
+      "synonyms": [
+        "Oxamide, N,N'-bis(2'-acetylphenyl)-",
+        "SCHEMBL6857308",
+        "AFZZGVYHTHBQBS-UHFFFAOYSA-N",
+        "AKOS024377852",
+        "N,N'-bis(2-acetylphenyl) ethanediamide",
+        "ST51021172",
+        "N-(2-acetylphenyl)-N'-(2-acetylphenyl)ethane-1,2-diamide"
+      ]
+    },
+    "AGCQZYRSTIRJFM-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=[N+]([O-])OCCOCCOCCO[N+](=O)[O-]",
+      "inchikey": "AGCQZYRSTIRJFM-UHFFFAOYSA-N",
+      "iupac_name": "2-[2-(2-nitrooxyethoxy)ethoxy]ethyl nitrate",
+      "synonyms": [
+        "Triethylene glycol dinitrate",
+        "TEGDN",
+        "111-22-8",
+        "TRIETHYLENE GLYCOL, DINITRATE",
+        "6X99UD6JTA",
+        "DTXSID0051572",
+        "2,2'-(1,2-Ethanediylbis(oxy))bisethanol, dinitrate",
+        "RefChem:191529",
+        "DTXCID4030124",
+        "203-847-6"
+      ]
+    },
+    "AGXKTYMXNZEEHT-UHFFFAOYSA-N": {
+      "canonical_smiles": "[P]#[Er]",
+      "inchikey": "AGXKTYMXNZEEHT-UHFFFAOYSA-N",
+      "iupac_name": "phosphanylidyneerbium",
+      "synonyms": [
+        "Erbium phosphide (ErP)",
+        "12218-47-2",
+        "EINECS 235-403-2",
+        "RefChem:137466",
+        "phosphanylidyneerbium",
+        "Erbium monophosphide",
+        "Erbium phosphide",
+        "U5TKH5WM5L",
+        "SCHEMBL1627908",
+        "DTXSID701314322"
+      ]
+    },
+    "AHHWIHXENZJRFG-UHFFFAOYSA-N": {
+      "canonical_smiles": "C1COC1",
+      "inchikey": "AHHWIHXENZJRFG-UHFFFAOYSA-N",
+      "iupac_name": "oxetane",
+      "synonyms": [
+        "Oxetane",
+        "Trimethylene oxide",
+        "503-30-0",
+        "1,3-Propylene oxide",
+        "1,3-EPOXYPROPANE",
+        "Oxacyclobutane",
+        "Cyclooxabutane",
+        "Trimethylenoxid",
+        "Oxetan",
+        "1,3-Trimethylene oxide"
+      ]
+    },
+    "AIKRREFJELMNQG-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(Cc1cccc(O)c1)CN1CC(C)OC(C)C1",
+      "inchikey": "AIKRREFJELMNQG-UHFFFAOYSA-N",
+      "iupac_name": "3-[3-(2,6-dimethylmorpholin-4-yl)-2-methylpropyl]phenol",
+      "synonyms": [
+        "115195-51-2",
+        "3-(3-(2,6-Dimethylmorpholin-4-yl)-2-methylpropyl)phenol",
+        "3-[3-(2,6-dimethylmorpholin-4-yl)-2-methylpropyl]phenol",
+        "SCHEMBL9810867",
+        "DTXSID00921645",
+        "AIKRREFJELMNQG-UHFFFAOYSA-N",
+        "Phenol, 3-(3-(2,6-dimethyl-4-morpholinyl)-2-methylpropyl)-, (4(S)-cis)-",
+        "143291-85-4",
+        "4-[3-(3-hydroxyphenyl)-2-methylpropyl]-2,6-dimethylmorpholine"
+      ]
+    },
+    "AKCRQHGQIJBRMN-UHFFFAOYSA-N": {
+      "canonical_smiles": "Nc1ccccc1Cl",
+      "inchikey": "AKCRQHGQIJBRMN-UHFFFAOYSA-N",
+      "iupac_name": "2-chloroaniline",
+      "synonyms": [
+        "2-CHLOROANILINE",
+        "95-51-2",
+        "o-Chloroaniline",
+        "1-Amino-2-chlorobenzene",
+        "2-Chlorophenylamine",
+        "Fast Yellow GC Base",
+        "Benzenamine, 2-chloro-",
+        "o-Aminochlorobenzene",
+        "Aniline, o-chloro-",
+        "o-Chloroaminobenzene"
+      ]
+    },
+    "AKCWYYNYRGNFBJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "NC1=Nc2ccccc2Sc2nnc(-c3ccc(Cl)cc3)n21",
+      "inchikey": "AKCWYYNYRGNFBJ-UHFFFAOYSA-N",
+      "iupac_name": "3-(4-chlorophenyl)-[1,2,4]triazolo[3,4-b][1,3,5]benzothiadiazepin-5-amine",
+      "synonyms": [
+        "NSC671319",
+        "3-(4-Chlorophenyl)[1,2,4]triazolo[3,4-b][1,3,5]benzothiadiazepin-5(6H)-imine",
+        "CHEMBL1968169",
+        "NSC-671319",
+        "NCI60_025177",
+        "3-(4-chlorophenyl)-6H-[1,2,4]triazolo[3,4-b][1,3,5]benzothiadiazepin-5-imine"
+      ]
+    },
+    "AKNNEGZIBPJZJG-UHFFFAOYSA-N": {
+      "canonical_smiles": "COc1ccc2c(c1OC)C(=O)OC2C1c2c(cc3c(c2OC)OCO3)CCN1C",
+      "inchikey": "AKNNEGZIBPJZJG-UHFFFAOYSA-N",
+      "iupac_name": "6,7-dimethoxy-3-(4-methoxy-6-methyl-7,8-dihydro-5H-[1,3]dioxolo[4,5-g]isoquinolin-5-yl)-3H-2-benzofuran-1-one",
+      "synonyms": [
+        "Gnoscopine",
+        "6035-40-1",
+        "RefChem:1086139",
+        "10421-76-8",
+        "Nascopine",
+        "6,7-Dimethoxy-3-(4-methoxy-6-methyl-5,6,7,8-tetrahydro-[1,3]dioxolo[4,5-g]isoquinolin-5-yl)-3h-isobenzofuran-1-one",
+        "dl-Narcotine",
+        "6,7-dimethoxy-3-{4-methoxy-6-methyl-2H,5H,6H,7H,8H-[1,3]dioxolo[4,5-g]isoquinolin-5-yl}-1,3-dihydro-2-benzofuran-1-one",
+        "alpha-Gnoscopine",
+        "6,7-dimethoxy-3-(4-methoxy-6-methyl-7,8-dihydro-5H-[1,3]dioxolo[4,5-g]isoquinolin-5-yl)-3H-2-benzofuran-1-one"
+      ]
+    },
+    "ALYNCZNDIQEVRV-UHFFFAOYSA-N": {
+      "canonical_smiles": "Nc1ccc(C(=O)O)cc1",
+      "inchikey": "ALYNCZNDIQEVRV-UHFFFAOYSA-N",
+      "iupac_name": "4-aminobenzoic acid",
+      "synonyms": [
+        "4-aminobenzoic acid",
+        "150-13-0",
+        "p-aminobenzoic acid",
+        "PABA",
+        "Vitamin BX",
+        "para-aminobenzoic acid",
+        "p-Carboxyaniline",
+        "Sunbrella",
+        "4-Carboxyaniline",
+        "Paraminol"
+      ]
+    },
+    "ANRUJJLGVODXIK-UHFFFAOYSA-N": {
+      "canonical_smiles": "NCCC(=O)NCCc1cnc[nH]1",
+      "inchikey": "ANRUJJLGVODXIK-UHFFFAOYSA-N",
+      "iupac_name": "3-amino-N-[2-(1H-imidazol-5-yl)ethyl]propanamide",
+      "synonyms": [
+        "Carcinine",
+        "56897-53-1",
+        "beta-Alanylhistamine",
+        "3-amino-N-[2-(1H-imidazol-5-yl)ethyl]propanamide",
+        "WIV0W167TC",
+        "CHEBI:131429",
+        "DTXSID90205421",
+        "Propanamide, 3-amino-N-(2-(1H-imidazol-4-yl)ethyl)-",
+        "3-amino-N-(2-(1H-imidazol-5-yl)ethyl)propanamide",
+        "RefChem:123691"
+      ]
+    },
+    "ANSXAPJVJOKRDJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=c1oc(=O)c2cc3c(=O)oc(=O)c3cc12",
+      "inchikey": "ANSXAPJVJOKRDJ-UHFFFAOYSA-N",
+      "iupac_name": "furo[3,4-f][2]benzofuran-1,3,5,7-tetrone",
+      "synonyms": [
+        "PYROMELLITIC DIANHYDRIDE",
+        "89-32-7",
+        "Pyromellitic anhydride",
+        "PMDA",
+        "Pyromellitic acid dianhydride",
+        "Pyromellitic acid anhydride",
+        "1,2,4,5-Benzenetetracarboxylic anhydride",
+        "1H,3H-Benzo[1,2-c:4,5-c']difuran-1,3,5,7-tetrone",
+        "Pyromellitic 1,2:4,5-dianhydride",
+        "DTXSID1026536"
+      ]
+    },
+    "AORIUCNKPVHMTN-UHFFFAOYSA-N": {
+      "canonical_smiles": "COC(=O)C(c1ccccc1)c1ccccc1",
+      "inchikey": "AORIUCNKPVHMTN-UHFFFAOYSA-N",
+      "iupac_name": "methyl 2,2-diphenylacetate",
+      "synonyms": [
+        "Methyl diphenylacetate",
+        "3469-00-9",
+        "NSC-27912",
+        "4H8021R61U",
+        "NSC-120416",
+        "DTXSID80188239",
+        "Methyl alpha-phenylbenzeneacetate",
+        "RefChem:1089539",
+        "DTXCID60110730",
+        "222-431-5"
+      ]
+    },
+    "AQIXAKUUQRKLND-UHFFFAOYSA-N": {
+      "canonical_smiles": "CN/C(=N\\CCSCc1nc[nH]c1C)NC#N",
+      "inchikey": "AQIXAKUUQRKLND-UHFFFAOYSA-N",
+      "iupac_name": "1-cyano-2-methyl-3-[2-[(5-methyl-1H-imidazol-4-yl)methylsulfanyl]ethyl]guanidine",
+      "synonyms": []
+    },
+    "AUZONCFQVSMFAP-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCN(CC)C(=S)SSC(=S)N(CC)CC",
+      "inchikey": "AUZONCFQVSMFAP-UHFFFAOYSA-N",
+      "iupac_name": "diethylcarbamothioylsulfanyl N,N-diethylcarbamodithioate",
+      "synonyms": [
+        "disulfiram",
+        "Tetraethylthiuram disulfide",
+        "97-77-8",
+        "Antabuse",
+        "Bis(diethylthiocarbamoyl) disulfide",
+        "Antabus",
+        "Esperal",
+        "Teturam",
+        "Alcophobin",
+        "Anticol"
+      ]
+    },
+    "AVKUERGKIZMTKX-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1(C)SC2C(NC(=O)C(N)c3ccccc3)C(=O)N2C1C(=O)O",
+      "inchikey": "AVKUERGKIZMTKX-UHFFFAOYSA-N",
+      "iupac_name": "6-[(2-amino-2-phenylacetyl)amino]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid",
+      "synonyms": [
+        "DTXSID20859077",
+        "6-[(2-amino-2-phenylacetyl)amino]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid",
+        "856649-99-5",
+        "6-((2-Amino-2-phenylacetyl)amino)-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo(3.2.0)heptane-2-carboxylic acid",
+        "RefChem:1073645",
+        "DTXCID80196632",
+        "Alpen",
+        "Guicitrine",
+        "Ampicin",
+        "Wypicil"
+      ]
+    },
+    "AWJUIBRHMBBTKR-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1ccc2cnccc2c1",
+      "inchikey": "AWJUIBRHMBBTKR-UHFFFAOYSA-N",
+      "iupac_name": "isoquinoline",
+      "synonyms": [
+        "ISOQUINOLINE",
+        "119-65-3",
+        "2-Benzazine",
+        "2-Azanaphthalene",
+        "Leucoline",
+        "beta-Quinoline",
+        "Isochinolin",
+        "Benzo[c]pyridine",
+        "3,4-Benzopyridine",
+        "Benzo(c)pyridine"
+      ]
+    },
+    "BGYICJVBGZQOCY-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCCCCOC(=O)CC",
+      "inchikey": "BGYICJVBGZQOCY-UHFFFAOYSA-N",
+      "iupac_name": "heptyl propanoate",
+      "synonyms": [
+        "heptyl propanoate",
+        "HEPTYL PROPIONATE",
+        "2216-81-1",
+        "n-Heptyl propionate",
+        "Propionic acid, heptyl ester",
+        "EINECS 218-698-2",
+        "AI3-21504",
+        "DTXSID00176693",
+        "ENT 21504",
+        "RefChem:145737"
+      ]
+    },
+    "BINKQJJWJHNOSQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1ccc(CO[Si](OCc2ccccc2)(OCc2ccccc2)OCc2ccccc2)cc1",
+      "inchikey": "BINKQJJWJHNOSQ-UHFFFAOYSA-N",
+      "iupac_name": "tetrabenzyl silicate",
+      "synonyms": [
+        "Tetrabenzyl orthosilicate",
+        "4424-00-4",
+        "Silicon ester of benzyl alcohol",
+        "Silicic acid (H4SiO4), tetrakis(methylphenyl) ester",
+        "EINECS 224-595-3",
+        "EINECS 248-135-6",
+        "26952-29-4",
+        "DTXSID101014639",
+        "Silicic acid (H4SiO4), tetrakis(phenylmethyl) ester",
+        "RefChem:896711"
+      ]
+    },
+    "BNRNXUUZRGQAQC-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCc1nn(C)c2c(=O)[nH]c(-c3cc(S(=O)(=O)N4CCN(C)CC4)ccc3OCC)nc12",
+      "inchikey": "BNRNXUUZRGQAQC-UHFFFAOYSA-N",
+      "iupac_name": "5-[2-ethoxy-5-(4-methylpiperazin-1-yl)sulfonylphenyl]-1-methyl-3-propyl-4H-pyrazolo[4,5-d]pyrimidin-7-one",
+      "synonyms": [
+        "sildenafil",
+        "139755-83-2",
+        "Aphrodil",
+        "Vizarsin",
+        "Sildenafilo",
+        "Patrex",
+        "Sildenafil teva",
+        "Sildenafil actavis",
+        "Sildenafil ratiopharm",
+        "3M7OB98Y7H"
+      ]
+    },
+    "BQCDTXARIOTIAU-UHFFFAOYSA-N": {
+      "canonical_smiles": "COc1ccc2[nH]cc(CN3CCCCCCC3)c2c1",
+      "inchikey": "BQCDTXARIOTIAU-UHFFFAOYSA-N",
+      "iupac_name": "3-(azocan-1-ylmethyl)-5-methoxy-1H-indole",
+      "synonyms": [
+        "5-Methoxy-3-(heptamethyleneiminomethyl)indole",
+        "INDOLE, 3-(HEXAHYDRO-1(2H)-AZOCINYLMETHYL)-5-METHOXY-",
+        "101831-97-4",
+        "DTXSID20144233",
+        "RefChem:349253",
+        "DTXCID7066724",
+        "3-[(Azocan-1-yl)methyl]-5-methoxy-1H-indole"
+      ]
+    },
+    "BRQMAAFGEXNUOL-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCC(CC)COC(=O)OOC(C)(C)C",
+      "inchikey": "BRQMAAFGEXNUOL-UHFFFAOYSA-N",
+      "iupac_name": "2-ethylhexyl (2-methylpropan-2-yl)oxy carbonate",
+      "synonyms": [
+        "tert-Butylperoxy 2-ethylhexyl carbonate",
+        "34443-12-4",
+        "Trigonox 117",
+        "Luperox TBEC",
+        "OO-tert-butyl O-(2-ethylhexyl) peroxycarbonate",
+        "2H9JK72OB3",
+        "DTXSID2044921",
+        "PEROXAN BEC",
+        "tert-Butylperoxy 2-ethylhexyl monocarbonate",
+        "EINECS 252-029-5"
+      ]
+    },
+    "BSYNRYMUTXBXSQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(=O)Oc1ccccc1C(=O)O",
+      "inchikey": "BSYNRYMUTXBXSQ-UHFFFAOYSA-N",
+      "iupac_name": "2-acetyloxybenzoic acid",
+      "synonyms": [
+        "aspirin",
+        "ACETYLSALICYLIC ACID",
+        "50-78-2",
+        "2-Acetoxybenzoic acid",
+        "2-(Acetyloxy)benzoic acid",
+        "Acylpyrin",
+        "O-Acetylsalicylic acid",
+        "o-Acetoxybenzoic acid",
+        "Acenterine",
+        "Acetophen"
+      ]
+    },
+    "BVKZGUZCCUSVTD-UHFFFAOYSA-L": {
+      "canonical_smiles": "O=C([O-])[O-]",
+      "inchikey": "BVKZGUZCCUSVTD-UHFFFAOYSA-L",
+      "iupac_name": "carbonate",
+      "synonyms": [
+        "carbonate",
+        "CARBONATE ION",
+        "3812-32-6",
+        "Carbonate ions",
+        "Karbonat",
+        "UNII-7UJQ5OPE7D",
+        "7UJQ5OPE7D",
+        "trioxidocarbonate(2-)",
+        "CO3(2-)",
+        "CHEBI:41609"
+      ]
+    },
+    "BVKZGUZCCUSVTD-UHFFFAOYSA-M": {
+      "canonical_smiles": "O=C([O-])O",
+      "inchikey": "BVKZGUZCCUSVTD-UHFFFAOYSA-M",
+      "iupac_name": "hydrogen carbonate",
+      "synonyms": [
+        "bicarbonate",
+        "Hydrogen carbonate",
+        "Bicarbonate ion",
+        "71-52-3",
+        "Hydrogencarbonate",
+        "Carbonate, hydrogen",
+        "HCO3-",
+        "Monohydrogen carbonate",
+        "Bicarbonate ions",
+        "Acid carbonate"
+      ]
+    },
+    "CCZLMCQIVCOCNB-UHFFFAOYSA-M": {
+      "canonical_smiles": "CCCCC1(CC)C(=O)N=C(S)N=C1[O-].[Na+]",
+      "inchikey": "CCZLMCQIVCOCNB-UHFFFAOYSA-M",
+      "iupac_name": "sodium 5-butyl-5-ethyl-6-oxo-2-sulfanylpyrimidin-4-olate",
+      "synonyms": []
+    },
+    "CDYPSIIDXKMBLV-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(O)C(C(=O)O)C1N=C(C(=O)O)C(SC2CNC(C(=O)N(C)C)C2)C1C",
+      "inchikey": "CDYPSIIDXKMBLV-UHFFFAOYSA-N",
+      "iupac_name": "2-(1-carboxy-2-hydroxypropyl)-4-[5-(dimethylcarbamoyl)pyrrolidin-3-yl]sulfanyl-3-methyl-3,4-dihydro-2H-pyrrole-5-carboxylic acid",
+      "synonyms": [
+        "2-(1-carboxy-2-hydroxypropyl)-4-{[5-(dimethylcarbamoyl)pyrrolidin-3-yl]sulfanyl}-3-methyl-3,4-dihydro-2h-pyrrole-5-carboxylic acid",
+        "DTXSID30924745",
+        "2-(1-Carboxy-2-hydroxypropyl)-4-[5-(dimethylcarbamoyl)pyrrolidin-3-yl]sulfanyl-3-methyl-3,4-dihydro-2H-pyrrole-5-carboxylic acid",
+        "2-(1,3-dihydroxy-1-oxobutan-2-yl)-4-[5-(dimethylcarbamoyl)pyrrolidin-3-yl]sulfanyl-3-methyl-3,4-dihydro-2H-pyrrole-5-carboxylic acid",
+        "2H-Pyrrole-2-acetic acid, 5-carboxy-4-[[(3S,5S)-5-[(dimethylamino)carbonyl]-3-pyrrolidinyl]thio]-3,4-dihydro-|A-[(1R)-hydroxyethyl]-3-methyl-, (|AS,2S,3R,4S)-"
+      ]
+    },
+    "CKLJMWTZIZZHCS-UHFFFAOYSA-N": {
+      "canonical_smiles": "NC(CC(=O)O)C(=O)O",
+      "inchikey": "CKLJMWTZIZZHCS-UHFFFAOYSA-N",
+      "iupac_name": "2-aminobutanedioic acid",
+      "synonyms": [
+        "(+-)-Aspartic acid",
+        "RefChem:905505",
+        "DL-ASPARTIC ACID",
+        "617-45-8",
+        "2-aminobutanedioic acid",
+        "DL-Aminosuccinic acid",
+        "DL-Asparagic acid",
+        "Aspartic acid, DL-",
+        "DL-Asp-OH",
+        "Acid D,L-aspart"
+      ]
+    },
+    "COBPKKZHLDDMTB-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCOCCOCCOCCO",
+      "inchikey": "COBPKKZHLDDMTB-UHFFFAOYSA-N",
+      "iupac_name": "2-[2-(2-butoxyethoxy)ethoxy]ethanol",
+      "synonyms": [
+        "TRIETHYLENE GLYCOL MONOBUTYL ETHER",
+        "143-22-6",
+        "Butoxytriglycol",
+        "2-[2-(2-Butoxyethoxy)ethoxy]ethanol",
+        "Butyltriglycol",
+        "Ethanol, 2-[2-(2-butoxyethoxy)ethoxy]-",
+        "2-(2-(2-Butoxyethoxy)ethoxy)ethanol",
+        "HSDB 5645",
+        "EINECS 205-592-6",
+        "UNII-OC116GRO69"
+      ]
+    },
+    "CPDSKRADSLRTFN-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1ccccc1C(=O)Nc1nn[nH]n1",
+      "inchikey": "CPDSKRADSLRTFN-UHFFFAOYSA-N",
+      "iupac_name": "2-methyl-N-(2H-tetrazol-5-yl)benzamide",
+      "synonyms": [
+        "2-methyl-N-(1H-tetrazol-5-yl)benzamide",
+        "SCHEMBL2662445",
+        "STK440176",
+        "AKOS003292447",
+        "ST50929249",
+        "SR-01000255878",
+        "SR-01000255878-1",
+        "N-(1H-1,2,3,4-tetraazol-5-yl)(2-methylphenyl)carboxamide"
+      ]
+    },
+    "CPNGPNLZQNNVQM-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1cnc2ncncc2n1",
+      "inchikey": "CPNGPNLZQNNVQM-UHFFFAOYSA-N",
+      "iupac_name": "pteridine",
+      "synonyms": [
+        "PTERIDINE",
+        "91-18-9",
+        "Azinepurine",
+        "1,3,5,8-Tetraazanaphthalene",
+        "Pyrimido(4,5-b)pyrazine",
+        "Pyrazino(2,3-d)pyrimidine",
+        "Pyrazino[2,3-d]pyrimidine",
+        "6EZF26XQ81",
+        "Pyrimido[4,5-b]pyrazine",
+        "NSC-268562"
+      ]
+    },
+    "CVAVMIODJQHEEH-UHFFFAOYSA-O": {
+      "canonical_smiles": "CCN(CC)c1ccc2c(-c3ccccc3C(=O)O)c3ccc(=[N+](CC)CC)cc-3oc2c1",
+      "inchikey": "CVAVMIODJQHEEH-UHFFFAOYSA-O",
+      "iupac_name": "[9-(2-carboxyphenyl)-6-(diethylamino)xanthen-3-ylidene]-diethylazanium",
+      "synonyms": [
+        "Rhodamine 610",
+        "Rhodamine B ion(1+)",
+        "Rhodamine B ion",
+        "Xanthylium, 9-(2-carboxyphenyl)-3,6-bis(diethylamino)-",
+        "RefChem:902310",
+        "Rhodamine B cation",
+        "Rhodamine B(1+)",
+        "64381-98-2",
+        "D and C Red 19",
+        "[9-(2-carboxyphenyl)-6-(diethylamino)xanthen-3-ylidene]-diethylazanium"
+      ]
+    },
+    "CVVFFUKULYKOJR-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(C)Oc1ccc(Nc2ccccc2)cc1",
+      "inchikey": "CVVFFUKULYKOJR-UHFFFAOYSA-N",
+      "iupac_name": "N-phenyl-4-propan-2-yloxyaniline",
+      "synonyms": [
+        "p-Isopropoxydiphenylamine",
+        "4-ISOPROPOXYDIPHENYLAMINE",
+        "Benzenamine, 4-(1-methylethoxy)-N-phenyl-",
+        "4-Isopropoxy-N-phenylaniline",
+        "CCRIS 6052",
+        "HSDB 2874",
+        "EINECS 202-970-2",
+        "UNII-259SIX2B44",
+        "BRN 2647119",
+        "AI3-14321"
+      ]
+    },
+    "CXMXRPHRNRROMY-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(O)CCCCCCCCC(=O)O",
+      "inchikey": "CXMXRPHRNRROMY-UHFFFAOYSA-N",
+      "iupac_name": "decanedioic acid",
+      "synonyms": [
+        "sebacic acid",
+        "DECANEDIOIC ACID",
+        "111-20-6",
+        "1,8-Octanedicarboxylic acid",
+        "1,10-Decanedioic acid",
+        "Sebacinsaure",
+        "Decanedicarboxylic acid",
+        "n-Decanedioic acid",
+        "Acide sebacique",
+        "Sebacinsaeure"
+      ]
+    },
+    "CZGGKXNYNPJFAX-UHFFFAOYSA-N": {
+      "canonical_smiles": "COP(=S)(S)OC",
+      "inchikey": "CZGGKXNYNPJFAX-UHFFFAOYSA-N",
+      "iupac_name": "dimethoxy-sulfanyl-sulfanylidene-lambda5-phosphane",
+      "synonyms": [
+        "756-80-9",
+        "O,O-DIMETHYL DITHIOPHOSPHATE",
+        "O,O-Dimethyldithiophosphate",
+        "Dimethyl phosphorodithioate",
+        "Dimethyldithiophosphoric acid",
+        "Dimethyl phosphodithionate",
+        "O,O-Dimethyl phosphorodithioate",
+        "O,O-Dimethyl dithiophosphoric acid",
+        "O,O-Dimethyl phosphorodithioic acid",
+        "4K09JRW4Z6"
+      ]
+    },
+    "CZPWVGJYEJSRLH-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1cncnc1",
+      "inchikey": "CZPWVGJYEJSRLH-UHFFFAOYSA-N",
+      "iupac_name": "pyrimidine",
+      "synonyms": [
+        "PYRIMIDINE",
+        "289-95-2",
+        "1,3-Diazine",
+        "Metadiazine",
+        "m-Diazine",
+        "Miazine",
+        "Pyrimidine base",
+        "1,3-Diazin",
+        "K8CXK5Q32L",
+        "NSC-89305"
+      ]
+    },
+    "DDLIGBOFAVUZHB-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2",
+      "inchikey": "DDLIGBOFAVUZHB-UHFFFAOYSA-N",
+      "iupac_name": "8-chloro-6-(2-fluorophenyl)-1-methyl-4H-imidazo[1,5-a][1,4]benzodiazepine",
+      "synonyms": [
+        "midazolam",
+        "59467-70-8",
+        "Buccolam",
+        "Midazolamum",
+        "8-Chloro-6-(2-fluorophenyl)-1-methyl-4H-imidazo[1,5-a][1,4]benzodiazepine",
+        "mezolam",
+        "Nayzilam",
+        "Midazolam civ",
+        "USL261",
+        "R60L0SM5BC"
+      ]
+    },
+    "DHBNKJDUOCTGCK-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCCCCCCCCCCCCCCC(=O)C1CCOC1=O",
+      "inchikey": "DHBNKJDUOCTGCK-UHFFFAOYSA-N",
+      "iupac_name": "3-octadecanoyloxolan-2-one",
+      "synonyms": [
+        "Perhydro-2-oxo-3-stearoylfuran",
+        "SCHEMBL9854993",
+        "DHBNKJDUOCTGCK-UHFFFAOYSA-N",
+        "3-Stearoyldihydro-2(3H)-furanone #"
+      ]
+    },
+    "DKYWVDODHFEZIM-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(C(=O)O)c1cccc(C(=O)c2ccccc2)c1",
+      "inchikey": "DKYWVDODHFEZIM-UHFFFAOYSA-N",
+      "iupac_name": "2-(3-benzoylphenyl)propanoic acid",
+      "synonyms": [
+        "ketoprofen",
+        "22071-15-4",
+        "2-(3-Benzoylphenyl)propanoic acid",
+        "2-(3-Benzoylphenyl)propionic acid",
+        "Orudis",
+        "Oruvail",
+        "Capisten",
+        "Actron",
+        "Alrheumat",
+        "Ketoprofene"
+      ]
+    },
+    "DLRVVLDZNNYCBX-ZZFZYMBESA-N": {
+      "canonical_smiles": "OC[C@H]1O[C@H](OC[C@H]2O[C@@H](O)[C@H](O)[C@@H](O)[C@@H]2O)[C@H](O)[C@@H](O)[C@H]1O",
+      "inchikey": "DLRVVLDZNNYCBX-ZZFZYMBESA-N",
+      "iupac_name": "(2R,3R,4S,5S,6R)-6-[[(2S,3R,4S,5R,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxymethyl]oxane-2,3,4,5-tetrol",
+      "synonyms": [
+        "13299-21-3",
+        "DTXSID701267541",
+        "6-O-alpha-D-galactopyranosyl-beta-D-glucopyranose",
+        "RefChem:935951",
+        "GlyTouCan:G55954SF",
+        "DTXCID201698179",
+        "G55954SF",
+        "beta-melibiose",
+        "CHEBI:61827",
+        "(2R,3R,4S,5S,6R)-6-[[(2S,3R,4S,5R,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxymethyl]oxane-2,3,4,5-tetrol"
+      ]
+    },
+    "DMEGYFMYUHOHGS-UHFFFAOYSA-N": {
+      "canonical_smiles": "C1CCCCCC1",
+      "inchikey": "DMEGYFMYUHOHGS-UHFFFAOYSA-N",
+      "iupac_name": "cycloheptane",
+      "synonyms": [
+        "CYCLOHEPTANE",
+        "291-64-5",
+        "Suberane",
+        "Heptamethylene",
+        "UNII-VTZ53P34JA",
+        "VTZ53P34JA",
+        "HSDB 59",
+        "NSC 5164",
+        "NSC-5164",
+        "EINECS 206-030-2"
+      ]
+    },
+    "DNIAPMSPPWPWGF-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(O)CO",
+      "inchikey": "DNIAPMSPPWPWGF-UHFFFAOYSA-N",
+      "iupac_name": "propane-1,2-diol",
+      "synonyms": [
+        "propylene glycol",
+        "1,2-propanediol",
+        "propane-1,2-diol",
+        "57-55-6",
+        "1,2-Propylene glycol",
+        "1,2-dihydroxypropane",
+        "2-Hydroxypropanol",
+        "Isopropylene glycol",
+        "Dowfrost",
+        "Sirlene"
+      ]
+    },
+    "DOMWKUIIPQCAJU-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCCC(=O)OC1(C(C)=O)CCC2C3CCC4=CC(=O)CCC4(C)C3CCC21C",
+      "inchikey": "DOMWKUIIPQCAJU-UHFFFAOYSA-N",
+      "iupac_name": "(17-acetyl-10,13-dimethyl-3-oxo-2,6,7,8,9,11,12,14,15,16-decahydro-1H-cyclopenta[a]phenanthren-17-yl) hexanoate",
+      "synonyms": [
+        "3,20-Dioxopregn-4-en-17-yl hexanoate",
+        "(17-acetyl-10,13-dimethyl-3-oxo-2,6,7,8,9,11,12,14,15,16-decahydro-1H-cyclopenta[a]phenanthren-17-yl) hexanoate",
+        "SCHEMBL17517045",
+        "17a-Hydroxyprogesterone hexanoate",
+        "HMS5083A14",
+        "STL356011",
+        "AKOS022096655",
+        "[(8R,9S,10R,13S,14S,17R)-17-acetyl-10,13-dimethyl-3-oxo-2,6,7,8,9,11,12,14,15,16-decahydro-1H-cyclopenta[a]phenanthren-17-yl] hexanoate;",
+        "[(8R,9S,10R,13S,14S,17S)-17-acetyl-10,13-dimethyl-3-oxo-2,6,7,8,9,11,12,14,15,16-decahydro-1H-cyclopenta[a]phenanthren-17-yl] hexanoate"
+      ]
+    },
+    "DPGKFACWOCLTCA-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(CC1c2ccccc2C(=O)N1c1ccc2ccc(Cl)nc2n1)N1CCC2(CC1)OCCO2",
+      "inchikey": "DPGKFACWOCLTCA-UHFFFAOYSA-N",
+      "iupac_name": "2-(7-chloro-1,8-naphthyridin-2-yl)-3-[2-(1,4-dioxa-8-azaspiro[4.5]decan-8-yl)-2-oxoethyl]-3H-isoindol-1-one",
+      "synonyms": [
+        "PAZINACLONE",
+        "103255-66-9",
+        "DN-2327",
+        "MHK03047IJ",
+        "A-77000",
+        "DTXSID70869388",
+        "DN2327",
+        "(+-)-2-(7-Chloro-1,8-naphthyridin-2-yl)-3-(((1,4-dioxa-8-azaspiro(4.5)dec-8-yl)carbonyl)methyl)-1-isoindolinone",
+        "(+-)-8-((2-(7-Chloro-1,8-naphthyridin-2-yl)-3-oxo-1-isoindolinyl)acetyl)-1,4-dioxa-8-azaspiro(4.5)decane",
+        "A77000"
+      ]
+    },
+    "DTQVDTLACAAQTR-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(O)C(F)(F)F",
+      "inchikey": "DTQVDTLACAAQTR-UHFFFAOYSA-N",
+      "iupac_name": "2,2,2-trifluoroacetic acid",
+      "synonyms": [
+        "Trifluoroacetic acid",
+        "76-05-1",
+        "Perfluoroacetic acid",
+        "Trifluoracetic acid",
+        "Trifluoroethanoic acid",
+        "2,2,2-trifluoroacetic acid",
+        "Acetic acid, trifluoro-",
+        "Kyselina trifluoroctova",
+        "Acetic acid, 2,2,2-trifluoro-",
+        "DTXSID9041578"
+      ]
+    },
+    "DVMTXIBWWWBKNL-UHFFFAOYSA-M": {
+      "canonical_smiles": "CC(C)[N+](C)(CCN(c1ccccc1)C1CCCCC1)C(C)C.[I-]",
+      "inchikey": "DVMTXIBWWWBKNL-UHFFFAOYSA-M",
+      "iupac_name": "2-(N-cyclohexylanilino)ethyl-methyl-di(propan-2-yl)azanium iodide",
+      "synonyms": [
+        "(2-(N-Cyclohexylanilino)ethyl)diisopropylmethylammonium iodide",
+        "3102-15-6",
+        "AMMONIUM, (2-(N-CYCLOHEXYLANILINO)ETHYL)DIISOPROPYLMETHYL-, IODIDE",
+        "Ioduro di metildiisopropil-beta-fenilcicloesilaminoetilammonio [Italian]",
+        "Ioduro di metildiisopropil-beta-fenilcicloesilaminoetilammonio",
+        "RefChem:318762",
+        "2-(N-cyclohexylanilino)ethyl-methyl-di(propan-2-yl)azanium iodide",
+        "DTXSID50953138",
+        "N-{2-[Cyclohexyl(phenyl)amino]ethyl}-N-methyl-N-(propan-2-yl)propan-2-aminium iodide"
+      ]
+    },
+    "DWIKEPVFPTUJQU-UHFFFAOYSA-N": {
+      "canonical_smiles": "COC1(OC)CCCN2CC(c3ccccc3)N=C21",
+      "inchikey": "DWIKEPVFPTUJQU-UHFFFAOYSA-N",
+      "iupac_name": "8,8-dimethoxy-2-phenyl-3,5,6,7-tetrahydro-2H-imidazo[1,2-a]pyridine",
+      "synonyms": [
+        "Oxamisole",
+        "99258-56-7",
+        "Oxamisol",
+        "Oxamisolum",
+        "MW5753V737",
+        "2,3,5,6,7,8-hexahydro-2-phenyl-8,8-dimethoxy-imidazo(1,2a)pyridine",
+        "RefChem:168820",
+        "PR-879-317",
+        "Oxamisole [INN]",
+        "8,8-dimethoxy-2-phenyl-3,5,6,7-tetrahydro-2H-imidazo[1,2-a]pyridine"
+      ]
+    },
+    "DWMREKMVXIFPFM-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1cnc(NC(O)=C2C(=O)c3ccccc3S(=O)(=O)N2C)s1",
+      "inchikey": "DWMREKMVXIFPFM-UHFFFAOYSA-N",
+      "iupac_name": "3-[hydroxy-[(5-methyl-1,3-thiazol-2-yl)amino]methylidene]-2-methyl-1,1-dioxo-1lambda6,2-benzothiazin-4-one",
+      "synonyms": [
+        "meloxicam",
+        "71125-38-7",
+        "Mobic",
+        "Metacam",
+        "Mobicox",
+        "Movalis",
+        "Movatec",
+        "Mobec",
+        "Coxicam",
+        "Meloxivet"
+      ]
+    },
+    "DWNAQMUDCDVSLT-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(Oc1ccccc1)c1ccccc1C(=O)Oc1ccccc1",
+      "inchikey": "DWNAQMUDCDVSLT-UHFFFAOYSA-N",
+      "iupac_name": "diphenyl benzene-1,2-dicarboxylate",
+      "synonyms": [
+        "DIPHENYL PHTHALATE",
+        "84-62-8",
+        "Phenyl phthalate",
+        "1,2-Benzenedicarboxylic acid, diphenyl ester",
+        "Phthalic acid, diphenyl ester",
+        "diphenyl benzene-1,2-dicarboxylate",
+        "Caswell No. 399B",
+        "1,2-Benzenedicarboxylic acid, 1,2-diphenyl ester",
+        "NSC 4052",
+        "EINECS 201-546-4"
+      ]
+    },
+    "FAVRAXVBHORDCR-UHFFFAOYSA-N": {
+      "canonical_smiles": "CN(C)C1CC(c2ccc(Br)cc2)c2ccccc21",
+      "inchikey": "FAVRAXVBHORDCR-UHFFFAOYSA-N",
+      "iupac_name": "3-(4-bromophenyl)-N,N-dimethyl-2,3-dihydro-1H-inden-1-amine",
+      "synonyms": [
+        "N,N-Dimethyl-3-(4'-bromophenyl)-1-indanamine",
+        "86945-54-2",
+        "RefChem:161247",
+        "CHEMBL300069",
+        "3-(4-bromophenyl)-N,N-dimethyl-2,3-dihydro-1H-inden-1-amine",
+        "trans-Dbpi",
+        "SCHEMBL29586293",
+        "DTXSID201007211",
+        "BDBM50021247",
+        "1-Indanamine, 3-(4-bromophenyl)-N,N-dimethyl-"
+      ]
+    },
+    "FKNQCJSGGFJEIZ-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1ccncc1",
+      "inchikey": "FKNQCJSGGFJEIZ-UHFFFAOYSA-N",
+      "iupac_name": "4-methylpyridine",
+      "synonyms": [
+        "4-METHYLPYRIDINE",
+        "4-Picoline",
+        "108-89-4",
+        "gamma-Picoline",
+        "Pyridine, 4-methyl-",
+        "p-Picoline",
+        "p-Methylpyridine",
+        "4-methyl pyridine",
+        "gamma-Methylpyridine",
+        "Ba 35846"
+      ]
+    },
+    "FKNXQNWAXFXVNW-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCC(NC(C)C)C(O)c1ccc(O)c2[nH]c(=O)ccc12",
+      "inchikey": "FKNXQNWAXFXVNW-UHFFFAOYSA-N",
+      "iupac_name": "8-hydroxy-5-[1-hydroxy-2-(propan-2-ylamino)butyl]-1H-quinolin-2-one",
+      "synonyms": [
+        "60443-17-6",
+        "NSC308904",
+        "Procaterol (INN)",
+        "Meptin (TN)",
+        "NSC 308904",
+        "NSC-308904",
+        "Spectrum2_001550",
+        "Spectrum3_001770",
+        "2(1H)-Quinolinone, 8-hydroxy-5-(1-hydroxy-2-((1-methylethyl)amino)butyl)-",
+        "8-Hydroxy-5-(1-hydroxy-2-((1-methylethyl)amino)butyl)-2(1H)-quinolinone"
+      ]
+    },
+    "FNTXZPIFHIHNPC-UHFFFAOYSA-N": {
+      "canonical_smiles": "Nc1nonc1C(=O)NCCN=Cc1cc(Cc2ccccc2)cc(Br)c1O",
+      "inchikey": "FNTXZPIFHIHNPC-UHFFFAOYSA-N",
+      "iupac_name": "4-amino-N-[2-[(5-benzyl-3-bromo-2-hydroxyphenyl)methylideneamino]ethyl]-1,2,5-oxadiazole-3-carboxamide",
+      "synonyms": [
+        "MLS000077667",
+        "SMR000035956",
+        "CHEMBL3190482",
+        "BDBM39873",
+        "cid_5389398",
+        "HMS2423C19",
+        "STK158065",
+        "AKOS000294718",
+        "NCGC00019993-01",
+        "NCGC00019993-02"
+      ]
+    },
+    "FNVZESNQKGUUGN-LBPRGKRZSA-N": {
+      "canonical_smiles": "CC[C@@H](CO)NCc1ccc(C)cc1",
+      "inchikey": "FNVZESNQKGUUGN-LBPRGKRZSA-N",
+      "iupac_name": "(2S)-2-[(4-methylphenyl)methylamino]butan-1-ol",
+      "synonyms": []
+    },
+    "FXFAOKJEMZBSFO-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cn1cc(C2C(=O)C(O)C(c3ccccc3)C(=O)C2O)c2ccccc21",
+      "inchikey": "FXFAOKJEMZBSFO-UHFFFAOYSA-N",
+      "iupac_name": "2,5-dihydroxy-3-(1-methylindol-3-yl)-6-phenylcyclohexane-1,4-dione",
+      "synonyms": []
+    },
+    "FZFGGNNUYSILSL-UHFFFAOYSA-N": {
+      "canonical_smiles": "COc1cc2c(cc1CC=C(C)C)C1Oc3cc(O)ccc3C1CO2",
+      "inchikey": "FZFGGNNUYSILSL-UHFFFAOYSA-N",
+      "iupac_name": "3-methoxy-2-(3-methylbut-2-enyl)-6a,11a-dihydro-6H-[1]benzofuro[3,2-c]chromen-9-ol",
+      "synonyms": [
+        "NSC692936",
+        "NSC-692936"
+      ]
+    },
+    "FZVGBZMKMOTWTQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(CSc1nnc(-c2ccccn2)s1)NN=Cc1ccc([N+](=O)[O-])cc1",
+      "inchikey": "FZVGBZMKMOTWTQ-UHFFFAOYSA-N",
+      "iupac_name": "N-[(4-nitrophenyl)methylideneamino]-2-[(5-pyridin-2-yl-1,3,4-thiadiazol-2-yl)sulfanyl]acetamide",
+      "synonyms": [
+        "NCI60_040364"
+      ]
+    },
+    "GDNCPUALLHJYDZ-UHFFFAOYSA-N": {
+      "canonical_smiles": "N=Nc1ccc(N(O)O)cc1",
+      "inchikey": "GDNCPUALLHJYDZ-UHFFFAOYSA-N",
+      "iupac_name": "4-diazenyl-N,N-dihydroxyaniline",
+      "synonyms": [
+        "4-Nitrophenylhydrazine",
+        "(4-Nitrophenyl)hydrazine",
+        "100-16-3",
+        "p-Nitrophenylhydrazine",
+        "Hydrazine, (4-nitrophenyl)-",
+        "p-Hydrazinonitrobenzene",
+        "HYDRAZINE, (p-NITROPHENYL)-",
+        "(p-Nitrophenyl)hydrazine",
+        "NSC 4079",
+        "NSC-4079"
+      ]
+    },
+    "GDTKLBWSCOKFCA-NSHDSACASA-N": {
+      "canonical_smiles": "N[C@@H](Cc1cc2ccccc2[nH]1)C(=O)NCC(=O)NCC(=O)O",
+      "inchikey": "GDTKLBWSCOKFCA-NSHDSACASA-N",
+      "iupac_name": "2-[[2-[[(2S)-2-amino-3-(1H-indol-2-yl)propanoyl]amino]acetyl]amino]acetic acid",
+      "synonyms": [
+        "Tryptophyl-glycyl-glycine",
+        "RefChem:192362",
+        "20762-31-6",
+        "3-(1h-indol-2-yl)-l-alanylglycylglycine",
+        "Trp-gly-gly dihydrate",
+        "2-[[2-[[(2S)-2-amino-3-(1H-indol-2-yl)propanoyl]amino]acetyl]amino]acetic acid",
+        "(S)-2-(2-(2-Amino-3-(1H-indol-2-yl)propanamido)acetamido)acetic acid",
+        "2-{2-[(2S)-2-amino-3-(1H-indol-2-yl)propanamido]acetamido}acetic acid",
+        "DTXSID30942969",
+        "Glycine, N-(N-L-tryptophylglycyl)-"
+      ]
+    },
+    "GLLCJYKJDIPIGT-UHFFFAOYSA-N": {
+      "canonical_smiles": "CB(C)C(C)=C(C)[Si](C)(C)C",
+      "inchikey": "GLLCJYKJDIPIGT-UHFFFAOYSA-N",
+      "iupac_name": "3-dimethylboranylbut-2-en-2-yl(trimethyl)silane",
+      "synonyms": [
+        "62108-35-4",
+        "AGN-PC-0JSRJV",
+        "DTXSID60338917",
+        "DB-360252",
+        "[3-(Dimethylboranyl)but-2-en-2-yl]tri(methyl)silane",
+        "Dimethyl [1-methyl-2-(trimethylsilyl )-1-propenyl]borane"
+      ]
+    },
+    "GLMIKHUSFBMIRH-INIZCTEOSA-N": {
+      "canonical_smiles": "CS(=O)(=O)N1N=C(c2ccccc2)C[C@H]1c1ccc(Cl)cc1",
+      "inchikey": "GLMIKHUSFBMIRH-INIZCTEOSA-N",
+      "iupac_name": "(3S)-3-(4-chlorophenyl)-2-methylsulfonyl-5-phenyl-3,4-dihydropyrazole",
+      "synonyms": []
+    },
+    "GOYDASFKHSBSBH-UHFFFAOYSA-P": {
+      "canonical_smiles": "Nc1ccc(S(=O)(=[OH+])[NH2+]c2ncccn2)cc1.[Ag+]",
+      "inchikey": "GOYDASFKHSBSBH-UHFFFAOYSA-P",
+      "iupac_name": "silver [(4-aminophenyl)-oxo-oxoniumylidene-lambda6-sulfanyl]-pyrimidin-2-ylazanium",
+      "synonyms": [
+        "AKOS015967004"
+      ]
+    },
+    "GPOGGCGGDJOXSN-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(Cl)=CC[N+](C)(C)C",
+      "inchikey": "GPOGGCGGDJOXSN-UHFFFAOYSA-N",
+      "iupac_name": "3-chlorobut-2-enyl(trimethyl)azanium",
+      "synonyms": []
+    },
+    "GRAAPKVUSREWIL-UHFFFAOYSA-N": {
+      "canonical_smiles": "C=C(O)CC(c1ccccc1)c1c(O)oc2ccccc2c1=O",
+      "inchikey": "GRAAPKVUSREWIL-UHFFFAOYSA-N",
+      "iupac_name": "2-hydroxy-3-(3-hydroxy-1-phenylbut-3-enyl)chromen-4-one",
+      "synonyms": [
+        "101468-14-8",
+        "COUMARIN, 4-HYDROXY-3-(alpha-(2-HYDROXYALLYL)BENZYL)-",
+        "RefChem:1082240",
+        "Microfarin",
+        "Acid (enol) warfarin",
+        "4-Hydroxy-3-(3-hydroxy-1-phenylbut-3-en-1-yl)-2H-chromen-2-one",
+        "Microcrystalline warfarin",
+        "orb1696105",
+        "SCHEMBL29472972",
+        "4-hydroxy-3-(3-hydroxy-1-phenylbut-3-enyl)chromen-2-one"
+      ]
+    },
+    "GSDSWSVVBLHKDQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1COc2c(N3CCN(C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23",
+      "inchikey": "GSDSWSVVBLHKDQ-UHFFFAOYSA-N",
+      "iupac_name": "7-fluoro-2-methyl-6-(4-methylpiperazin-1-yl)-10-oxo-4-oxa-1-azatricyclo[7.3.1.05,13]trideca-5(13),6,8,11-tetraene-11-carboxylic acid",
+      "synonyms": [
+        "ofloxacin",
+        "82419-36-1",
+        "Floxin",
+        "Ofloxacine",
+        "Tarivid",
+        "Ocuflox",
+        "Ofloxacino",
+        "Visiren",
+        "Ofloxacinum",
+        "Exocin"
+      ]
+    },
+    "HBEDSQVIWPRPAY-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1ccc2c(c1)CCO2",
+      "inchikey": "HBEDSQVIWPRPAY-UHFFFAOYSA-N",
+      "iupac_name": "2,3-dihydro-1-benzofuran",
+      "synonyms": [
+        "2,3-DIHYDROBENZOFURAN",
+        "496-16-2",
+        "Coumaran",
+        "2,3-Dihydro-1-benzofuran",
+        "Dihydrobenzofuran",
+        "99E861415L",
+        "DTXSID2022040",
+        "CHEBI:87607",
+        "RefChem:442387",
+        "DTXCID402040"
+      ]
+    },
+    "HEDRZPFGACZZDS-MICDWDOJSA-N": {
+      "canonical_smiles": "[2H]C(Cl)(Cl)Cl",
+      "inchikey": "HEDRZPFGACZZDS-MICDWDOJSA-N",
+      "iupac_name": "trichloro(deuterio)methane",
+      "synonyms": [
+        "Chloroform-D",
+        "865-49-6",
+        "deuteriochloroform",
+        "Trichloromethane-d",
+        "Methane-d, trichloro-",
+        "(2H)Chloroform",
+        "deuterated chloroform",
+        "CDCl3",
+        "Trichloromethane-d1",
+        "deuterotrichloromethane"
+      ]
+    },
+    "HEVXQLBAMFMFKU-UHFFFAOYSA-N": {
+      "canonical_smiles": "C=C1C2=C(CC1(C)CC=CC(C)=CC(=O)O)C(C)(C)CCC2",
+      "inchikey": "HEVXQLBAMFMFKU-UHFFFAOYSA-N",
+      "iupac_name": "3-methyl-6-(2,7,7-trimethyl-3-methylidene-1,4,5,6-tetrahydroinden-2-yl)hexa-2,4-dienoic acid",
+      "synonyms": [
+        "SCHEMBL2513359",
+        "PD036938"
+      ]
+    },
+    "HFBRIBBFDLIEDL-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(C)c1ccccc1NC(=O)c1ccc(Cl)cc1",
+      "inchikey": "HFBRIBBFDLIEDL-UHFFFAOYSA-N",
+      "iupac_name": "4-chloro-N-(2-propan-2-ylphenyl)benzamide",
+      "synonyms": [
+        "4-chloro-N-(2-isopropylphenyl)benzamide",
+        "4-chloro-N-[2-(propan-2-yl)phenyl]benzamide",
+        "4-chloro-N-(2-propan-2-ylphenyl)benzamide",
+        "STK408265",
+        "AKOS000533899",
+        "ST50184340",
+        "AK-968/11368410",
+        "SR-01000405185",
+        "SR-01000405185-1",
+        "(4-chlorophenyl)-N-[2-(methylethyl)phenyl]carboxamide"
+      ]
+    },
+    "HJBUWTLHZIRBIM-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCCCCCCc1ccc(O)c(Cl)c1",
+      "inchikey": "HJBUWTLHZIRBIM-UHFFFAOYSA-N",
+      "iupac_name": "2-chloro-4-nonylphenol",
+      "synonyms": [
+        "2-CHLORO-4-NONYLPHENOL",
+        "Phenol, 2-chloro-4-nonyl-",
+        "EINECS 262-034-4",
+        "87R5T63ABY",
+        "NSC-402635",
+        "AI3-18979",
+        "DTXSID0069381",
+        "NSC 402635",
+        "RefChem:86271",
+        "DTXCID5042748"
+      ]
+    },
+    "HKOCPPPZXJOJBL-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCOC(=O)C1CCN(C2=NC(=O)C(=Cc3ccccc3)S2)CC1",
+      "inchikey": "HKOCPPPZXJOJBL-UHFFFAOYSA-N",
+      "iupac_name": "ethyl 1-(5-benzylidene-4-oxo-1,3-thiazol-2-yl)piperidine-4-carboxylate",
+      "synonyms": []
+    },
+    "HKQBGDOVZRQTMC-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(C)c1ccc(Nc2ccccc2)cc1",
+      "inchikey": "HKQBGDOVZRQTMC-UHFFFAOYSA-N",
+      "iupac_name": "N-phenyl-4-propan-2-ylaniline",
+      "synonyms": [
+        "4-Isopropyl-N-phenylaniline",
+        "5650-10-2",
+        "24U6D0YF40",
+        "4-(1-METHYLETHYL)-N-PHENYLBENZENAMINE",
+        "RefChem:1069728",
+        "227-089-0",
+        "N-(4-Isopropylphenyl)aniline",
+        "N-phenyl-4-propan-2-ylaniline",
+        "N-Phenyl-4-(propan-2-yl)aniline",
+        "Benzenamine, 4-(1-methylethyl)-N-phenyl-"
+      ]
+    },
+    "HOKKHZGPKSLGJE-UHFFFAOYSA-N": {
+      "canonical_smiles": "CNC(CC(=O)O)C(=O)O",
+      "inchikey": "HOKKHZGPKSLGJE-UHFFFAOYSA-N",
+      "iupac_name": "2-(methylamino)butanedioic acid",
+      "synonyms": [
+        "N-Methyl-DL-aspartic acid",
+        "17833-53-3",
+        "N-methylaspartic acid",
+        "Aspartic acid, N-methyl-",
+        "EU52DFC4WJ",
+        "DTXSID20859971",
+        "RefChem:830670",
+        "DTXCID30209721",
+        "2-(Methylamino)succinic acid",
+        "2-(methylamino)butanedioic acid"
+      ]
+    },
+    "HQVHOQAKMCMIIM-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1c(C(=O)c2cccc3ccccc23)c2cccc3c2n1C(CN1CCOCC1)CO3",
+      "inchikey": "HQVHOQAKMCMIIM-UHFFFAOYSA-N",
+      "iupac_name": "[2-methyl-11-(morpholin-4-ylmethyl)-9-oxa-1-azatricyclo[6.3.1.04,12]dodeca-2,4(12),5,7-tetraen-3-yl]-naphthalen-1-ylmethanone",
+      "synonyms": [
+        "131513-18-3",
+        "(5-methyl-3-(morpholinomethyl)-2,3-dihydro-[1,4]oxazino[2,3,4-hi]indol-6-yl)(naphthalen-1-yl)methanone",
+        "[5-methyl-3-(morpholin-4-ylmethyl)-2,3-dihydro[1,4]oxazino[2,3,4-hi]indol-6-yl](1-naphthyl)methanone",
+        "(5-Methyl-3-(morpholinomethyl)-2,3-dihydro-[1,4]oxazino-[2,3,4-hi]indol-6-yl)(naphthalen-1-yl)methanone",
+        "[2-methyl-11-(morpholin-4-ylmethyl)-9-oxa-1-azatricyclo[6.3.1.04,12]dodeca-2,4(12),5,7-tetraen-3-yl]-naphthalen-1-ylmethanone",
+        "[3H]WIN55212-2",
+        "GTPL736",
+        "CHEMBL283206",
+        "SCHEMBL3680086",
+        "SCHEMBL29410177"
+      ]
+    },
+    "HTTJABKRGRZYRN-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(=O)NC1C(O)OC(COS(=O)(=O)O)C(OC2OC(C(=O)O)C(OC3OC(CO)C(OC4OC(C(=O)O)C(O)C(O)C4OS(=O)(=O)O)C(OS(=O)(=O)O)C3NS(=O)(=O)O)C(O)C2OS(=O)(=O)O)C1O",
+      "inchikey": "HTTJABKRGRZYRN-UHFFFAOYSA-N",
+      "iupac_name": "6-[6-[6-[5-acetamido-4,6-dihydroxy-2-(sulfooxymethyl)oxan-3-yl]oxy-2-carboxy-4-hydroxy-5-sulfooxyoxan-3-yl]oxy-2-(hydroxymethyl)-5-(sulfoamino)-4-sulfooxyoxan-3-yl]oxy-3,4-dihydroxy-5-sulfooxyoxane-2-carboxylic acid",
+      "synonyms": [
+        "DTXSID80872762",
+        "2-o-sulfohexopyranuronosyl-(1->4)-2-deoxy-3-o-sulfo-2-(sulfoamino)hexopyranosyl-(1->4)-2-o-sulfohexopyranuronosyl-(1->4)-2-acetamido-2-deoxy-6-o-sulfohexopyranose",
+        "RefChem:935558",
+        "GlyTouCan:G90061MS",
+        "DTXCID50820351",
+        "G90061MS",
+        "Clexane",
+        "Parvoparin",
+        "alpha-Heparin",
+        "LMWH"
+      ]
+    },
+    "HVSVBQXJORWVEW-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(Cc1nc2ccc(Cl)cc2[nH]c1=O)c1ccccc1",
+      "inchikey": "HVSVBQXJORWVEW-UHFFFAOYSA-N",
+      "iupac_name": "7-chloro-3-phenacyl-1H-quinoxalin-2-one",
+      "synonyms": [
+        "NSC373056",
+        "NSC-373056"
+      ]
+    },
+    "HXGDTGSAIMULJN-UHFFFAOYSA-N": {
+      "canonical_smiles": "C1=Cc2cccc3cccc1c23",
+      "inchikey": "HXGDTGSAIMULJN-UHFFFAOYSA-N",
+      "iupac_name": "acenaphthylene",
+      "synonyms": [
+        "ACENAPHTHYLENE",
+        "208-96-8",
+        "Acenaphthalene",
+        "Cyclopenta[de]naphthalene",
+        "Cyclopenta(de)naphthalene",
+        "DTXSID3023845",
+        "NSC-59821",
+        "DTXCID103845",
+        "1Z25C36811",
+        "CHEBI:33081"
+      ]
+    },
+    "HYWYRSMBCFDLJT-UHFFFAOYSA-N": {
+      "canonical_smiles": "CS(=O)(=O)Nc1ccc([N+](=O)[O-])cc1Oc1ccccc1",
+      "inchikey": "HYWYRSMBCFDLJT-UHFFFAOYSA-N",
+      "iupac_name": "N-(4-nitro-2-phenoxyphenyl)methanesulfonamide",
+      "synonyms": [
+        "nimesulide",
+        "51803-78-2",
+        "N-(4-Nitro-2-phenoxyphenyl)methanesulfonamide",
+        "Aulin",
+        "R-805",
+        "Nimesulida",
+        "4-NITRO-2-PHENOXYMETHANESULFONANILIDE",
+        "Methanesulfonamide, N-(4-nitro-2-phenoxyphenyl)-",
+        "Nimesulidum",
+        "R 805"
+      ]
+    },
+    "HYZJCKYKOHLVJF-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1ccc2[nH]cnc2c1",
+      "inchikey": "HYZJCKYKOHLVJF-UHFFFAOYSA-N",
+      "iupac_name": "1H-benzimidazole",
+      "synonyms": [
+        "BENZIMIDAZOLE",
+        "51-17-2",
+        "1H-Benzimidazole",
+        "Benzoimidazole",
+        "1,3-Benzodiazole",
+        "3-Azaindole",
+        "Benziminazole",
+        "o-Benzimidazole",
+        "Benzoglyoxaline",
+        "Azindole"
+      ]
+    },
+    "HZJLWKWNJCDCNN-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1CC1C(=NO)C1CC1C",
+      "inchikey": "HZJLWKWNJCDCNN-UHFFFAOYSA-N",
+      "iupac_name": "N-[bis(2-methylcyclopropyl)methylidene]hydroxylamine",
+      "synonyms": [
+        "Dimethylcyclopropyl ketoxime",
+        "BRN 1936540",
+        "Methane, bis(2-methylcyclopropyl)-, oxime",
+        "Methane, hydroxyiminobis(2-methylcyclopropyl)-",
+        "54187-19-8",
+        "CYCLOPROPYL KETONE, 2,2'-DIMETHYL-, OXIME",
+        "RefChem:336324",
+        "N-[bis(2-methylcyclopropyl)methylidene]hydroxylamine",
+        "DTXSID60969144"
+      ]
+    },
+    "IAYPIBMASNFSPL-UHFFFAOYSA-N": {
+      "canonical_smiles": "C1CO1",
+      "inchikey": "IAYPIBMASNFSPL-UHFFFAOYSA-N",
+      "iupac_name": "oxirane",
+      "synonyms": [
+        "Oxirane",
+        "ETHYLENE OXIDE",
+        "75-21-8",
+        "Epoxyethane",
+        "1,2-Epoxyethane",
+        "Oxacyclopropane",
+        "Dihydrooxirene",
+        "Anprolene",
+        "Oxidoethane",
+        "Oxyfume"
+      ]
+    },
+    "IFZMRSOVOJVENG-UHFFFAOYSA-N": {
+      "canonical_smiles": "CN(C)C(=O)C(CC[N+]1(C)CCCC12CCCCC2)(c1ccccc1)c1ccccc1",
+      "inchikey": "IFZMRSOVOJVENG-UHFFFAOYSA-N",
+      "iupac_name": "N,N-dimethyl-4-(1-methyl-1-azoniaspiro[4.5]decan-1-yl)-2,2-diphenylbutanamide",
+      "synonyms": [
+        "NSC27397",
+        "NSC-27397",
+        "N,N-Dimethyl-4-(1-methyl-1.lambda.~5~-azaspiro[4.5]dec-1-yl)-2,2-diphenylbutanamide",
+        "N,N-dimethyl-4-(4-methyl-4-azoniaspiro[4.5]decan-4-yl)-2,2-diphenyl-butanamide"
+      ]
+    },
+    "IHOBPUJYFPFKOX-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCc1c(O)nc(SC2CC(=O)N(c3cc(OC)ccc3OC)C2=O)[nH]c1=O",
+      "inchikey": "IHOBPUJYFPFKOX-UHFFFAOYSA-N",
+      "iupac_name": "1-(2,5-dimethoxyphenyl)-3-[(4-hydroxy-6-oxo-5-propyl-1H-pyrimidin-2-yl)sulfanyl]pyrrolidine-2,5-dione",
+      "synonyms": [
+        "3-[(4,6-dihydroxy-5-propylpyrimidin-2-yl)sulfanyl]-1-(2,5-dimethoxyphenyl)pyrrolidine-2,5-dione",
+        "SMR000047489",
+        "878972-39-5",
+        "MLS000042579",
+        "MLS001306419",
+        "CHEMBL1466679",
+        "HMS2384N19",
+        "STK209992",
+        "AKOS002277504",
+        "AKOS016308769"
+      ]
+    },
+    "IISBACLAFKSPIT-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(C)(c1ccc(O)cc1)c1ccc(O)cc1",
+      "inchikey": "IISBACLAFKSPIT-UHFFFAOYSA-N",
+      "iupac_name": "4-[2-(4-hydroxyphenyl)propan-2-yl]phenol",
+      "synonyms": [
+        "Bisphenol A",
+        "80-05-7",
+        "2,2-Bis(4-hydroxyphenyl)propane",
+        "Bisphenol",
+        "Diano",
+        "4,4'-Isopropylidenediphenol",
+        "4,4'-(propane-2,2-diyl)diphenol",
+        "Diphenylolpropane",
+        "4,4'-Bisphenol A",
+        "2,2-Bis(p-hydroxyphenyl)propane"
+      ]
+    },
+    "IKFLLHVVKJTHAH-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1CN=C(N)S1",
+      "inchikey": "IKFLLHVVKJTHAH-UHFFFAOYSA-N",
+      "iupac_name": "5-methyl-4,5-dihydro-1,3-thiazol-2-amine",
+      "synonyms": [
+        "10416-80-5",
+        "5-METHYL-4,5-DIHYDROTHIAZOL-2-AMINE",
+        "CHEMBL185505",
+        "5-Methyl-4,5-dihydro-1,3-thiazol-2-amine",
+        "2-amino-5-methylthiazoline",
+        "SCHEMBL6637787",
+        "SCHEMBL9870593",
+        "2-amino-5-methyl-2-thiazoline",
+        "EX-A13461Y",
+        "BDBM50150913"
+      ]
+    },
+    "ILKFUCTXKFHMGO-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCOc1ccc(C=NNC(=O)c2c[nH]c3ccccc23)cc1",
+      "inchikey": "ILKFUCTXKFHMGO-UHFFFAOYSA-N",
+      "iupac_name": "N-[(4-ethoxyphenyl)methylideneamino]-1H-indole-3-carboxamide",
+      "synonyms": []
+    },
+    "IMNFDUFMRHMDMM-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCCCC",
+      "inchikey": "IMNFDUFMRHMDMM-UHFFFAOYSA-N",
+      "iupac_name": "heptane",
+      "synonyms": [
+        "HEPTANE",
+        "n-Heptane",
+        "142-82-5",
+        "Heptan",
+        "Heptyl hydride",
+        "Dipropyl methane",
+        "Dipropylmethane",
+        "Gettysolve-C",
+        "Skellysolve C",
+        "Heptanen"
+      ]
+    },
+    "INUNDISUCITEQT-UHFFFAOYSA-N": {
+      "canonical_smiles": "NCCCC1C(CN)C2CC1C1C3CCC(C3)C21",
+      "inchikey": "INUNDISUCITEQT-UHFFFAOYSA-N",
+      "iupac_name": "3-[5-(aminomethyl)-4-tetracyclo[6.2.1.13,6.02,7]dodecanyl]propan-1-amine",
+      "synonyms": [
+        "101198-11-2",
+        "1,4:5,8-DIMETHANONAPHTHALENE-2-PROPYLAMINE, DECAHYDRO-3-AMINOMETHYL-",
+        "2-Aminomethyl-3-aminopropyl-1,2,3,4,4a,5,6,7,8,8a-decahydro-1,4:5,8-dimethanonaphthalene",
+        "RefChem:221092",
+        "NSC173007",
+        "DTXSID10905971",
+        "3-[3-(aminomethyl)decahydro-1,4:5,8-dimethanonaphthalen-2-yl]propan-1-amine",
+        "NSC-173007"
+      ]
+    },
+    "IRTMAFYJZWRAPF-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cn1c(SCC(=O)N2CCCCC2)nnc1-c1ccncc1",
+      "inchikey": "IRTMAFYJZWRAPF-UHFFFAOYSA-N",
+      "iupac_name": "2-[(4-methyl-5-pyridin-4-yl-1,2,4-triazol-3-yl)sulfanyl]-1-piperidin-1-ylethanone",
+      "synonyms": [
+        "Oprea1_479515",
+        "AKOS001076127",
+        "Z20252538"
+      ]
+    },
+    "IRTXHWTZQUYIAV-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCC(=O)NC(Cc1ccccc1)C(=O)N1CCCC1C(=O)NC(CCCSC(=N)N)B(O)O",
+      "inchikey": "IRTXHWTZQUYIAV-UHFFFAOYSA-N",
+      "iupac_name": "[4-carbamimidoylsulfanyl-1-[[1-[3-phenyl-2-(propanoylamino)propanoyl]pyrrolidine-2-carbonyl]amino]butyl]boronic acid",
+      "synonyms": [
+        "SCHEMBL8166601"
+      ]
+    },
+    "ITJRRPWXDFLUBR-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCOCC1OC(OC)C(OCC)C(COC)C1OC(C)=O",
+      "inchikey": "ITJRRPWXDFLUBR-UHFFFAOYSA-N",
+      "iupac_name": "[5-ethoxy-2-(ethoxymethyl)-6-methoxy-4-(methoxymethyl)oxan-3-yl] acetate",
+      "synonyms": [
+        "ITJRRPWXDFLUBR-UHFFFAOYSA-N",
+        "Methyl 4-O-acetyl-2,3,6-tri-O-ethyl-.alpha.-d-galactopyranoside",
+        "Methyl 4-O-acetyl-3-deoxy-2,6-di-O-ethyl-3-(methoxymethyl)hexopyranoside #"
+      ]
+    },
+    "IVSZLXZYQVIEFR-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1cccc(C)c1",
+      "inchikey": "IVSZLXZYQVIEFR-UHFFFAOYSA-N",
+      "iupac_name": "1,3-xylene",
+      "synonyms": [
+        "M-XYLENE",
+        "1,3-Dimethylbenzene",
+        "108-38-3",
+        "1,3-Xylene",
+        "meta-Xylene",
+        "m-Dimethylbenzene",
+        "m-Xylol",
+        "m-Methyltoluene",
+        "Benzene, 1,3-dimethyl-",
+        "3-Xylene"
+      ]
+    },
+    "IYGMGKYKMGATRC-UHFFFAOYSA-N": {
+      "canonical_smiles": "COc1cc(N)c(Cl)cc1C(=O)NC1CCN(C)CC1",
+      "inchikey": "IYGMGKYKMGATRC-UHFFFAOYSA-N",
+      "iupac_name": "4-amino-5-chloro-2-methoxy-N-(1-methylpiperidin-4-yl)benzamide",
+      "synonyms": [
+        "CHEMBL164425",
+        "SCHEMBL15651948",
+        "BDBM50123809",
+        "4-Amino-5-chloro-2-methoxy-N-(1-methyl-piperidin-4-yl)-benzamide"
+      ]
+    },
+    "IYTSPMTUILHVNF-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1CC(N(N=O)C2CC(C)CC(C)(C)C2)CC(C)(C)C1",
+      "inchikey": "IYTSPMTUILHVNF-UHFFFAOYSA-N",
+      "iupac_name": "N,N-bis(3,3,5-trimethylcyclohexyl)nitrous amide",
+      "synonyms": [
+        "NSC40796",
+        "NSC-40796"
+      ]
+    },
+    "JBKVHLHDHHXQEQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C1CCCCCN1",
+      "inchikey": "JBKVHLHDHHXQEQ-UHFFFAOYSA-N",
+      "iupac_name": "azepan-2-one",
+      "synonyms": [
+        "azepan-2-one",
+        "CAPROLACTAM",
+        "105-60-2",
+        "epsilon-Caprolactam",
+        "2-Oxohexamethylenimine",
+        "6-Caprolactam",
+        "Aminocaproic lactam",
+        "Hexahydro-2H-azepin-2-one",
+        "6-Hexanelactam",
+        "2-Oxohexamethyleneimine"
+      ]
+    },
+    "JCTYEDJLEPLOAX-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1ccc2c(c1)nc1n2c2nc3ccccc3n2c2nc3ccccc3n12",
+      "inchikey": "JCTYEDJLEPLOAX-UHFFFAOYSA-N",
+      "iupac_name": "2,9,11,18,20,27-hexazaheptacyclo[18.7.0.02,10.03,8.011,19.012,17.021,26]heptacosa-1(27),3,5,7,9,12,14,16,18,21,23,25-dodecaene",
+      "synonyms": [
+        "Benzo[4,5]imidazo[1,2-a]benzo[4,5]imidazo[1,2-c]benzo[4,5]imidazo[1,2-e][1,3,5]triazine",
+        "SCHEMBL824377",
+        "32833-13-9"
+      ]
+    },
+    "JDUYPUMQALQRCN-UHFFFAOYSA-N": {
+      "canonical_smiles": "Brc1ccc(Oc2ccccc2)cc1",
+      "inchikey": "JDUYPUMQALQRCN-UHFFFAOYSA-N",
+      "iupac_name": "1-bromo-4-phenoxybenzene",
+      "synonyms": [
+        "1-Bromo-4-phenoxybenzene",
+        "101-55-3",
+        "4-Bromodiphenyl ether",
+        "4-Bromophenyl phenyl ether",
+        "4-Bromophenoxybenzene",
+        "Benzene, 1-bromo-4-phenoxy-",
+        "p-Bromodiphenyl ether",
+        "p-Phenoxybromobenzene",
+        "p-Bromophenoxybenzene",
+        "P-BROMOPHENYL PHENYL ETHER"
+      ]
+    },
+    "JEUPZKBFJZDULG-UHFFFAOYSA-M": {
+      "canonical_smiles": "CC[N+]1(CC)C(C)CCCC1C.[Br-]",
+      "inchikey": "JEUPZKBFJZDULG-UHFFFAOYSA-M",
+      "iupac_name": "1,1-diethyl-2,6-dimethylpiperidin-1-ium bromide",
+      "synonyms": [
+        "19072-57-2",
+        "Piperidinium, 1,1-diethyl-2,6-dimethyl-, bromide",
+        "RefChem:1096275",
+        "2,6-Dimethyl-1,1-diethylpiperidinium bromide",
+        "1,1-diethyl-2,6-dimethylpiperidin-1-ium bromide",
+        "1,1-diethyl-2,6-dimethylpiperidinium bromide",
+        "1,1-diethyl-2,6-dimethylpiperidin-1-ium;bromide",
+        "SC-1950",
+        "SCHEMBL5925465",
+        "DTXSID10940645"
+      ]
+    },
+    "JFJZZMVDLULRGK-UHFFFAOYSA-O": {
+      "canonical_smiles": "COc1cc2c3cc1Oc1cc(ccc1O)CC1c4c(cc(OC)c(O)c4Oc4ccc(cc4)CC3N(C)CC2)CC[N+]1(C)C",
+      "inchikey": "JFJZZMVDLULRGK-UHFFFAOYSA-O",
+      "iupac_name": "10,25-dimethoxy-15,15,30-trimethyl-7,23-dioxa-30-aza-15-azoniaheptacyclo[22.6.2.23,6.18,12.118,22.027,31.016,34]hexatriaconta-3(36),4,6(35),8(34),9,11,18(33),19,21,24,26,31-dodecaene-9,21-diol",
+      "synonyms": [
+        "1019837-20-7",
+        "CHEMBL1616987",
+        "BDBM81458",
+        "DTXSID10859021",
+        "NSC_6000",
+        "PDSP1_000462",
+        "PDSP2_000460",
+        "CAS_57-94-3",
+        "L000909",
+        "10,25-Dimethoxy-15,15,30-trimethyl-7,23-dioxa-30-aza-15-azoniaheptacyclo[22.6.2.23,6.18,12.118,22.027,31.016,34]hexatriaconta-3(36),4,6(35),8(34),9,11,18(33),19,21,24,26,31-dodecaene-9,21-diol"
+      ]
+    },
+    "JGFZNNIVVJXRND-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCN(C(C)C)C(C)C",
+      "inchikey": "JGFZNNIVVJXRND-UHFFFAOYSA-N",
+      "iupac_name": "N-ethyl-N-propan-2-ylpropan-2-amine",
+      "synonyms": [
+        "N,N-Diisopropylethylamine",
+        "7087-68-5",
+        "Ethyldiisopropylamine",
+        "Diisopropylethylamine",
+        "N-Ethyldiisopropylamine",
+        "diea",
+        "DIPEA",
+        "Hunig's Base",
+        "2-Propanamine, N-ethyl-N-(1-methylethyl)-",
+        "1,1'-Dimethyltriethylamine"
+      ]
+    },
+    "JGSARLDLIJGVTE-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1(C)SC2C(NC(=O)Cc3ccccc3)C(=O)N2C1C(=O)O",
+      "inchikey": "JGSARLDLIJGVTE-UHFFFAOYSA-N",
+      "iupac_name": "3,3-dimethyl-7-oxo-6-[(2-phenylacetyl)amino]-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid",
+      "synonyms": [
+        "CHEBI:17334",
+        "penicillins",
+        "Penicillin Antibiotics",
+        "Antibiotics, Penicillin",
+        "RefChem:126139",
+        "DTXSID501017130",
+        "215-794-6",
+        "1406-05-9",
+        "Penicillin",
+        "Cillin"
+      ]
+    },
+    "JHZHWVQTOXIXIV-UHFFFAOYSA-N": {
+      "canonical_smiles": "ON=Cc1cc[n+](CCC[n+]2ccc(C=NO)cc2)cc1.[Br-].[Br-]",
+      "inchikey": "JHZHWVQTOXIXIV-UHFFFAOYSA-N",
+      "iupac_name": "N-[[1-[3-[4-(hydroxyiminomethyl)pyridin-1-ium-1-yl]propyl]pyridin-1-ium-4-yl]methylidene]hydroxylamine dibromide",
+      "synonyms": [
+        "orb1740401",
+        "SCHEMBL5705579",
+        "NS00041185",
+        "Trimethylen-bis-(pyridinium-4-aldoxim)-dibromid",
+        "oxo-[[1-[3-[4-(oxoazaniumylmethylidene)pyridin-1-yl]propyl]pyridin-4-ylidene]methyl]azanium,dibromide"
+      ]
+    },
+    "JIYDETKRFAWGMA-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCNS(=O)(=O)c1ccc(OP(=S)(OC)OC)cc1",
+      "inchikey": "JIYDETKRFAWGMA-UHFFFAOYSA-N",
+      "iupac_name": "4-dimethoxyphosphinothioyloxy-N-ethylbenzenesulfonamide",
+      "synonyms": [
+        "American cyanamid 38,064",
+        "American cyanamid CL-38064",
+        "1713-60-6",
+        "ENT 25,645",
+        "BRN 2158130",
+        "AC 38,064",
+        "AI3-25645",
+        "Phosphorothioic acid, O-(4-((ethylamino)sulfonyl)phenyl) O,O-dimethyl ester",
+        "O-p-(Ethylsulfamoyl)phenyl O,O-dimethyl phosphorothioate",
+        "O-(4-(Ethylamino)sulfonyl)phenyl O,O-dimethyl phosphorothioate"
+      ]
+    },
+    "JJSMMKXRTRMNMB-UHFFFAOYSA-N": {
+      "canonical_smiles": "CNc1ncnc2ccc(Cl)cc12",
+      "inchikey": "JJSMMKXRTRMNMB-UHFFFAOYSA-N",
+      "iupac_name": "6-chloro-N-methylquinazolin-4-amine",
+      "synonyms": [
+        "NSC288014",
+        "32084-63-2",
+        "6-chloro-N-methylquinazolin-4-amine",
+        "DTXSID80314738",
+        "AKOS009137611",
+        "NSC-288014"
+      ]
+    },
+    "JLMNKZSTJKHESS-UHFFFAOYSA-N": {
+      "canonical_smiles": "Nc1nc(S)nc2n[nH]nc12",
+      "inchikey": "JLMNKZSTJKHESS-UHFFFAOYSA-N",
+      "iupac_name": "7-amino-2H-triazolo[4,5-d]pyrimidine-5-thiol",
+      "synonyms": [
+        "87866-18-0",
+        "5H-1,2,3-Triazolo(4,5-d)pyrimidine-5-thione, 1,4-dihydro-7-amino-",
+        "DTXSID10236671",
+        "RefChem:1073393",
+        "DTXCID40159162",
+        "2-Mercapto-6-amino-8-azapurine",
+        "BRN 5521044",
+        "7-amino-1H-triazolo[4,5-d]pyrimidine-5-thiol",
+        "NSC675586",
+        "7-Amino-1H-v-triazolo(4,5-d)pyrimidine-5-thiol"
+      ]
+    },
+    "JLTLUCPGTYDLGU-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCOc1cc2c(cc1OC)CCN(C)C2",
+      "inchikey": "JLTLUCPGTYDLGU-UHFFFAOYSA-N",
+      "iupac_name": "7-ethoxy-6-methoxy-2-methyl-3,4-dihydro-1H-isoquinoline",
+      "synonyms": [
+        "SCHEMBL21255908"
+      ]
+    },
+    "JNUUNUQHXIOFDA-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCCC=CCC=CCC=CC=CC(CCCC(=O)O)OO",
+      "inchikey": "JNUUNUQHXIOFDA-UHFFFAOYSA-N",
+      "iupac_name": "5-hydroperoxyicosa-6,8,11,14-tetraenoic acid",
+      "synonyms": [
+        "5-hydroperoxyicosa-6,8,11,14-tetraenoic acid",
+        "RefChem:303338",
+        "74581-83-2",
+        "5-Hydroperoxy-6,8,11,14-eicosatetraenoic acid",
+        "SCHEMBL6905374",
+        "DTXSID30868034",
+        "WCA77408",
+        "PD025993",
+        "5-hydroperoxy-6,8,11,14 eicosatetraenoic acid"
+      ]
+    },
+    "JNVXEGYKHDTOKM-SECBINFHSA-N": {
+      "canonical_smiles": "N#CC1=C(N)Oc2n[nH]c(C(F)(F)F)c2[C@@H]1c1ccccc1Cl",
+      "inchikey": "JNVXEGYKHDTOKM-SECBINFHSA-N",
+      "iupac_name": "(4R)-6-amino-4-(2-chlorophenyl)-3-(trifluoromethyl)-2,4-dihydropyrano[2,3-c]pyrazole-5-carbonitrile",
+      "synonyms": []
+    },
+    "JOERAYJUSNFWQY-WBVOFJQMSA-N": {
+      "canonical_smiles": "CCCC(NC(=O)[C@H](Cc1ccc(F)cc1)NC(=O)[C@@H](NC(=O)OCC(C)C)C1CCCCC1)C(=O)C(=O)NCC(=O)NC(C(=O)O)c1ccccc1",
+      "inchikey": "JOERAYJUSNFWQY-WBVOFJQMSA-N",
+      "iupac_name": "2-[[2-[[3-[[(2S)-2-[[(2S)-2-cyclohexyl-2-(2-methylpropoxycarbonylamino)acetyl]amino]-3-(4-fluorophenyl)propanoyl]amino]-2-oxohexanoyl]amino]acetyl]amino]-2-phenylacetic acid",
+      "synonyms": [
+        "SCHEMBL14601790",
+        "2-[[2-[[3-[[(2S)-2-[[(2S)-2-cyclohexyl-2-(isobutoxycarbonylamino)acetyl]amino]-3-(4-fluorophenyl)propanoyl]amino]-2-oxo-hexanoyl]amino]acetyl]amino]-2-phenyl-acetic acid",
+        "Benzeneacetic acid, a-[[(9S,12S)-12-cyclohexyl-9-[(4-fluorophenyl)methyl]-17-methyl-1,4,5,8,11,14-hexaoxo-6-propyl-15-oxa-3,7,10,13-tetraazaoctadec-1-yl]amino]-"
+      ]
+    },
+    "JRFLOXMNKZAMEU-ROUUACIJSA-N": {
+      "canonical_smiles": "O=C(c1nn2c(c1Cl)N[C@H](c1ccc(Br)cc1)C[C@H]2C(F)(F)F)N1CCc2ccccc2C1",
+      "inchikey": "JRFLOXMNKZAMEU-ROUUACIJSA-N",
+      "iupac_name": "[(5S,7S)-5-(4-bromophenyl)-3-chloro-7-(trifluoromethyl)-4,5,6,7-tetrahydropyrazolo[1,5-a]pyrimidin-2-yl]-(3,4-dihydro-1H-isoquinolin-2-yl)methanone",
+      "synonyms": []
+    },
+    "JRHHJNMASOIRDS-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCOc1ccc(C=O)cc1",
+      "inchikey": "JRHHJNMASOIRDS-UHFFFAOYSA-N",
+      "iupac_name": "4-ethoxybenzaldehyde",
+      "synonyms": [
+        "4-ETHOXYBENZALDEHYDE",
+        "10031-82-0",
+        "p-Ethoxybenzaldehyde",
+        "Benzaldehyde, 4-ethoxy-",
+        "Ethoxybenzaldehyde, p-",
+        "FEMA No. 2413",
+        "UNII-GOW1H0F49A",
+        "EINECS 233-093-3",
+        "GOW1H0F49A",
+        "NSC 406709"
+      ]
+    },
+    "JUJWROOIHBZHMG-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1ccncc1",
+      "inchikey": "JUJWROOIHBZHMG-UHFFFAOYSA-N",
+      "iupac_name": "pyridine",
+      "synonyms": [
+        "PYRIDINE",
+        "110-86-1",
+        "Azabenzene",
+        "Azine",
+        "Pyridin",
+        "Piridina",
+        "Pirydyna",
+        "RCRA waste number U196",
+        "CP 32",
+        "NCI-C55301"
+      ]
+    },
+    "JUNGPRNTMDWRKG-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(CSc1ccccc1N)Sc1ccccc1N",
+      "inchikey": "JUNGPRNTMDWRKG-UHFFFAOYSA-N",
+      "iupac_name": "2-[2-(2-aminophenyl)sulfanylpropylsulfanyl]aniline",
+      "synonyms": [
+        "1,2-Bis(2-aminophenylthio)propane",
+        "EINECS 260-804-4",
+        "Benzenamine, 2,2'-[(1-methyl-1,2-ethanediyl)bis(thio)]bis-",
+        "DTXSID70886232",
+        "Benzenamine, 2,2'-((1-methyl-1,2-ethanediyl)bis(thio))bis-",
+        "RefChem:561627",
+        "DTXCID101025569",
+        "57545-80-9",
+        "2,2'-[(1-METHYLETHYLENE)BIS(THIO)]DIANILINE",
+        "2,2'-((1-Methylethylene)bis(thio))dianiline"
+      ]
+    },
+    "JWVCLYRUEFBMGU-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1ccc2ncncc2c1",
+      "inchikey": "JWVCLYRUEFBMGU-UHFFFAOYSA-N",
+      "iupac_name": "quinazoline",
+      "synonyms": [
+        "QUINAZOLINE",
+        "253-82-7",
+        "Phenmiazine",
+        "1,3-Benzodiazine",
+        "1,3-Diazanaphthalene",
+        "5,6-Benzopyrimidine",
+        "Chinazolin",
+        "Benzo[a]pyrimidine",
+        "Benzo(a)pyrimidine",
+        "UNII-UB9QUR18NL"
+      ]
+    },
+    "JYRBBNPCUSRRNJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(C)(COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O)C(O)C(=O)NCCC(=O)NCCC(F)C(=O)O",
+      "inchikey": "JYRBBNPCUSRRNJ-UHFFFAOYSA-N",
+      "iupac_name": "4-[3-[[4-[[[5-(6-aminopurin-9-yl)-4-hydroxy-3-phosphonooxyoxolan-2-yl]methoxy-hydroxyphosphoryl]oxy-hydroxyphosphoryl]oxy-2-hydroxy-3,3-dimethylbutanoyl]amino]propanoylamino]-2-fluorobutanoic acid",
+      "synonyms": [
+        "PD041963"
+      ]
+    },
+    "KCALAFIVPCAXJI-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C1C(=O)c2cccnc2-c2ncccc21",
+      "inchikey": "KCALAFIVPCAXJI-UHFFFAOYSA-N",
+      "iupac_name": "1,10-phenanthroline-5,6-dione",
+      "synonyms": [
+        "1,10-Phenanthroline-5,6-dione",
+        "27318-90-7",
+        "phendione",
+        "LDN-73794",
+        "8JD7KXA2W0",
+        "1,10-Pad",
+        "NSC-346882",
+        "DTXSID60181763",
+        "phen-dione",
+        "RefChem:410366"
+      ]
+    },
+    "KDXKERNSBIXSRK-UHFFFAOYSA-N": {
+      "canonical_smiles": "NCCCCC(N)C(=O)O",
+      "inchikey": "KDXKERNSBIXSRK-UHFFFAOYSA-N",
+      "iupac_name": "2,6-diaminohexanoic acid",
+      "synonyms": [
+        "DL-Lysine",
+        "Lysine, DL-",
+        "(RS)-Lysine",
+        "(+-)-Lysine",
+        "UNII-AI4RT59273",
+        "CCRIS 8600",
+        "(+-)-2,6-Diaminohexanoic acid",
+        "AI4RT59273",
+        "DL-alpha,epsilon-Diaminocaproic acid",
+        "EINECS 200-740-6"
+      ]
+    },
+    "KDZRMXZKUSBABJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "N#CC1(NP(=O)(c2ccccc2)c2ccccc2)CCCCC1",
+      "inchikey": "KDZRMXZKUSBABJ-UHFFFAOYSA-N",
+      "iupac_name": "1-(diphenylphosphorylamino)cyclohexane-1-carbonitrile",
+      "synonyms": [
+        "N-(1-Cyanocyclohexyl)diphenylphosphinamide",
+        "KDZRMXZKUSBABJ-UHFFFAOYSA-N",
+        "N-(1-Cyanocyclohexyl)-p,p-diphenylphosphinic amide #"
+      ]
+    },
+    "KICXKPSKWAUCHY-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCCCCCCCOc1ccc(C(=N)N(C(C)C)C(C)C)c2ccccc12",
+      "inchikey": "KICXKPSKWAUCHY-UHFFFAOYSA-N",
+      "iupac_name": "4-decoxy-N,N-di(propan-2-yl)naphthalene-1-carboximidamide",
+      "synonyms": []
+    },
+    "KMYSSFBJECWQSW-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(=Nc1cccc2c1CCCC2)N(C)C",
+      "inchikey": "KMYSSFBJECWQSW-UHFFFAOYSA-N",
+      "iupac_name": "N,N-dimethyl-N'-(5,6,7,8-tetrahydronaphthalen-1-yl)ethanimidamide",
+      "synonyms": [
+        "N,N-Dimethyl-N'-(5,6,7,8-tetrahydro-1-naphthyl) acetamide",
+        "FORMAMIDINE, N'-(5,6,7,8-TETRAHYDRONAPHTH-1-YL)-N,N,1-TRIMETHYL-",
+        "101832-94-4"
+      ]
+    },
+    "KRPWOZYYMGYUEP-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(NN=Cc1ccc(Cl)cc1)c1cc(-c2ccc(F)cc2)n[nH]1",
+      "inchikey": "KRPWOZYYMGYUEP-UHFFFAOYSA-N",
+      "iupac_name": "N-[(4-chlorophenyl)methylideneamino]-3-(4-fluorophenyl)-1H-pyrazole-5-carboxamide",
+      "synonyms": []
+    },
+    "KSWAWMKKKXZBMX-ZETCQYMHSA-N": {
+      "canonical_smiles": "O=C(O)C[C@H](NC(=O)c1cncc(Br)c1)C(=O)S",
+      "inchikey": "KSWAWMKKKXZBMX-ZETCQYMHSA-N",
+      "iupac_name": "(3S)-3-[(5-bromopyridine-3-carbonyl)amino]-4-oxo-4-sulfanylbutanoic acid",
+      "synonyms": [
+        "NA3"
+      ]
+    },
+    "KUAYWYLPRVBGHL-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(C)=CCc1c(O)c2c(O)c(-c3ccc(O)cc3)coc-2cc1=O",
+      "inchikey": "KUAYWYLPRVBGHL-UHFFFAOYSA-N",
+      "iupac_name": "4,5-dihydroxy-3-(4-hydroxyphenyl)-6-(3-methylbut-2-enyl)chromen-7-one",
+      "synonyms": [
+        "Wighteone",
+        "51225-30-0",
+        "Erythrinin B",
+        "5,7-Dihydroxy-3-(4-hydroxyphenyl)-6-(3-methylbut-2-enyl)chromen-4-one",
+        "5,7,4'-Trihydroxy-6-prenylisoflavone",
+        "48ZS74CB9A",
+        "CHEBI:10038",
+        "DTXSID30199239",
+        "RefChem:1101049",
+        "DTXCID10121730"
+      ]
+    },
+    "KVRMFYJZXMVCOK-UHFFFAOYSA-L": {
+      "canonical_smiles": "[Cl-].[Cl-].[N-]=[N+]=Nc1ccc[n+](CCCCCCCCCC[n+]2cccc(N=[N+]=[N-])c2)c1",
+      "inchikey": "KVRMFYJZXMVCOK-UHFFFAOYSA-L",
+      "iupac_name": "3-azido-1-[10-(3-azidopyridin-1-ium-1-yl)decyl]pyridin-1-ium dichloride",
+      "synonyms": [
+        "Bis(3-azidopyridinium)-1,10-decane perchlorate",
+        "3-azido-1-[10-(3-azidopyridin-1-ium-1-yl)decyl]pyridin-1-ium;dichloride",
+        "3-azido-1-(10-(3-azidopyridin-1-ium-1-yl)decyl)pyridin-1-ium;dichloride",
+        "RefChem:120119",
+        "C13679",
+        "AC1LCVGB",
+        "CHEBI:34574",
+        "Q27116157",
+        "3-azido-1-[10-(3-azidopyridin-1-ium-1-yl)decyl]pyridin-1-ium"
+      ]
+    },
+    "KYQCOXFCLRTKLS-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1cnccn1",
+      "inchikey": "KYQCOXFCLRTKLS-UHFFFAOYSA-N",
+      "iupac_name": "pyrazine",
+      "synonyms": [
+        "PYRAZINE",
+        "290-37-9",
+        "1,4-Diazine",
+        "p-Diazine",
+        "Paradiazine",
+        "Piazine",
+        "1,4-Diazabenzene",
+        "pyrazin",
+        "MFCD00006122",
+        "1,4-Diazin"
+      ]
+    },
+    "KZRDDGGREUNDMV-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1(C)CC(C23C=CC(CO)(CC2)OO3)CCC1Br",
+      "inchikey": "KZRDDGGREUNDMV-UHFFFAOYSA-N",
+      "iupac_name": "[4-(4-bromo-3,3-dimethylcyclohexyl)-2,3-dioxabicyclo[2.2.2]oct-5-en-1-yl]methanol",
+      "synonyms": [
+        "Majapolene A",
+        "[4-(4-bromo-3,3-dimethylcyclohexyl)-2,3-dioxabicyclo[2.2.2]oct-5-en-1-yl]methanol",
+        "(4-(4-bromo-3,3-dimethylcyclohexyl)-2,3-dioxabicyclo(2.2.2)oct-5-en-1-yl)methanol",
+        "RefChem:155319",
+        "1092795-43-1",
+        "NSC692207",
+        "CHEMBL450193",
+        "SCHEMBL30848227",
+        "NSC-692207"
+      ]
+    },
+    "LCSISJLRFPFFDR-UHFFFAOYSA-N": {
+      "canonical_smiles": "COC(=O)COc1ccc(Cl)cc1CSC(=N)[NH3+].[Cl-]",
+      "inchikey": "LCSISJLRFPFFDR-UHFFFAOYSA-N",
+      "iupac_name": "[C-[[5-chloro-2-(2-methoxy-2-oxoethoxy)phenyl]methylsulfanyl]carbonimidoyl]azanium chloride",
+      "synonyms": [
+        "(2-(((Aminoiminomethyl)thio)methyl)-4-chlorophenoxy) acetic acid methyl ester monohydrochloride",
+        "16253-45-5",
+        "Acetic acid, ((alpha-(amidinothio)-4-chloro-o-tolyl)oxy)-, methyl ester, monohydrochloride",
+        "Acetic acid, (2-(((aminoiminomethyl)thio)methyl)-4-chlorophenoxy)-, methyl ester, monohydrochloride"
+      ]
+    },
+    "LCTONWCANYUPML-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(=O)C(=O)O",
+      "inchikey": "LCTONWCANYUPML-UHFFFAOYSA-N",
+      "iupac_name": "2-oxopropanoic acid",
+      "synonyms": [
+        "Pyruvic acid",
+        "2-Oxopropanoic acid",
+        "127-17-3",
+        "acetylformic acid",
+        "Pyroracemic acid",
+        "2-Oxopropionic acid",
+        "Propanoic acid, 2-oxo-",
+        "alpha-ketopropionic acid",
+        "2-Ketopropionic acid",
+        "2-Oxopropansaeure"
+      ]
+    },
+    "LCYHUIFOKKLFCK-HTQZYQBOSA-N": {
+      "canonical_smiles": "C[C@@H]1CN(S(=O)(=O)N(C)C)C[C@@H](C)O1",
+      "inchikey": "LCYHUIFOKKLFCK-HTQZYQBOSA-N",
+      "iupac_name": "(2R,6R)-N,N,2,6-tetramethylmorpholine-4-sulfonamide",
+      "synonyms": []
+    },
+    "LFLBHTZRLVHUQC-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCOS(C)(=O)=O",
+      "inchikey": "LFLBHTZRLVHUQC-UHFFFAOYSA-N",
+      "iupac_name": "butyl methanesulfonate",
+      "synonyms": [
+        "Butyl methanesulfonate",
+        "1912-32-9",
+        "n-Butyl methanesulfonate",
+        "Butyl mesylate",
+        "METHANESULFONIC ACID, BUTYL ESTER",
+        "Butyl methanesulphonate",
+        "23G806JP9G",
+        "NSC-36060",
+        "DTXSID6073281",
+        "methyl butyl sulfonate"
+      ]
+    },
+    "LFRNCVLQAZNXIS-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1ccc(NC(=O)CCl)c(I)c1",
+      "inchikey": "LFRNCVLQAZNXIS-UHFFFAOYSA-N",
+      "iupac_name": "2-chloro-N-(2-iodo-4-methylphenyl)acetamide",
+      "synonyms": [
+        "Acetamide, N-(2-iodo-4-methylphenyl)-2-chloro-",
+        "LFRNCVLQAZNXIS-UHFFFAOYSA-N"
+      ]
+    },
+    "LNYSGUPQTHXQMJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1ccc(S(=O)(=O)NC(C)c2ccccc2)cc1",
+      "inchikey": "LNYSGUPQTHXQMJ-UHFFFAOYSA-N",
+      "iupac_name": "4-methyl-N-(1-phenylethyl)benzenesulfonamide",
+      "synonyms": [
+        "4-Methyl-N-(1-phenylethyl)benzenesulfonamide",
+        "4809-56-7",
+        "4-methyl-N-(1-phenylethyl)benzene-1-sulfonamide",
+        "N-Tosyl-alpha-methylbenzenemethaneamine",
+        "CBMicro_018731",
+        "Oprea1_076448",
+        "SCHEMBL14619788",
+        "LNYSGUPQTHXQMJ-UHFFFAOYSA-N",
+        "CCG-6517",
+        "STK864444"
+      ]
+    },
+    "LQANGKSBLPMBTJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCCC(O)C=CC1C2CC(CO2)C1CC=CCCCC(=O)O",
+      "inchikey": "LQANGKSBLPMBTJ-UHFFFAOYSA-N",
+      "iupac_name": "7-[6-(3-hydroxyoct-1-enyl)-2-oxabicyclo[2.2.1]heptan-5-yl]hept-5-enoic acid",
+      "synonyms": [
+        "U-46619",
+        "7-[6-(3-Hydroxyoct-1-enyl)-2-oxabicyclo[2.2.1]heptan-5-yl]hept-5-enoic acid",
+        "(15S)-Hydroxy-11 alpha, 9 alpha-(epoxymethano)prosta-5Z, 13E-dienoic Acid",
+        "HMS3372C01"
+      ]
+    },
+    "LQNUZADURLCDLV-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=[N+]([O-])c1ccccc1",
+      "inchikey": "LQNUZADURLCDLV-UHFFFAOYSA-N",
+      "iupac_name": "nitrobenzene",
+      "synonyms": [
+        "NITROBENZENE",
+        "98-95-3",
+        "Nitrobenzol",
+        "Benzene, nitro-",
+        "Essence of mirbane",
+        "nitro-Benzene",
+        "Nitrobenzeen",
+        "Nitrobenzen",
+        "Mononitrobenzene",
+        "Essence of Myrbane"
+      ]
+    },
+    "LSLYSVXEIFPGNV-UHFFFAOYSA-M": {
+      "canonical_smiles": "CCC(Cc1ccco1)C[N+](C)(C)Cc1ccccc1.[I-]",
+      "inchikey": "LSLYSVXEIFPGNV-UHFFFAOYSA-M",
+      "iupac_name": "benzyl-[2-(furan-2-ylmethyl)butyl]-dimethylazanium iodide",
+      "synonyms": [
+        "Benzyldimethyl(2-furfurylbutyl)ammonium iodide",
+        "Benzyldimethyl(2-(2-furfuryl)butyl)ammonium iodide",
+        "25433-52-7",
+        "AMMONIUM, BENZYLDIMETHYL(2-(2-FURFURYL)BUTYL)-, IODIDE",
+        "RefChem:319168",
+        "DTXSID00948296",
+        "N-Benzyl-2-[(furan-2-yl)methyl]-N,N-dimethylbutan-1-aminium iodide"
+      ]
+    },
+    "LSQZJLSUYDQPKJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1(C)SC2C(NC(=O)C(N)c3ccc(O)cc3)C(=O)N2C1C(=O)O",
+      "inchikey": "LSQZJLSUYDQPKJ-UHFFFAOYSA-N",
+      "iupac_name": "6-[[2-amino-2-(4-hydroxyphenyl)acetyl]amino]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid",
+      "synonyms": [
+        "DTXSID50860378",
+        "6-(2-Amino(4-hydroxyphenyl)acetamido)-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo(3.2.0)heptane-2-carboxylic acid",
+        "6-[2-Amino(4-hydroxyphenyl)acetamido]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid",
+        "RefChem:1073671",
+        "DTXCID50196700",
+        "6-[2-amino-2-(4-hydroxyphenyl)acetamido]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid",
+        "Amoxicillin (trihydrate)",
+        "Amoxycillin (trihydrate)",
+        "6-{[amino(4-hydroxyphenyl)acetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid",
+        "Amoxicillin-13C2,15N(MixtureofDiastereomers)"
+      ]
+    },
+    "LVSWGFXYXLQABN-HXUWFJFHSA-N": {
+      "canonical_smiles": "O[C@H](c1ccccc1)c1nc2ccccc2n1Cc1ccccc1Cl",
+      "inchikey": "LVSWGFXYXLQABN-HXUWFJFHSA-N",
+      "iupac_name": "(R)-[1-[(2-chlorophenyl)methyl]benzimidazol-2-yl]-phenylmethanol",
+      "synonyms": []
+    },
+    "MBVCESWADCIXJN-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C1Nc2ccc(Br)cc2C1=O",
+      "inchikey": "MBVCESWADCIXJN-UHFFFAOYSA-N",
+      "iupac_name": "5-bromo-1H-indole-2,3-dione",
+      "synonyms": [
+        "5-Bromoisatin",
+        "87-48-9",
+        "5-Bromo-1H-indole-2,3-dione",
+        "5-Bromoindole-2,3-dione",
+        "Isatin, 5-bromo-",
+        "5-Bromisatin",
+        "1H-Indole-2,3-dione, 5-bromo-",
+        "NSC-4980",
+        "DZU75P8VY8",
+        "DTXSID30236037"
+      ]
+    },
+    "MDCOKMVQZVKCDW-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(=O)c1ccc(N2CCN(c3c(O)c4c(c(O)c3Cl)C(=O)C=CC4=O)CC2)cc1",
+      "inchikey": "MDCOKMVQZVKCDW-UHFFFAOYSA-N",
+      "iupac_name": "6-[4-(4-acetylphenyl)piperazin-1-yl]-7-chloro-5,8-dihydroxynaphthalene-1,4-dione",
+      "synonyms": [
+        "NSC660635",
+        "CHEMBL1979493",
+        "2-Chloro-3-[1-(4-(4'-acetophenone)piperazino)]- naphthazarin",
+        "NSC-660635",
+        "NCI60_021159"
+      ]
+    },
+    "MJIHNNLFOKEZEW-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1c(OCC(F)(F)F)ccnc1CS(=O)c1nc2ccccc2[nH]1",
+      "inchikey": "MJIHNNLFOKEZEW-UHFFFAOYSA-N",
+      "iupac_name": "2-[[3-methyl-4-(2,2,2-trifluoroethoxy)-2-pyridinyl]methylsulfinyl]-1H-benzimidazole",
+      "synonyms": [
+        "lansoprazole",
+        "103577-45-3",
+        "Prevacid",
+        "Limpidex",
+        "Agopton",
+        "Lanzor",
+        "Takepron",
+        "Zoton",
+        "Prevacid SoluTab",
+        "Lansoprazol"
+      ]
+    },
+    "MLEKJKDIACKVFJ-UHFFFAOYSA-O": {
+      "canonical_smiles": "CCCc1cc([N+](C)(C)C)ccc1OC(=O)NC",
+      "inchikey": "MLEKJKDIACKVFJ-UHFFFAOYSA-O",
+      "iupac_name": "trimethyl-[4-(methylcarbamoyloxy)-3-propylphenyl]azanium",
+      "synonyms": []
+    },
+    "MLYYVTUWGNIJIB-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1nnc(SCC2=C(C(=O)O)N3C(=O)C(NC(=O)Cn4cnnn4)C3SC2)s1",
+      "inchikey": "MLYYVTUWGNIJIB-UHFFFAOYSA-N",
+      "iupac_name": "3-[(5-methyl-1,3,4-thiadiazol-2-yl)sulfanylmethyl]-8-oxo-7-[[2-(tetrazol-1-yl)acetyl]amino]-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic acid",
+      "synonyms": [
+        "DTXSID10860354",
+        "438540-91-1",
+        "3-(((5-Methyl-1,3,4-thiadiazol-2-yl)thio)methyl)-8-oxo-7-((2-(1H-tetrazol-1-yl)acetyl)amino)-5-thia-1-azabicyclo(4.2.0)oct-2-ene-2-carboxylic acid",
+        "3-[[(5-Methyl-1,3,4-thiadiazol-2-yl)thio]methyl]-8-oxo-7-[[2-(1H-tetrazol-1-yl)acetyl]amino]-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic acid",
+        "RefChem:1066252",
+        "DTXCID90208750",
+        "3-[(5-methyl-1,3,4-thiadiazol-2-yl)sulfanylmethyl]-8-oxo-7-[[2-(tetrazol-1-yl)acetyl]amino]-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic acid",
+        "3-{[(5-methyl-1,3,4-thiadiazol-2-yl)sulfanyl]methyl}-8-oxo-7-[(1H-tetrazol-1-ylacetyl)amino]-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic acid",
+        "Cephamezine;Cephazoline",
+        "3-[(5-methyl(1,3,4-thiadiazol-2-ylthio))methyl]-6-oxo-7-(2-(1,2,3,4-tetraazoly l)acetylamino)-2H,7H,7aH-azetidino[2,1-b]1,3-thiazine-4-carboxylic acid"
+      ]
+    },
+    "MUDUXRHPVDVWHU-UHFFFAOYSA-N": {
+      "canonical_smiles": "C#CCN(C)C(C)Cc1ccc(F)cc1",
+      "inchikey": "MUDUXRHPVDVWHU-UHFFFAOYSA-N",
+      "iupac_name": "1-(4-fluorophenyl)-N-methyl-N-prop-2-ynylpropan-2-amine",
+      "synonyms": [
+        "4-Fluorodeprenyl",
+        "103596-43-6",
+        "RefChem:99015",
+        "(R)-(-)-4-Fluorodeprenyl",
+        "1-(4-fluorophenyl)-N-methyl-N-prop-2-ynylpropan-2-amine",
+        "PV4SHR2L8J",
+        "N-(1-(4-fluorophenyl)propan-2-yl)-N-methylprop-2-yn-1-amine",
+        "N-[1-(4-fluorophenyl)propan-2-yl]-N-methylprop-2-yn-1-amine",
+        "Benzeneethanamine, 4-fluoro-N,alpha-dimethyl-N-2-propynyl-",
+        "p-Fluorodeprenyl"
+      ]
+    },
+    "MWGXGTJJAOZBNW-UHFFFAOYSA-N": {
+      "canonical_smiles": "Nc1nc(OCC2CCCCC2)c2[nH]cnc2n1",
+      "inchikey": "MWGXGTJJAOZBNW-UHFFFAOYSA-N",
+      "iupac_name": "6-(cyclohexylmethoxy)-7H-purin-2-amine",
+      "synonyms": [
+        "nu2058",
+        "161058-83-9",
+        "NU 2058",
+        "NU-2058",
+        "O(6)-cyclohexylmethylguanine",
+        "884MN6AR44",
+        "RefChem:544117",
+        "6-(cyclohexylmethoxy)-9H-purin-2-amine",
+        "6-O-CYCLOHEXYLMETHYL GUANINE",
+        "9H-Purin-2-amine, 6-(cyclohexylmethoxy)-"
+      ]
+    },
+    "MWQCHHACWWAQLJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C1CN=C(c2ccccc2)c2cc(Cl)ccc2N1CC1CC1",
+      "inchikey": "MWQCHHACWWAQLJ-UHFFFAOYSA-N",
+      "iupac_name": "7-chloro-1-(cyclopropylmethyl)-5-phenyl-3H-1,4-benzodiazepin-2-one",
+      "synonyms": [
+        "prazepam",
+        "Centrax",
+        "Demetrin",
+        "Trepidan",
+        "2955-38-6",
+        "Prazepamum",
+        "W 4020",
+        "Prazepam civ",
+        "2H-1,4-Benzodiazepin-2-one, 7-chloro-1-(cyclopropylmethyl)-1,3-dihydro-5-phenyl-",
+        "DTXSID4021181"
+      ]
+    },
+    "MXSKJYLPNPYQHH-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1cc(C)c(O)c(C2(C)CCCCC2)c1",
+      "inchikey": "MXSKJYLPNPYQHH-UHFFFAOYSA-N",
+      "iupac_name": "2,4-dimethyl-6-(1-methylcyclohexyl)phenol",
+      "synonyms": [
+        "2,4-dimethyl-6-(1-methylcyclohexyl)phenol",
+        "6-(1-Methylcyclohexyl)-2,4-xylenol",
+        "Phenol, 2,4-dimethyl-6-(1-methylcyclohexyl)-",
+        "XA060Y2X3D",
+        "PERMANAX WSL",
+        "EINECS 201-042-4",
+        "UNII-XA060Y2X3D",
+        "DTXSID5058808",
+        "2-(1-methylcyclohexyl)-4,6-dimethylphenol",
+        "2,4-XYLENOL, 6-(1-METHYLCYCLOHEXYL)-"
+      ]
+    },
+    "MYHXHCUNDDAEOZ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCCC(O)C=CC1C=CC(=O)C1CC=CCCCC(=O)O",
+      "inchikey": "MYHXHCUNDDAEOZ-UHFFFAOYSA-N",
+      "iupac_name": "7-[2-(3-hydroxyoct-1-enyl)-5-oxocyclopent-3-en-1-yl]hept-5-enoic acid",
+      "synonyms": [
+        "Prostaglandin A6",
+        "SCHEMBL11544760",
+        "BP180569",
+        "DB-042180",
+        "NS00123640"
+      ]
+    },
+    "NAQMVNRVTILPCV-UHFFFAOYSA-N": {
+      "canonical_smiles": "NCCCCCCN",
+      "inchikey": "NAQMVNRVTILPCV-UHFFFAOYSA-N",
+      "iupac_name": "hexane-1,6-diamine",
+      "synonyms": [
+        "1,6-Hexanediamine",
+        "Hexamethylenediamine",
+        "124-09-4",
+        "HEXANE-1,6-DIAMINE",
+        "HMDA",
+        "HEXAMETHYLENE DIAMINE",
+        "1,6-Hexylenediamine",
+        "1,6-Diamino-n-hexane",
+        "diaminohexane",
+        "Hexane, 1,6-diamino-"
+      ]
+    },
+    "NAZDVUBIEPVUKE-UHFFFAOYSA-N": {
+      "canonical_smiles": "COc1ccc(OC)c(N)c1",
+      "inchikey": "NAZDVUBIEPVUKE-UHFFFAOYSA-N",
+      "iupac_name": "2,5-dimethoxyaniline",
+      "synonyms": [
+        "2,5-DIMETHOXYANILINE",
+        "102-56-7",
+        "Benzenamine, 2,5-dimethoxy-",
+        "Aminohydroquinone dimethyl ether",
+        "1-Amino-2,5-dimethoxybenzene",
+        "Aniline, 2,5-dimethoxy-",
+        "2,5-Dimethoxybenzenamine",
+        "MFCD00008368",
+        "C.I. 35811",
+        "V3Z5U3FL10"
+      ]
+    },
+    "NBXZNTLFQLUFES-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCC[Si](OCC)(OCC)OCC",
+      "inchikey": "NBXZNTLFQLUFES-UHFFFAOYSA-N",
+      "iupac_name": "triethoxy(propyl)silane",
+      "synonyms": [
+        "n-Propyltriethoxysilane",
+        "Propyltriethoxysilane",
+        "Triethoxypropylsilane",
+        "Silane, triethoxypropyl-",
+        "F17OTX9FG5",
+        "UNII-F17OTX9FG5",
+        "DTXSID60862984",
+        "EINECS 219-842-7",
+        "EC 219-842-7",
+        "PROPYLTRIETHOXYSILANE; SILANE, TRIETHOXYPROPYL-"
+      ]
+    },
+    "NIXOWILDQLNWCW-UHFFFAOYSA-N": {
+      "canonical_smiles": "C=CC(=O)O",
+      "inchikey": "NIXOWILDQLNWCW-UHFFFAOYSA-N",
+      "iupac_name": "prop-2-enoic acid",
+      "synonyms": [
+        "ACRYLIC ACID",
+        "2-Propenoic acid",
+        "79-10-7",
+        "prop-2-enoic acid",
+        "Propenoic acid",
+        "Vinylformic acid",
+        "Acroleic acid",
+        "Ethylenecarboxylic acid",
+        "Propene acid",
+        "Glacial acrylic acid"
+      ]
+    },
+    "NKJQZSDCCLDOQH-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCN1CCC(=C2c3ccccc3CCc3ccccc32)C1C",
+      "inchikey": "NKJQZSDCCLDOQH-UHFFFAOYSA-N",
+      "iupac_name": "1-ethyl-2-methyl-3-(2-tricyclo[9.4.0.03,8]pentadeca-1(15),3,5,7,11,13-hexaenylidene)pyrrolidine",
+      "synonyms": [
+        "Piroheptine",
+        "16378-21-5",
+        "Piroheptina",
+        "Piroheptinum",
+        "AR6Y753ARL",
+        "CHEBI:135287",
+        "3-(10,11-dihydro-5H-dibenzo-(a,d)cycloheptan-5-ylidene)-1-ethyl-2-methylpyrrolidine",
+        "RefChem:174556",
+        "Piroheptine [INN]",
+        "3-(10,11-Dihydro-5H-dibenzo[a,d][7]annulen-5-ylidene)-1-ethyl-2-methylpyrrolidine"
+      ]
+    },
+    "NOWKCMXCCJGMRR-UHFFFAOYSA-N": {
+      "canonical_smiles": "C1CN1",
+      "inchikey": "NOWKCMXCCJGMRR-UHFFFAOYSA-N",
+      "iupac_name": "aziridine",
+      "synonyms": [
+        "Aziridine",
+        "ETHYLENEIMINE",
+        "Ethylenimine",
+        "151-56-4",
+        "Azacyclopropane",
+        "Dimethyleneimine",
+        "Dihydroazirene",
+        "Azirane",
+        "Aziran",
+        "Aethylenimin"
+      ]
+    },
+    "NQRYJNQNLNOLGT-UHFFFAOYSA-N": {
+      "canonical_smiles": "C1CCNCC1",
+      "inchikey": "NQRYJNQNLNOLGT-UHFFFAOYSA-N",
+      "iupac_name": "piperidine",
+      "synonyms": [
+        "PIPERIDINE",
+        "110-89-4",
+        "Hexahydropyridine",
+        "Cyclopentimine",
+        "Azacyclohexane",
+        "Hexazane",
+        "Cypentil",
+        "Pentamethyleneimine",
+        "Piperidin",
+        "Pentamethylenimine"
+      ]
+    },
+    "NQUNKSRIHYKOIX-QFLIJWGCSA-N": {
+      "canonical_smiles": "C[C@@]12C[C@H](O)C[C@]3(C)C4=CC(=O)OCC4=C[C@@H](OC1=O)[C@@H]23",
+      "inchikey": "NQUNKSRIHYKOIX-QFLIJWGCSA-N",
+      "iupac_name": "(1S,9R,12S,14R,16R)-14-hydroxy-1,12-dimethyl-5,10-dioxatetracyclo[7.6.1.02,7.012,16]hexadeca-2,7-diene-4,11-dione",
+      "synonyms": [
+        "Wentilactone B",
+        "76236-26-5",
+        "8JTI620GSI",
+        "RefChem:194810",
+        "(1S,9R,12S,14S,16R)-14-hydroxy-1,12-dimethyl-5,10-dioxatetracyclo(7.6.1.02,7.012,16)hexadeca-2,7-diene-4,11-dione",
+        "UNII-8JTI620GSI",
+        "DTXSID80997580",
+        "(1S,9R,12S,14R,16R)-14-hydroxy-1,12-dimethyl-5,10-dioxatetracyclo[7.6.1.02,7.012,16]hexadeca-2,7-diene-4,11-dione",
+        "Q27270644",
+        "(2R,3aS,5aR,10bS,10cR)-2-Hydroxy-3a,10b-dimethyl-1,2,3,3a,5a,7,10b,10c-octahydro-4H,9H-furo[2',3',4':4,5]naphtho[2,1-c]pyran-4,9-dione"
+      ]
+    },
+    "NWNBRKHCXIQLDT-UHFFFAOYSA-N": {
+      "canonical_smiles": "COc1ccc(C(=O)c2c(C)n(CC(=O)O)c3cc(OC)ccc23)cc1",
+      "inchikey": "NWNBRKHCXIQLDT-UHFFFAOYSA-N",
+      "iupac_name": "2-[6-methoxy-3-(4-methoxybenzoyl)-2-methylindol-1-yl]acetic acid",
+      "synonyms": [
+        "Duometacin",
+        "25771-23-7",
+        "Duometacina",
+        "Duometacine",
+        "Duometacin [INN:DCF]",
+        "Duometacinum",
+        "Duometacine [INN-French]",
+        "Duometacinum [INN-Latin]",
+        "Duometacina [INN-Spanish]",
+        "UNII-L5WVJ201KN"
+      ]
+    },
+    "ODKSFYDXXFIFQN-UHFFFAOYSA-N": {
+      "canonical_smiles": "NC(N)=NCCCC(N)C(=O)O",
+      "inchikey": "ODKSFYDXXFIFQN-UHFFFAOYSA-N",
+      "iupac_name": "2-amino-5-(diaminomethylideneamino)pentanoic acid",
+      "synonyms": [
+        "DL-Arginine",
+        "7200-25-1",
+        "Arginine, DL-",
+        "(+-)-Arginine",
+        "FL26NTK3EP",
+        "CCRIS 8597",
+        "EINECS 230-571-3",
+        "DTXSID8022618",
+        "DL-2-amino-5-guanidovaleric acid",
+        "RefChem:589921"
+      ]
+    },
+    "ODSQODTUNULBHF-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1cn(C2C=CC(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O2)c(=O)[nH]c1=O",
+      "inchikey": "ODSQODTUNULBHF-UHFFFAOYSA-N",
+      "iupac_name": "[hydroxy-[[5-(5-methyl-2,4-dioxopyrimidin-1-yl)-2,5-dihydrofuran-2-yl]methoxy]phosphoryl] phosphono hydrogen phosphate",
+      "synonyms": [
+        "[hydroxy-[[5-(5-methyl-2,4-dioxo-pyrimidin-1-yl)-2,5-dihydrofuran-2-yl]methoxy]phosphoryl] phosphono hydrogen phosphate"
+      ]
+    },
+    "OEUQDGNNEYCCQW-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(=O)Oc1cccc([N+](C)(C)C)c1",
+      "inchikey": "OEUQDGNNEYCCQW-UHFFFAOYSA-N",
+      "iupac_name": "(3-acetyloxyphenyl)-trimethylazanium",
+      "synonyms": [
+        "CHEMBL343344",
+        "BDBM50055199",
+        "(3-Acetoxy-phenyl)-trimethyl-ammonium"
+      ]
+    },
+    "OFEZSBMBBKLLBJ-BAJZRUMYSA-N": {
+      "canonical_smiles": "Nc1ncnc2c1ncn2[C@@H]1O[C@H](CO)C[C@H]1O",
+      "inchikey": "OFEZSBMBBKLLBJ-BAJZRUMYSA-N",
+      "iupac_name": "(2R,3R,5S)-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)oxolan-3-ol",
+      "synonyms": [
+        "Cordycepin",
+        "3'-Deoxyadenosine",
+        "73-03-0",
+        "Cordycepine",
+        "9-Cordyceposidoadenine",
+        "ADENOSINE, 3'-DEOXY-",
+        "9-(beta-D-3'-Deoxyribofuranosyl)adenine",
+        "GZ8VF4M2J8",
+        "DTXSID1041007",
+        "NSC-63984"
+      ]
+    },
+    "OGYDJPHBURQYKK-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(OCCN(CCO)CCO)C(c1ccccc1)c1ccccc1",
+      "inchikey": "OGYDJPHBURQYKK-UHFFFAOYSA-N",
+      "iupac_name": "2-[bis(2-hydroxyethyl)amino]ethyl 2,2-diphenylacetate",
+      "synonyms": []
+    },
+    "OJGDCBLYJGHCIH-UHFFFAOYSA-N": {
+      "canonical_smiles": "CN(Cc1cc(Br)cc(Br)c1N)C1CCCCC1",
+      "inchikey": "OJGDCBLYJGHCIH-UHFFFAOYSA-N",
+      "iupac_name": "2,4-dibromo-6-[[cyclohexyl(methyl)amino]methyl]aniline",
+      "synonyms": [
+        "bromhexine",
+        "3572-43-8",
+        "Benzenemethanamine, 2-amino-3,5-dibromo-N-cyclohexyl-N-methyl-",
+        "Bromhexina",
+        "Bromhexinum",
+        "Fluibron",
+        "2,4-dibromo-6-[[cyclohexyl(methyl)amino]methyl]aniline",
+        "2,4-Dibromo-6-((cyclohexyl(methyl)amino)methyl)aniline",
+        "Q1J152VB1P",
+        "CHEBI:77032"
+      ]
+    },
+    "OOFDZNIJQXUNBK-UHFFFAOYSA-N": {
+      "canonical_smiles": "COC(=O)Cn1c(=NN=Cc2ccc(C)cc2)sc2ccccc21",
+      "inchikey": "OOFDZNIJQXUNBK-UHFFFAOYSA-N",
+      "iupac_name": "methyl 2-[2-[(4-methylphenyl)methylidenehydrazinylidene]-1,3-benzothiazol-3-yl]acetate",
+      "synonyms": []
+    },
+    "OQELNTUKTOTURB-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1ccc(NS(=O)(=O)c2ccc(C(C)(C)C)cc2)cc1O",
+      "inchikey": "OQELNTUKTOTURB-UHFFFAOYSA-N",
+      "iupac_name": "4-tert-butyl-N-(3-hydroxy-4-methylphenyl)benzenesulfonamide",
+      "synonyms": [
+        "4-tert-butyl-N-(3-hydroxy-4-methylphenyl)benzenesulfonamide",
+        "OQELNTUKTOTURB-UHFFFAOYSA-N",
+        "SCHEMBL208685",
+        "CHEMBL187215",
+        "AN-652/43024860",
+        "4-tert-Butyl-N-(3-hydroxy-4-methyl-phenyl)-benzenesulfonamide"
+      ]
+    },
+    "OQNFYFONNMFOPH-UHFFFAOYSA-N": {
+      "canonical_smiles": "COCCN=C(S)C(S)=NCCOC",
+      "inchikey": "OQNFYFONNMFOPH-UHFFFAOYSA-N",
+      "iupac_name": "N,N'-bis(2-methoxyethyl)ethanediimidothioic acid",
+      "synonyms": [
+        "OXAMIDE, N,N'-BIS(2-METHOXYETHYL)DITHIO-",
+        "25411-96-5",
+        "USAF PD-73",
+        "N,N'-Bis(2-methoxyethyl)dithiooxamide",
+        "BRN 2445664",
+        "DTXSID60180074",
+        "RefChem:367110",
+        "DTXCID70102565",
+        "N,N'-bis(2-methoxyethyl)ethanedithioamide",
+        "STL573563"
+      ]
+    },
+    "ORILYTVJVMAKLC-UHFFFAOYSA-N": {
+      "canonical_smiles": "C1C2CC3CC1CC(C2)C3",
+      "inchikey": "ORILYTVJVMAKLC-UHFFFAOYSA-N",
+      "iupac_name": "adamantane",
+      "synonyms": [
+        "ADAMANTANE",
+        "281-23-2",
+        "Tricyclo[3.3.1.13,7]decane",
+        "Tricyclo[3.3.1.1(3,7)]decane",
+        "Tricyclo(3.3.1.13,7)decane",
+        "PJY633525U",
+        "NSC-527913",
+        "DTXSID5022017",
+        "CHEBI:40519",
+        "tricyclo(3.3.1.1(3,7))decane"
+      ]
+    },
+    "OTMSDBZUPAUEDD-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC",
+      "inchikey": "OTMSDBZUPAUEDD-UHFFFAOYSA-N",
+      "iupac_name": "ethane",
+      "synonyms": [
+        "ETHANE",
+        "Bimethyl",
+        "Dimethyl",
+        "74-84-0",
+        "Methylmethane",
+        "Ethyl hydride",
+        "DTXSID6026377",
+        "L99N5N533T",
+        "CHEBI:42266",
+        "RefChem:138120"
+      ]
+    },
+    "PAYRUJLWNCNPSJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "Nc1ccccc1",
+      "inchikey": "PAYRUJLWNCNPSJ-UHFFFAOYSA-N",
+      "iupac_name": "aniline",
+      "synonyms": [
+        "ANILINE",
+        "Benzenamine",
+        "62-53-3",
+        "Phenylamine",
+        "Aminobenzene",
+        "Aminophen",
+        "Arylamine",
+        "Kyanol",
+        "Cyanol",
+        "Anilin"
+      ]
+    },
+    "PCJLUGWQCHMMAG-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(NO)c1ccc2ccccc2c1",
+      "inchikey": "PCJLUGWQCHMMAG-UHFFFAOYSA-N",
+      "iupac_name": "N-hydroxynaphthalene-2-carboxamide",
+      "synonyms": [
+        "2-Naphthohydroximic acid",
+        "N-Hydroxy-2-naphthalenecarboxamide",
+        "2-Naphthylhydroxamic acid",
+        "N,N-Naphthaloylhydroxylamine",
+        "10335-79-2",
+        "2-NAPHTHOHYDROXAMIC ACID",
+        "2-Naphthalenecarboxamide, N-hydroxy-",
+        "VE8NEC3VME",
+        "DTXSID70145795",
+        "RefChem:927180"
+      ]
+    },
+    "PCSIJLYEUQGZKL-UHFFFAOYSA-N": {
+      "canonical_smiles": "C=C1CC(C#N)(C#N)C2C1CC1CCCC12",
+      "inchikey": "PCSIJLYEUQGZKL-UHFFFAOYSA-N",
+      "iupac_name": "6-methylidene-2,3,3a,3b,5,6a,7,7a-octahydro-1H-cyclopenta[f]pentalene-4,4-dicarbonitrile",
+      "synonyms": []
+    },
+    "PCVRSXXPGXRVEZ-UHFFFAOYSA-N": {
+      "canonical_smiles": "ClCc1c2ccccc2cc2ccccc12",
+      "inchikey": "PCVRSXXPGXRVEZ-UHFFFAOYSA-N",
+      "iupac_name": "9-(chloromethyl)anthracene",
+      "synonyms": [
+        "9-(Chloromethyl)anthracene",
+        "24463-19-2",
+        "9-Chloromethylanthracene",
+        "Anthracene, 9-(chloromethyl)-",
+        "8C4ZDD4KUV",
+        "ANTHRACENE, 9-CHLOROMETHYL-",
+        "NSC-241165",
+        "DTXSID00179220",
+        "RefChem:107700",
+        "DTXCID30101711"
+      ]
+    },
+    "PDACUKOKVHBVHJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "Nc1cncn1C1OC(COP(=O)(O)O)C(O)C1O",
+      "inchikey": "PDACUKOKVHBVHJ-UHFFFAOYSA-N",
+      "iupac_name": "[5-(5-aminoimidazol-1-yl)-3,4-dihydroxyoxolan-2-yl]methyl dihydrogen phosphate",
+      "synonyms": [
+        "{[5-(5-amino-1H-imidazol-1-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}phosphonic acid",
+        "SCHEMBL29136140",
+        "PDACUKOKVHBVHJ-UHFFFAOYSA-N"
+      ]
+    },
+    "PEDCQBHIVMGVHV-UHFFFAOYSA-N": {
+      "canonical_smiles": "OCC(O)CO",
+      "inchikey": "PEDCQBHIVMGVHV-UHFFFAOYSA-N",
+      "iupac_name": "propane-1,2,3-triol",
+      "synonyms": [
+        "glycerol",
+        "glycerin",
+        "56-81-5",
+        "Glycerine",
+        "1,2,3-Propanetriol",
+        "Glycyl alcohol",
+        "Trihydroxypropane",
+        "Glyceritol",
+        "Osmoglyn",
+        "1,2,3-trihydroxypropane"
+      ]
+    },
+    "PEEIJJMXAMNICA-UHFFFAOYSA-N": {
+      "canonical_smiles": "CNC1C(OC(C)=O)OC(COC(C)=O)C(OC(C)=O)C1OC(C)=O",
+      "inchikey": "PEEIJJMXAMNICA-UHFFFAOYSA-N",
+      "iupac_name": "[3,4,6-triacetyloxy-5-(methylamino)oxan-2-yl]methyl acetate",
+      "synonyms": [
+        "65499-57-2",
+        "[3,4,6-triacetyloxy-5-(methylamino)oxan-2-yl]methyl acetate",
+        "NSC401852",
+        "DTXSID40322697",
+        "NSC-401852",
+        "1,3,4,6-Tetra-O-acetyl-2-deoxy-2-(methylamino)hexopyranose"
+      ]
+    },
+    "PETJKYHAQBWMDY-UHFFFAOYSA-N": {
+      "canonical_smiles": "CNC1=CC(=O)c2ccncc2C1=O",
+      "inchikey": "PETJKYHAQBWMDY-UHFFFAOYSA-N",
+      "iupac_name": "7-(methylamino)isoquinoline-5,8-dione",
+      "synonyms": [
+        "Caulibugulone A",
+        "662167-15-9",
+        "RefChem:124028",
+        "7-(methylamino)isoquinoline-5,8-dione",
+        "Cailbugulone A",
+        "UPCMLD00WCaulibugA:001",
+        "CHEMBL480286",
+        "SCHEMBL2555738",
+        "DTXSID50274375",
+        "NSC731583"
+      ]
+    },
+    "PJANXHGTPQOBST-QXMHVHEDSA-N": {
+      "canonical_smiles": "C(=C/c1ccccc1)/c1ccccc1",
+      "inchikey": "PJANXHGTPQOBST-QXMHVHEDSA-N",
+      "iupac_name": "(Z)-stilbene",
+      "synonyms": []
+    },
+    "PNODOYYSMMDXEB-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1=C(C)C(Br)=NC1=Cc1[nH]c(C)c(C)c1C",
+      "inchikey": "PNODOYYSMMDXEB-UHFFFAOYSA-N",
+      "iupac_name": "2-bromo-3,4-dimethyl-5-[(3,4,5-trimethyl-1H-pyrrol-2-yl)methylidene]pyrrole",
+      "synonyms": []
+    },
+    "PSIFNNKUMBGKDQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCc1nc(Cl)c(CO)n1Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1",
+      "inchikey": "PSIFNNKUMBGKDQ-UHFFFAOYSA-N",
+      "iupac_name": "[2-butyl-5-chloro-3-[[4-[2-(2H-tetrazol-5-yl)phenyl]phenyl]methyl]imidazol-4-yl]methanol",
+      "synonyms": [
+        "losartan",
+        "114798-26-4",
+        "allisartan",
+        "Angizaar",
+        "Losartic",
+        "Lozap",
+        "DUP-89",
+        "DTXSID7023227",
+        "JMS50MPO89",
+        "NSC-758699"
+      ]
+    },
+    "PTTQIUHVDDBART-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=[N+]([O-])c1cnc(Cl)c(Br)c1",
+      "inchikey": "PTTQIUHVDDBART-UHFFFAOYSA-N",
+      "iupac_name": "3-bromo-2-chloro-5-nitropyridine",
+      "synonyms": [
+        "3-Bromo-2-chloro-5-nitropyridine",
+        "5470-17-7",
+        "DTXSID70282513",
+        "RefChem:93116",
+        "DTXCID70233666",
+        "640-176-1",
+        "2-chloro-3-bromo-5-nitropyridine",
+        "3-Bromo-2-chloro-5-nitro-pyridine",
+        "MFCD00233989",
+        "Pyridine, 3-bromo-2-chloro-5-nitro-"
+      ]
+    },
+    "PVHUJELLJLJGLN-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCOC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1cccc([N+](=O)[O-])c1",
+      "inchikey": "PVHUJELLJLJGLN-UHFFFAOYSA-N",
+      "iupac_name": "5-O-ethyl 3-O-methyl 2,6-dimethyl-4-(3-nitrophenyl)-1,4-dihydropyridine-3,5-dicarboxylate",
+      "synonyms": [
+        "nitrendipine",
+        "39562-70-4",
+        "Bayotensin",
+        "Baypress",
+        "Nidrel",
+        "Deiten",
+        "3-ethyl 5-methyl 2,6-dimethyl-4-(3-nitrophenyl)-1,4-dihydropyridine-3,5-dicarboxylate",
+        "Nitrendipinum",
+        "Bay-e-5009",
+        "Nitrendipino"
+      ]
+    },
+    "PYICTMYIIYAIIQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1CCN(C)C(CO)(CO)C1=O",
+      "inchikey": "PYICTMYIIYAIIQ-UHFFFAOYSA-N",
+      "iupac_name": "2,2-bis(hydroxymethyl)-1,4-dimethylpiperidin-3-one",
+      "synonyms": []
+    },
+    "QFJCIRLUMZQUOT-UHFFFAOYSA-N": {
+      "canonical_smiles": "COC1CC2CCC(C)C(O)(O2)C(=O)C(=O)N2CCCCC2C(=O)OC(C(C)CC2CCC(O)C(OC)C2)CC(=O)C(C)C=C(C)C(O)C(OC)C(=O)C(C)CC(C)C=CC=CC=C1C",
+      "inchikey": "QFJCIRLUMZQUOT-UHFFFAOYSA-N",
+      "iupac_name": "1,18-dihydroxy-12-[1-(4-hydroxy-3-methoxycyclohexyl)propan-2-yl]-19,30-dimethoxy-15,17,21,23,29,35-hexamethyl-11,36-dioxa-4-azatricyclo[30.3.1.04,9]hexatriaconta-16,24,26,28-tetraene-2,3,10,14,20-pentone",
+      "synonyms": [
+        "Rapamycin-d3",
+        "28-Epirapamycin",
+        "SiroliMus-D3/RapaMycin-D3",
+        "C51H79NO13",
+        "(RS)-rapamycin",
+        "mTOR Inhibitor I",
+        "253431-35-5",
+        "392711-19-2",
+        "SpecPlus_000840",
+        "23,27-Epoxy-3H-pyrido[2,1-c][1,4]oxaazacyclohentriacontine"
+      ]
+    },
+    "QHKYPYXTTXKZST-UHFFFAOYSA-N": {
+      "canonical_smiles": "Oc1ccc(-c2nc(-c3ccc(F)cc3)c(-c3ccncc3)[nH]2)cc1",
+      "inchikey": "QHKYPYXTTXKZST-UHFFFAOYSA-N",
+      "iupac_name": "4-[4-(4-fluorophenyl)-5-pyridin-4-yl-1H-imidazol-2-yl]phenol",
+      "synonyms": [
+        "152121-30-7",
+        "SB 202190",
+        "SB-202190",
+        "SB202190",
+        "4-(4-Fluorophenyl)-2-(4-hydroxyphenyl)-5-(4-pyridyl)-1H-imidazole",
+        "4-(4-(4-fluorophenyl)-5-(pyridin-4-yl)-1H-imidazol-2-yl)phenol",
+        "4-(4-fluorophenyl)-2-(4-hydroxyphenyl)-5-(4-pyridyl)imidazole",
+        "4-[4-(4-fluorophenyl)-5-(pyridin-4-yl)-1H-imidazol-2-yl]phenol",
+        "PVX798P8GI",
+        "CHEBI:79090"
+      ]
+    },
+    "QNAYBMKLOCPYGJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(N)C(=O)O",
+      "inchikey": "QNAYBMKLOCPYGJ-UHFFFAOYSA-N",
+      "iupac_name": "2-aminopropanoic acid",
+      "synonyms": [
+        "DL-ALANINE",
+        "DL-2-Aminopropionic acid",
+        "Alanine, DL-",
+        "D,L-Alanine",
+        "DL-2-Aminopropanoic acid",
+        "NSC 7602",
+        "AI3-08908",
+        "EINECS 206-126-4",
+        "CCRIS 8596",
+        "1FU7983T0U"
+      ]
+    },
+    "QNNASOAFVHGFQC-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCC(=O)C(CC[NH+]1CCOCC1)(c1ccccc1)c1ccccc1.[Cl-]",
+      "inchikey": "QNNASOAFVHGFQC-UHFFFAOYSA-N",
+      "iupac_name": "6-morpholin-4-ium-4-yl-4,4-diphenylhexan-3-one chloride",
+      "synonyms": [
+        "63765-88-8",
+        "DTXSID30980306",
+        "6-(Morpholin-4-yl)-4,4-diphenylhexan-3-one--hydrogen chloride (1/1)",
+        "RefChem:1073749",
+        "DTXCID801407584",
+        "4,4-Diphenyl-6-morpholino-3-hexanone hydrochloride",
+        "6-morpholin-4-ium-4-yl-4,4-diphenylhexan-3-one chloride",
+        "3-HEXANONE, 4,4-DIPHENYL-6-MORPHOLINO-, HYDROCHLORIDE"
+      ]
+    },
+    "QTGHUNIWFITBRK-UHFFFAOYSA-N": {
+      "canonical_smiles": "COC(=O)CCC1=NOC(CC2CC(CCC(=O)OC)=NO2)C1",
+      "inchikey": "QTGHUNIWFITBRK-UHFFFAOYSA-N",
+      "iupac_name": "methyl 3-[5-[[3-(3-methoxy-3-oxopropyl)-4,5-dihydro-1,2-oxazol-5-yl]methyl]-4,5-dihydro-1,2-oxazol-3-yl]propanoate",
+      "synonyms": [
+        "NSC624868",
+        "Methyl 3-(5-((3-(3-methoxy-3-oxopropyl)-4,5-dihydro-5-isoxazolyl)methyl)-4,5-dihydro-3-isoxazolyl)propanoate",
+        "methyl 3-(5-{[3-(3-methoxy-3-oxopropyl)-4,5-dihydro-5-isoxazolyl]methyl}-4,5-dihydro-3-isoxazolyl)propanoate",
+        "CHEMBL1965396",
+        "AKOS024405872",
+        "NSC-624868",
+        "NCI60_007571",
+        "methyl 3-[5-[[3-(3-methoxy-3-oxo-propyl)-4,5-dihydroisoxazol-5-yl]methyl]-4,5-dihydroisoxazol-3-yl]propanoate"
+      ]
+    },
+    "QVWAEZJXDYOKEH-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(O)CCc1cccc(O)c1",
+      "inchikey": "QVWAEZJXDYOKEH-UHFFFAOYSA-N",
+      "iupac_name": "3-(3-hydroxyphenyl)propanoic acid",
+      "synonyms": [
+        "3-(3-hydroxyphenyl)propanoic acid",
+        "621-54-5",
+        "3-(3-hydroxyphenyl)propionic acid",
+        "Benzenepropanoic acid, 3-hydroxy-",
+        "Dihydro-3-coumaric acid",
+        "m-hydroxyphenylpropionic acid",
+        "HYDROCINNAMIC ACID, m-HYDROXY-",
+        "Dihydro-m-coumaric acid",
+        "beta-(m-Hydroxyphenyl)propionic acid",
+        "beta-(3-Hydroxyphenyl)propionic acid"
+      ]
+    },
+    "QXFVCKOCNCYDQD-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=c1cc(S)nc[nH]1",
+      "inchikey": "QXFVCKOCNCYDQD-UHFFFAOYSA-N",
+      "iupac_name": "4-sulfanyl-1H-pyrimidin-6-one",
+      "synonyms": [
+        "6311-83-7",
+        "6-mercaptopyrimidin-4(1H)-one",
+        "6-MERCAPTO-4(1H)-PYRIMIDINONE",
+        "4-sulfanyl-1H-pyrimidin-6-one",
+        "4(1H)-Pyrimidinone, 6-mercapto-",
+        "6-sulfanyl-1,4-dihydropyrimidin-4-one",
+        "6-Mercaptopyrimidin-4(3H)-one",
+        "6-sulfanylpyrimidin-4-ol",
+        "4-hydroxy-6-mercaptopyrimidine",
+        "SCHEMBL4695498"
+      ]
+    },
+    "QZAYGJVTTNCVMB-UHFFFAOYSA-N": {
+      "canonical_smiles": "NCCc1c[nH]c2ccc(O)cc12",
+      "inchikey": "QZAYGJVTTNCVMB-UHFFFAOYSA-N",
+      "iupac_name": "3-(2-aminoethyl)-1H-indol-5-ol",
+      "synonyms": [
+        "serotonin",
+        "5-HYDROXYTRYPTAMINE",
+        "50-67-9",
+        "3-(2-Aminoethyl)-1H-indol-5-ol",
+        "Enteramine",
+        "Thrombotonin",
+        "Thrombocytin",
+        "Serotonine",
+        "1H-Indol-5-ol, 3-(2-aminoethyl)-",
+        "Hippophaine"
+      ]
+    },
+    "RHLJLALHBZGAFM-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCC(=O)N1CCCN(c2nc(N)c3cc(OC)c(OC)cc3n2)CC1",
+      "inchikey": "RHLJLALHBZGAFM-UHFFFAOYSA-N",
+      "iupac_name": "1-[4-(4-amino-6,7-dimethoxyquinazolin-2-yl)-1,4-diazepan-1-yl]butan-1-one",
+      "synonyms": [
+        "Bunazosin",
+        "80755-51-7",
+        "Bunazosina",
+        "Bunazosine",
+        "1-[4-(4-amino-6,7-dimethoxyquinazolin-2-yl)-1,4-diazepan-1-yl]butan-1-one",
+        "Bunazosinum",
+        "1-(4-(4-Amino-6,7-dimethoxyquinazolin-2-yl)-1,4-diazepan-1-yl)butan-1-one",
+        "9UUW4V7G2H",
+        "DTXSID7022700",
+        "1H-1,4-Diazepine, 1-(4-amino-6,7-dimethoxy-2-quinazolinyl)hexahydro-4-(1-oxobutyl)-, monohydrochloride"
+      ]
+    },
+    "ROHFNLRQFUQHCH-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(C)CC(N)C(=O)O",
+      "inchikey": "ROHFNLRQFUQHCH-UHFFFAOYSA-N",
+      "iupac_name": "2-amino-4-methylpentanoic acid",
+      "synonyms": [
+        "DL-Leucine",
+        "Leucine, DL-",
+        "1QSS9D5DR6",
+        "NSC 9252",
+        "NSC-9252",
+        "EINECS 206-328-2",
+        "DL-LEUCINE [FCC]",
+        "AI3-26709",
+        "DTXSID00859050",
+        "RefChem:589959"
+      ]
+    },
+    "RRKQGNJQGSJGIQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "N#CC(C#N)CN=Nc1cccc(Cl)c1",
+      "inchikey": "RRKQGNJQGSJGIQ-UHFFFAOYSA-N",
+      "iupac_name": "2-[[(3-chlorophenyl)diazenyl]methyl]propanedinitrile",
+      "synonyms": [
+        "((m-Chlorophenyl)azo)methylmalononitrile",
+        "3655-93-4",
+        "F 2284",
+        "3-Chlor-phenyl-azo-methyl-malonitril [German]",
+        "MALONONITRILE, ((m-CHLOROPHENYL)AZO)METHYL-",
+        "3-Chlor-phenyl-azo-methyl-malonitril"
+      ]
+    },
+    "RSQRWOWBGMDPOS-UHFFFAOYSA-N": {
+      "canonical_smiles": "Oc1c(C=Nc2ccc(N(CCCl)CCCl)cc2)[nH]c2ccccc12",
+      "inchikey": "RSQRWOWBGMDPOS-UHFFFAOYSA-N",
+      "iupac_name": "2-[[4-[bis(2-chloroethyl)amino]phenyl]iminomethyl]-1H-indol-3-ol",
+      "synonyms": [
+        "NIOSH/NL5160400",
+        "NL51604000",
+        "2-(N-(p-(N,N-Bis(2-chloroethyl))aminophenyl)formimidoyl)-3-hydroxyindole",
+        "Indole, 2-(N-(p-(N,N-bis(2-chloroethyl))aminophenyl)formimidoyl)-3-hydroxy-",
+        "2-(((p-(Bis(2-chloroethyl)amino)phenyl)imino)methyl)indol-3-ol",
+        "INDOL-3-OL, 2-(((p-(BIS(2-CHLOROETHYL)AMINO)PHENYL)IMINO)METHYL)-",
+        "101651-84-7"
+      ]
+    },
+    "RTZKZFJDLAIYFH-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCOCC",
+      "inchikey": "RTZKZFJDLAIYFH-UHFFFAOYSA-N",
+      "iupac_name": "ethoxyethane",
+      "synonyms": [
+        "DIETHYL ETHER",
+        "ether",
+        "Ethyl ether",
+        "Ethoxyethane",
+        "60-29-7",
+        "Ethyl oxide",
+        "Pronarcol",
+        "Diethyl oxide",
+        "Aether",
+        "Anesthetic ether"
+      ]
+    },
+    "RUYUCCQRWINUHE-UHFFFAOYSA-N": {
+      "canonical_smiles": "ClC(Cl)=C(Cl)c1c(Cl)c(Cl)c(Cl)c(Cl)c1Cl",
+      "inchikey": "RUYUCCQRWINUHE-UHFFFAOYSA-N",
+      "iupac_name": "1,2,3,4,5-pentachloro-6-(1,2,2-trichloroethenyl)benzene",
+      "synonyms": [
+        "OCTACHLOROSTYRENE",
+        "29082-74-4",
+        "Styrene, octachloro-",
+        "Trichlorovinylpentachlorobenzene",
+        "Benzene, pentachloro(trichloroethenyl)-",
+        "DTXSID2021074",
+        "304368U4VH",
+        "RefChem:167552",
+        "DTXCID801074",
+        "684-175-4"
+      ]
+    },
+    "RYMZZMVNJRMUDD-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21",
+      "inchikey": "RYMZZMVNJRMUDD-UHFFFAOYSA-N",
+      "iupac_name": "[8-[2-(4-hydroxy-6-oxooxan-2-yl)ethyl]-3,7-dimethyl-1,2,3,7,8,8a-hexahydronaphthalen-1-yl] 2,2-dimethylbutanoate",
+      "synonyms": [
+        "892395-81-2",
+        "DTXSID60861018",
+        "8-(2-(4-Hydroxy-6-oxotetrahydro-2H-pyran-2-yl)ethyl)-3,7-dimethyl-1,2,3,7,8,8a-hexahydro-1-naphthalenyl 2,2-dimethylbutanoate",
+        "RefChem:311603",
+        "DTXCID80208643",
+        "Simvastatin D6",
+        "Statin",
+        "8-[2-(4-hydroxy-6-oxooxan-2-yl)ethyl]-3,7-dimethyl-1,2,3,7,8,8a-hexahydronaphthalen-1-yl 2,2-dimethylbutanoate",
+        "[8-[2-(4-hydroxy-6-oxooxan-2-yl)ethyl]-3,7-dimethyl-1,2,3,7,8,8a-hexahydronaphthalen-1-yl] 2,2-dimethylbutanoate",
+        "Kolestevan"
+      ]
+    },
+    "RZEKVGVHFLEQIL-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1ccc(-c2cc(C(F)(F)F)nn2-c2ccc(S(N)(=O)=O)cc2)cc1",
+      "inchikey": "RZEKVGVHFLEQIL-UHFFFAOYSA-N",
+      "iupac_name": "4-[5-(4-methylphenyl)-3-(trifluoromethyl)pyrazol-1-yl]benzenesulfonamide",
+      "synonyms": [
+        "celecoxib",
+        "169590-42-5",
+        "Celebrex",
+        "Celebra",
+        "Onsenal",
+        "4-[5-(4-METHYLPHENYL)-3-(TRIFLUOROMETHYL)-1H-PYRAZOL-1-YL]BENZENESULFONAMIDE",
+        "184007-95-2",
+        "SC-58635",
+        "4-[5-(4-methylphenyl)-3-(trifluoromethyl)pyrazol-1-yl]benzenesulfonamide",
+        "YM 177"
+      ]
+    },
+    "SCAKECZMGGNMPK-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(CF)N(CCO)c1ccc(F)cc1",
+      "inchikey": "SCAKECZMGGNMPK-UHFFFAOYSA-N",
+      "iupac_name": "2-fluoro-N-(4-fluorophenyl)-N-(2-hydroxyethyl)acetamide",
+      "synonyms": [
+        "10016-07-6",
+        "2,4'-Difluoro-N-(2-hydroxyethyl)acetanilide",
+        "BRN 2124077",
+        "ACETANILIDE, 2,4'-DIFLUORO-N-(2-HYDROXYETHYL)-",
+        "DTXSID10142985",
+        "RefChem:315705",
+        "DTXCID6065476",
+        "2-fluoro-N-(4-fluorophenyl)-N-(2-hydroxyethyl)acetamide",
+        "2,4/'-Difluoro-N-(2-hydroxyethyl)acetanilide"
+      ]
+    },
+    "SCCDQYPEOIRVGX-UHFFFAOYSA-N": {
+      "canonical_smiles": "C=CCc1ccc(OC(C)=O)c(OC)c1",
+      "inchikey": "SCCDQYPEOIRVGX-UHFFFAOYSA-N",
+      "iupac_name": "(2-methoxy-4-prop-2-enylphenyl) acetate",
+      "synonyms": [
+        "Eugenol acetate",
+        "EUGENYL ACETATE",
+        "Acetyleugenol",
+        "93-28-7",
+        "Acetyl eugenol",
+        "Phenol, 2-methoxy-4-(2-propenyl)-, acetate",
+        "Phenol, 4-allyl-2-methoxy-, acetate",
+        "FEMA No. 2469",
+        "V9OSB376X8",
+        "NSC-1242"
+      ]
+    },
+    "SDXAWLJRERMRKF-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1cc(C)[nH]n1",
+      "inchikey": "SDXAWLJRERMRKF-UHFFFAOYSA-N",
+      "iupac_name": "3,5-dimethyl-1H-pyrazole",
+      "synonyms": [
+        "3,5-Dimethylpyrazole",
+        "67-51-6",
+        "1H-Pyrazole, 3,5-dimethyl-",
+        "PYRAZOLE, 3,5-DIMETHYL-",
+        "3,5 DMP",
+        "TH 564",
+        "U 6245",
+        "H21N865K9J",
+        "NSC-8729",
+        "TRIXENE DP 8692"
+      ]
+    },
+    "SIVZUZNTZDNKGF-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCN(CC)CCNC(=O)C(Nc1cccc(Cl)c1)c1ccccc1",
+      "inchikey": "SIVZUZNTZDNKGF-UHFFFAOYSA-N",
+      "iupac_name": "2-(3-chloroanilino)-N-[2-(diethylamino)ethyl]-2-phenylacetamide",
+      "synonyms": []
+    },
+    "SKBJTDATEPTFQD-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCN(CC)CCC1C(=O)N=C(S)N(c2ccc(Cl)cc2)C1=O",
+      "inchikey": "SKBJTDATEPTFQD-UHFFFAOYSA-N",
+      "iupac_name": "1-(4-chlorophenyl)-5-[2-(diethylamino)ethyl]-2-sulfanylpyrimidine-4,6-dione",
+      "synonyms": [
+        "BRN 0931215",
+        "1-(p-Chlorophenyl)-5-(2-(diethylamino)ethyl)-2-thiobarbituric acid",
+        "93017-59-5",
+        "5-25-16-00098 (Beilstein Handbook Reference)",
+        "BARBITURIC ACID, 1-(p-CHLOROPHENYL)-5-(2-(DIETHYLAMINO)ETHYL)-2-THIO-",
+        "RefChem:320624",
+        "DTXSID00918777",
+        "3-(4-Chlorophenyl)-5-[2-(diethylamino)ethyl]-6-hydroxy-2-sulfanylidene-2,5-dihydropyrimidin-4(3H)-one"
+      ]
+    },
+    "SNCIHCJCKWLYNH-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCn1c(O)c2c(c(C(C)=N)c1=O)CCCC2",
+      "inchikey": "SNCIHCJCKWLYNH-UHFFFAOYSA-N",
+      "iupac_name": "4-ethanimidoyl-1-hydroxy-2-propyl-5,6,7,8-tetrahydroisoquinolin-3-one",
+      "synonyms": [
+        "5,6,7,8-Tetrahydro-3-hydroxy-4-(1-iminoethyl)-2-propylisoquinolin-1(2H)-one",
+        "1(2H)-ISOQUINOLINONE, 5,6,7,8-TETRAHYDRO-3-HYDROXY-4-(1-IMINOETHYL)-2-PROPYL-",
+        "89246-43-5"
+      ]
+    },
+    "SQBOSZXDOHQFAA-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C1N(Cc2ccccc2)C(COc2ccccc2)C(O)C(O)C(COc2ccccc2)N1Cc1ccccc1",
+      "inchikey": "SQBOSZXDOHQFAA-UHFFFAOYSA-N",
+      "iupac_name": "1,3-dibenzyl-5,6-dihydroxy-4,7-bis(phenoxymethyl)-1,3-diazepan-2-one",
+      "synonyms": [
+        "PD043168"
+      ]
+    },
+    "SRAHBOKVSSZEHQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(O)CCNC(=O)C1CCCN1S(=O)(=O)c1ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc1",
+      "inchikey": "SRAHBOKVSSZEHQ-UHFFFAOYSA-N",
+      "iupac_name": "2-[[4-[2-(2-carboxyethylcarbamoyl)pyrrolidin-1-yl]sulfonylbenzoyl]amino]pentanedioic acid",
+      "synonyms": [
+        "SCHEMBL7083423"
+      ]
+    },
+    "SUBDBMMJDZJVOS-UHFFFAOYSA-N": {
+      "canonical_smiles": "COc1ccc2[nH]c(S(=O)Cc3ncc(C)c(OC)c3C)nc2c1",
+      "inchikey": "SUBDBMMJDZJVOS-UHFFFAOYSA-N",
+      "iupac_name": "6-methoxy-2-[(4-methoxy-3,5-dimethyl-2-pyridinyl)methylsulfinyl]-1H-benzimidazole",
+      "synonyms": [
+        "Prilosec",
+        "RefChem:929978",
+        "omeprazole",
+        "73590-58-6",
+        "Losec",
+        "Antra",
+        "Omeprazon",
+        "Audazol",
+        "Omepral",
+        "Omapren"
+      ]
+    },
+    "SZRLKIKBPASKQH-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCN(CCCC)C(=S)S",
+      "inchikey": "SZRLKIKBPASKQH-UHFFFAOYSA-N",
+      "iupac_name": "dibutylcarbamodithioic acid",
+      "synonyms": [
+        "Dibutylcarbamodithioic acid",
+        "Dibutyldithiocarbamic acid",
+        "150-11-8",
+        "Carbamodithioic acid, dibutyl-",
+        "Carbamic acid, dibutyldithio-",
+        "N,N-Dibutyldithiocarbamic acid",
+        "BZ (ACCELERATOR",
+        "R7455206G0",
+        "CHEBI:144349",
+        "N,N-DIBUTYLDITHIOCARBAMIC AC"
+      ]
+    },
+    "SZYHELVLDPKTOS-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(C)C(NC(=O)Cn1c(-c2cccs2)ncc(N)c1=O)C(=O)C(F)(F)C(=O)NCCN1CCOCC1",
+      "inchikey": "SZYHELVLDPKTOS-UHFFFAOYSA-N",
+      "iupac_name": "4-[[2-(5-amino-6-oxo-2-thiophen-2-ylpyrimidin-1-yl)acetyl]amino]-2,2-difluoro-5-methyl-N-(2-morpholin-4-ylethyl)-3-oxohexanamide",
+      "synonyms": [
+        "2-[5-amino-6-oxo-2-(2-thienyl)-1,6-dihydropyrimidin-1-yl]-N-[3,3-difluoro-1-isopropyl-2-oxo-3-[N-(2-morpholinoethyl)carbamoyl]propyl]acetamide",
+        "SCHEMBL6132181",
+        "SZYHELVLDPKTOS-UHFFFAOYSA-N",
+        "PD193718"
+      ]
+    },
+    "TTZQRXNXZRWGHT-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(Nc1ccc(F)cc1)C12CC3CC(CC(C3)C1)C2",
+      "inchikey": "TTZQRXNXZRWGHT-UHFFFAOYSA-N",
+      "iupac_name": "N-(4-fluorophenyl)adamantane-1-carboxamide",
+      "synonyms": [
+        "N-(4-fluorophenyl)adamantane-1-carboxamide",
+        "42600-82-8",
+        "DTXSID30317911",
+        "RefChem:361990",
+        "DTXCID00269034",
+        "N-(4-Fluorophenyl)-1-adamantanecarboxamide",
+        "1-Adamantanecarboxamide, N-(4-fluorophenyl)-",
+        "NSC322037",
+        "Cambridge id 5268805",
+        "Oprea1_268253"
+      ]
+    },
+    "TVSRNCDLBDQCCC-UHFFFAOYSA-N": {
+      "canonical_smiles": "C[NH2+]CC1=C(c2ccc(Cl)c(Cl)c2)C2CCC1CC2.[Cl-]",
+      "inchikey": "TVSRNCDLBDQCCC-UHFFFAOYSA-N",
+      "iupac_name": "[3-(3,4-dichlorophenyl)-2-bicyclo[2.2.2]oct-2-enyl]methyl-methylazanium chloride",
+      "synonyms": [
+        "Bicyclo(2.2.2)oct-2-ene-2-methylamine, 3-(3,4-dichlorophenyl)-N-methyl-, hydrochloride",
+        "2-(3,4-Dichlorophenyl)-3-(methylaminomethyl)bicyclo(2.2.2)oct-2-ene, hydrochloride",
+        "62374-07-6",
+        "RefChem:329249"
+      ]
+    },
+    "TWLGLYVADVLALB-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(Br)C(Br)C#N",
+      "inchikey": "TWLGLYVADVLALB-UHFFFAOYSA-N",
+      "iupac_name": "2,3-dibromobutanenitrile",
+      "synonyms": [
+        "2,3-dibromobutanenitrile",
+        "25109-76-6",
+        "2,3-Dibromobutyronitrile",
+        "2,3-Dibromobutanenitrile (90%)",
+        "2,3-Dibromobutanenitrile (90per cent)",
+        "EINECS 246-624-9",
+        "Butanenitrile,2,3-dibromo-",
+        "2,3-Dibrombuttersaurenitril",
+        "Butanenitrile, 2,3-dibromo-",
+        "SCHEMBL7517487"
+      ]
+    },
+    "UATJOMSPNYCXIX-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=[N+]([O-])c1cc([N+](=O)[O-])cc([N+](=O)[O-])c1",
+      "inchikey": "UATJOMSPNYCXIX-UHFFFAOYSA-N",
+      "iupac_name": "1,3,5-trinitrobenzene",
+      "synonyms": [
+        "1,3,5-TRINITROBENZENE",
+        "99-35-4",
+        "sym-Trinitrobenzene",
+        "Trinitrobenzene",
+        "s-Trinitrobenzene",
+        "Benzite",
+        "syn-Trinitrobenzene",
+        "Trinitrobenzeen",
+        "Trinitrobenzol",
+        "Benzene, 1,3,5-trinitro-"
+      ]
+    },
+    "UBQKCCHYAOITMY-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=c1cccc[nH]1",
+      "inchikey": "UBQKCCHYAOITMY-UHFFFAOYSA-N",
+      "iupac_name": "1H-pyridin-2-one",
+      "synonyms": [
+        "2-HYDROXYPYRIDINE",
+        "142-08-5",
+        "2-Pyridone",
+        "2(1H)-Pyridinone",
+        "2-Pyridinone",
+        "2(1H)-Pyridone",
+        "2(lH)-Pyridinone",
+        "DTXSID2051716",
+        "6770O3A2I5",
+        "NSC-172522"
+      ]
+    },
+    "UBQNRHZMVUUOMG-UHFFFAOYSA-N": {
+      "canonical_smiles": "NS(=O)(=O)Cc1noc2ccccc12",
+      "inchikey": "UBQNRHZMVUUOMG-UHFFFAOYSA-N",
+      "iupac_name": "1,2-benzoxazol-3-ylmethanesulfonamide",
+      "synonyms": [
+        "zonisamide",
+        "68291-97-4",
+        "Zonegran",
+        "1,2-Benzisoxazole-3-methanesulfonamide",
+        "1,2-benzoxazol-3-ylmethanesulfonamide",
+        "Exceglan",
+        "Excegram",
+        "Excegran",
+        "AD-810",
+        "Zonisamida"
+      ]
+    },
+    "UCJXQRFJERKPOZ-UHFFFAOYSA-N": {
+      "canonical_smiles": "OCC1C(O)C(O)C(O)c2nnnn21",
+      "inchikey": "UCJXQRFJERKPOZ-UHFFFAOYSA-N",
+      "iupac_name": "5-(hydroxymethyl)-5,6,7,8-tetrahydrotetrazolo[1,5-a]pyridine-6,7,8-triol",
+      "synonyms": [
+        "SCHEMBL4997742"
+      ]
+    },
+    "UCTWMZQNUQWSLP-UHFFFAOYSA-N": {
+      "canonical_smiles": "CNCC(O)c1ccc(O)c(O)c1",
+      "inchikey": "UCTWMZQNUQWSLP-UHFFFAOYSA-N",
+      "iupac_name": "4-[1-hydroxy-2-(methylamino)ethyl]benzene-1,2-diol",
+      "synonyms": [
+        "329-65-7",
+        "Racepinephrine",
+        "(+-)-Adrenaline",
+        "Epinephrine, dl-",
+        "Racemic Epinephrine",
+        "Racemic adrenaline",
+        "GR0L9S3J0F",
+        "Adrenaline, racemic",
+        "Epinephrine, Racemic",
+        "CHEBI:33568"
+      ]
+    },
+    "UDMBCSSLTHHNCD-UHFFFAOYSA-N": {
+      "canonical_smiles": "Nc1ncnc2c1ncn2C1OC(COP(=O)(O)O)C(O)C1O",
+      "inchikey": "UDMBCSSLTHHNCD-UHFFFAOYSA-N",
+      "iupac_name": "[5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methyl dihydrogen phosphate",
+      "synonyms": [
+        "[5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methyl dihydrogen phosphate",
+        "(5-(6-Aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl)methyl dihydrogen phosphate",
+        "RefChem:1050555",
+        "9-(5-O-phosphonopentofuranosyl)-9H-purin-6-amine",
+        "31077-38-0",
+        "Vidarabine (phosphate)",
+        "Vidarabine-5'-monophosphate",
+        "122768-03-0",
+        "Arabinosyladenine monophosphate",
+        "5'-Arabinosyladenine monophosphate"
+      ]
+    },
+    "UFWIBTONFRDIAS-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1ccc2ccccc2c1",
+      "inchikey": "UFWIBTONFRDIAS-UHFFFAOYSA-N",
+      "iupac_name": "naphthalene",
+      "synonyms": [
+        "naphthalene",
+        "91-20-3",
+        "Naphthalin",
+        "Tar camphor",
+        "White tar",
+        "Albocarbon",
+        "Naphthene",
+        "Camphor tar",
+        "naphtalene",
+        "Naphthaline"
+      ]
+    },
+    "UHOVQNZJYSORNB-MZWXYZOWSA-N": {
+      "canonical_smiles": "[2H]c1c([2H])c([2H])c([2H])c([2H])c1[2H]",
+      "inchikey": "UHOVQNZJYSORNB-MZWXYZOWSA-N",
+      "iupac_name": "1,2,3,4,5,6-hexadeuteriobenzene",
+      "synonyms": [
+        "Benzene-d6",
+        "1076-43-3",
+        "Perdeuterobenzene",
+        "Benzene-1,2,3,4,5,6-d6",
+        "D6-Benzene",
+        "EINECS 214-061-8",
+        "DTXSID7037769",
+        "(d6)Benzene",
+        "[D6]benzene",
+        "Benzene(d6)"
+      ]
+    },
+    "UIIMBOGNXHQVGW-UHFFFAOYSA-M": {
+      "canonical_smiles": "O=C([O-])O.[Na+]",
+      "inchikey": "UIIMBOGNXHQVGW-UHFFFAOYSA-M",
+      "iupac_name": "sodium hydrogen carbonate",
+      "synonyms": [
+        "SODIUM BICARBONATE",
+        "144-55-8",
+        "Sodium hydrogen carbonate",
+        "Baking soda",
+        "Sodium hydrogencarbonate",
+        "Sodium acid carbonate",
+        "Bicarbonate of soda",
+        "Carbonic acid monosodium salt",
+        "Monosodium carbonate",
+        "Meylon"
+      ]
+    },
+    "UIKGLXJNZXSPGV-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1nnc(N)nc1C",
+      "inchikey": "UIKGLXJNZXSPGV-UHFFFAOYSA-N",
+      "iupac_name": "5,6-dimethyl-1,2,4-triazin-3-amine",
+      "synonyms": [
+        "3-Amino-5,6-dimethyl-1,2,4-triazine",
+        "17584-12-2",
+        "1,2,4-Triazin-3-amine, 5,6-dimethyl-",
+        "3-Amino-5,6-dimethyl-as-triazine",
+        "NSC 55646",
+        "as-Triazine, 3-amino-5,6-dimethyl-",
+        "5,6-Dimethyl-1,2,4-triazin-3-ylamine",
+        "EINECS 241-552-4",
+        "Y36ASR52NU",
+        "BRN 0118790"
+      ]
+    },
+    "UJRRDDHEMZLWFI-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(=O)Nc1ncc([N+](=O)[O-])s1",
+      "inchikey": "UJRRDDHEMZLWFI-UHFFFAOYSA-N",
+      "iupac_name": "N-(5-nitro-1,3-thiazol-2-yl)acetamide",
+      "synonyms": [
+        "Nithiamide",
+        "140-40-9",
+        "2-Acetamido-5-nitrothiazole",
+        "Aminitrozole",
+        "Acinitrazole",
+        "Aminitrozol",
+        "Nitazole",
+        "Acetamide, N-(5-nitro-2-thiazolyl)-",
+        "N-(5-Nitro-2-thiazolyl)acetamide",
+        "Aminitrozolum"
+      ]
+    },
+    "USVMJSALORZVDV-SDBHATRESA-N": {
+      "canonical_smiles": "CC(C)=CCNc1ncnc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@H]1O",
+      "inchikey": "USVMJSALORZVDV-SDBHATRESA-N",
+      "iupac_name": "(2R,3S,4R,5R)-2-(hydroxymethyl)-5-[6-(3-methylbut-2-enylamino)purin-9-yl]oxolane-3,4-diol",
+      "synonyms": [
+        "7724-76-7",
+        "Riboprine",
+        "N6-Isopentenyladenosine",
+        "Isopentenyladenosine",
+        "2iPA",
+        "Riboprina",
+        "Isopentenyladenosine riboside",
+        "Riboprinum",
+        "ADENOSINE, N-(3-METHYL-2-BUTENYL)-",
+        "2-IPA"
+      ]
+    },
+    "UTADHIFAFYGZKD-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1(C)NC(=O)C(C)(C)O1",
+      "inchikey": "UTADHIFAFYGZKD-UHFFFAOYSA-N",
+      "iupac_name": "2,2,5,5-tetramethyl-1,3-oxazolidin-4-one",
+      "synonyms": [
+        "6862-08-4",
+        "2,2,5,5-Tetramethyloxazolidin-4-one",
+        "2,2,5,5-tetramethyl-1,3-oxazolidin-4-one",
+        "NSC25564",
+        "DTXSID50988304",
+        "UTADHIFAFYGZKD-UHFFFAOYSA-N",
+        "EINECS 229-960-0",
+        "NSC 25564",
+        "NSC-25564",
+        "NS00045257"
+      ]
+    },
+    "UWWLQUATUMACJU-UHFFFAOYSA-N": {
+      "canonical_smiles": "CNCCc1csc2ccccc12",
+      "inchikey": "UWWLQUATUMACJU-UHFFFAOYSA-N",
+      "iupac_name": "2-(1-benzothiophen-3-yl)-N-methylethanamine",
+      "synonyms": [
+        "52994-61-3",
+        "BRN 1367853",
+        "BENZO(b)THIOPHENE-3-ETHYLAMINE, N-METHYL-",
+        "N-Methylbenzo(b)thiophene-3-ethylamine",
+        "3-(2-(Methylamino)ethyl)benzo(b)thiophene",
+        "DTXSID70201027",
+        "RefChem:326251",
+        "DTXCID70123518",
+        "[2-(1-benzothiophen-3-yl)ethyl](methyl)amine",
+        "SCHEMBL6973697"
+      ]
+    },
+    "UZXLTPMMECHNLB-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCC1OCC2OC(Nc3ccccc3)C(O)C(O)C2O1",
+      "inchikey": "UZXLTPMMECHNLB-UHFFFAOYSA-N",
+      "iupac_name": "6-anilino-2-propyl-4,4a,6,7,8,8a-hexahydropyrano[3,2-d][1,3]dioxine-7,8-diol",
+      "synonyms": [
+        "NSC351578",
+        "NSC-351578"
+      ]
+    },
+    "VFIDUCMKNJIJTO-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1ccc(OCC(O)C(C)NC(C)C)c2c1CCC2",
+      "inchikey": "VFIDUCMKNJIJTO-UHFFFAOYSA-N",
+      "iupac_name": "1-[(7-methyl-2,3-dihydro-1H-inden-4-yl)oxy]-3-(propan-2-ylamino)butan-2-ol",
+      "synonyms": [
+        "ICI-118,551",
+        "DTXSID70874977",
+        "RefChem:1048317",
+        "DTXCID801013101",
+        "1-[(7-methyl-2,3-dihydro-1H-inden-4-yl)oxy]-3-(propan-2-ylamino)butan-2-ol",
+        "72795-19-8",
+        "72795-26-7",
+        "3-(Isopropylamino)-1-((7-methyl-2,3-dihydro-1H-inden-4-yl)oxy)butan-2-ol",
+        "1-[(7-methyl-2,3-dihydro-1H-inden-4-yl)oxy]-3-[(propan-2-yl)amino]butan-2-ol",
+        "91021-57-7"
+      ]
+    },
+    "VKRAXSZEDRWLAG-SJKOYZFVSA-N": {
+      "canonical_smiles": "CCN(CC)C(=O)[C@@H]1C=C2c3cccc4[nH]c(Br)c(c34)C[C@H]2N(C)C1",
+      "inchikey": "VKRAXSZEDRWLAG-SJKOYZFVSA-N",
+      "iupac_name": "(6aR,9R)-5-bromo-N,N-diethyl-7-methyl-6,6a,8,9-tetrahydro-4H-indolo[4,3-fg]quinoline-9-carboxamide",
+      "synonyms": [
+        "BROMOLYSERGIDE",
+        "2-Bromo-LSD",
+        "478-84-2",
+        "Bromlysergamide",
+        "2-Bromo-D-lysergic acid diethylamide",
+        "Brom LSD",
+        "USAF SZ-1",
+        "BOL-148",
+        "2-Br-LSD",
+        "D-2-Bromolysergic acid diethylamide"
+      ]
+    },
+    "VLKZOEOYAKHREP-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCCC",
+      "inchikey": "VLKZOEOYAKHREP-UHFFFAOYSA-N",
+      "iupac_name": "hexane",
+      "synonyms": [
+        "HEXANE",
+        "n-Hexane",
+        "110-54-3",
+        "Skellysolve B",
+        "Esani",
+        "Gettysolve-B",
+        "Hexyl hydride",
+        "Dipropyl",
+        "Hexanen",
+        "Heksan"
+      ]
+    },
+    "VQASKUSHBVDKGU-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCC1(C)OC(=O)N(C)C1=O",
+      "inchikey": "VQASKUSHBVDKGU-UHFFFAOYSA-N",
+      "iupac_name": "5-ethyl-3,5-dimethyl-1,3-oxazolidine-2,4-dione",
+      "synonyms": [
+        "PARAMETHADIONE",
+        "Parametadione",
+        "115-67-3",
+        "Paradione",
+        "Isoethadione",
+        "5-Ethyl-3,5-dimethyl-1,3-oxazolidine-2,4-dione",
+        "Paramethadionum",
+        "2,4-Oxazolidinedione, 5-ethyl-3,5-dimethyl-",
+        "Parametadiona",
+        "3,5-Dimethyl-5-ethyloxazolidine-2,4-dione"
+      ]
+    },
+    "VQKWOQAMYRRGGN-UHFFFAOYSA-N": {
+      "canonical_smiles": "OCCN(CCO)c1nc(Cl)nc2c(N(CCO)CCO)ncnc12",
+      "inchikey": "VQKWOQAMYRRGGN-UHFFFAOYSA-N",
+      "iupac_name": "2-[[8-[bis(2-hydroxyethyl)amino]-2-chloropyrimido[5,4-d]pyrimidin-4-yl]-(2-hydroxyethyl)amino]ethanol",
+      "synonyms": [
+        "NSC516416",
+        "NSC-516416"
+      ]
+    },
+    "VREFGVBLTWBCJP-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2",
+      "inchikey": "VREFGVBLTWBCJP-UHFFFAOYSA-N",
+      "iupac_name": "8-chloro-1-methyl-6-phenyl-4H-[1,2,4]triazolo[4,3-a][1,4]benzodiazepine",
+      "synonyms": [
+        "alprazolam",
+        "Xanax",
+        "28981-97-7",
+        "Niravam",
+        "Solanax",
+        "Tranquinal",
+        "Alplax",
+        "Xanor",
+        "Alpronax",
+        "Xanax XR"
+      ]
+    },
+    "VSFIKHFVWBEFKU-NDEPHWFRSA-N": {
+      "canonical_smiles": "CCCCOc1ccc([C@H](C)NCCCNCCC(c2ccccc2)c2ccccc2)cc1OCCCC",
+      "inchikey": "VSFIKHFVWBEFKU-NDEPHWFRSA-N",
+      "iupac_name": "N'-[(1S)-1-(3,4-dibutoxyphenyl)ethyl]-N-(3,3-diphenylpropyl)propane-1,3-diamine",
+      "synonyms": []
+    },
+    "VTHUYJIXSMGYOQ-GRTSCFIKSA-N": {
+      "canonical_smiles": "CC(=O)O[C@]1(C(C)=O)CC[C@H]2C3CCC4=CC(=O)CCC4(C)[C@H]3CCC21C",
+      "inchikey": "VTHUYJIXSMGYOQ-GRTSCFIKSA-N",
+      "iupac_name": "[(9S,14S,17R)-17-acetyl-10,13-dimethyl-3-oxo-2,6,7,8,9,11,12,14,15,16-decahydro-1H-cyclopenta[a]phenanthren-17-yl] acetate",
+      "synonyms": [
+        "SCHEMBL29766827"
+      ]
+    },
+    "VTYYLEPIZMXCLO-UHFFFAOYSA-L": {
+      "canonical_smiles": "O=C([O-])[O-].[Ca+2]",
+      "inchikey": "VTYYLEPIZMXCLO-UHFFFAOYSA-L",
+      "iupac_name": "calcium carbonate",
+      "synonyms": [
+        "CALCIUM CARBONATE",
+        "471-34-1",
+        "Aeromatt",
+        "Calcium carbonate (1:1)",
+        "Carbonic acid calcium salt (1:1)",
+        "Calofort U",
+        "Albaglos",
+        "Aragonite",
+        "Calcicoll",
+        "Calseeds"
+      ]
+    },
+    "VUUITUUENPOMIU-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=Cc1nc(-c2ccccc2Cl)c2cc(Cl)ccc2n1",
+      "inchikey": "VUUITUUENPOMIU-UHFFFAOYSA-N",
+      "iupac_name": "6-chloro-4-(2-chlorophenyl)quinazoline-2-carbaldehyde",
+      "synonyms": [
+        "6-chloro-4-(2-chlorophenyl)-2-Quinazolinecarboxaldehyde",
+        "Lorazepam impurity E [EP]",
+        "UNII-8RF5NW66M0",
+        "6-Chloro-4-(o-chlorophenyl)-2-quinazolinecarboxaldehyde",
+        "2-Quinazolinecarboxaldehyde, 6-chloro-4-(2-chlorophenyl)-",
+        "8RF5NW66M0",
+        "DTXSID40239938",
+        "LORAZEPAM IMPURITY E [EP IMPURITY]",
+        "LORAZEPAM IMPURITY E (EP IMPURITY)",
+        "Lorazepam impurity E"
+      ]
+    },
+    "VYDBTNADENXYSN-UHFFFAOYSA-N": {
+      "canonical_smiles": "COc1ccc2c(c1)c(CC(=O)NCCc1ccccc1)c(C)n2C(=O)c1ccc(Cl)cc1",
+      "inchikey": "VYDBTNADENXYSN-UHFFFAOYSA-N",
+      "iupac_name": "2-[1-(4-chlorobenzoyl)-5-methoxy-2-methylindol-3-yl]-N-(2-phenylethyl)acetamide",
+      "synonyms": [
+        "LM 4108",
+        "LM-4108",
+        "RefChem:924855",
+        "261766-32-9",
+        "N-(2-Phenylethyl)indomethacin Amide",
+        "N-(2-phenylethyl)-Indomethacin amide",
+        "N-(2-Phenylethyl)indomethacinamide",
+        "2-[1-(4-chlorobenzoyl)-5-methoxy-2-methylindol-3-yl]-N-(2-phenylethyl)acetamide",
+        "CHEMBL95311",
+        "2-[1-(4-chlorobenzoyl)-5-methoxy-2-methyl-1H-indol-3-yl]-N-(2-phenylethyl)acetamide"
+      ]
+    },
+    "VZGDMQKNWNREIO-UHFFFAOYSA-N": {
+      "canonical_smiles": "ClC(Cl)(Cl)Cl",
+      "inchikey": "VZGDMQKNWNREIO-UHFFFAOYSA-N",
+      "iupac_name": "tetrachloromethane",
+      "synonyms": [
+        "CARBON TETRACHLORIDE",
+        "Tetrachloromethane",
+        "56-23-5",
+        "Perchloromethane",
+        "Tetrasol",
+        "Benzinoform",
+        "Necatorine",
+        "Tetrafinol",
+        "Vermoestricid",
+        "Carbona"
+      ]
+    },
+    "WBYWAXJHAXSJNI-VOTSOKGWSA-N": {
+      "canonical_smiles": "O=C(O)/C=C/c1ccccc1",
+      "inchikey": "WBYWAXJHAXSJNI-VOTSOKGWSA-N",
+      "iupac_name": "(E)-3-phenylprop-2-enoic acid",
+      "synonyms": []
+    },
+    "WFDIJRYMOXRFFG-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(=O)OC(C)=O",
+      "inchikey": "WFDIJRYMOXRFFG-UHFFFAOYSA-N",
+      "iupac_name": "acetyl acetate",
+      "synonyms": [
+        "ACETIC ANHYDRIDE",
+        "Acetyl acetate",
+        "108-24-7",
+        "Acetanhydride",
+        "Ethanoic anhydride",
+        "Acetyl oxide",
+        "Acetyl anhydride",
+        "Acetic oxide",
+        "Acetic acid, anhydride",
+        "acetic acid anhydride"
+      ]
+    },
+    "WHRDCHPONAMGPJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C1CN=C(c2ccccc2)c2cc(Cl)ccc2N1CCCN1CCN(c2ccccc2)CC1",
+      "inchikey": "WHRDCHPONAMGPJ-UHFFFAOYSA-N",
+      "iupac_name": "7-chloro-5-phenyl-1-[3-(4-phenylpiperazin-1-yl)propyl]-3H-1,4-benzodiazepin-2-one",
+      "synonyms": [
+        "AKOS005065860"
+      ]
+    },
+    "WLVAGPOMHYWYGV-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1cc(Br)ccc1OCC(=O)Nc1ccccc1F",
+      "inchikey": "WLVAGPOMHYWYGV-UHFFFAOYSA-N",
+      "iupac_name": "2-(4-bromo-2-methylphenoxy)-N-(2-fluorophenyl)acetamide",
+      "synonyms": [
+        "2-(4-bromo-2-methylphenoxy)-N-(2-fluorophenyl)acetamide",
+        "Cambridge id 7007572",
+        "STK202014",
+        "AKOS003330813",
+        "SR-01000248930",
+        "SR-01000248930-1"
+      ]
+    },
+    "WOWHHFRSBJGXCM-UHFFFAOYSA-M": {
+      "canonical_smiles": "CCCCCCCCCCCCCCCC[N+](C)(C)C.[Cl-]",
+      "inchikey": "WOWHHFRSBJGXCM-UHFFFAOYSA-M",
+      "iupac_name": "hexadecyl(trimethyl)azanium chloride",
+      "synonyms": [
+        "112-02-7",
+        "Hexadecyltrimethylammonium chloride",
+        "Cetrimonium chloride",
+        "N-Hexadecyltrimethylammonium chloride",
+        "Dehyquart A",
+        "Genamin CTAC",
+        "Aliquat 6",
+        "Cetyl trimethyl ammonium chloride",
+        "CETAC",
+        "HTAC"
+      ]
+    },
+    "WQZGIWQJTINELR-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(NCc1ccccc1)C(=O)Nc1ccc2c(c1)C(=O)c1ccccc1C2=O",
+      "inchikey": "WQZGIWQJTINELR-UHFFFAOYSA-N",
+      "iupac_name": "N-benzyl-N'-(9,10-dioxoanthracen-2-yl)oxamide",
+      "synonyms": [
+        "N-(2-Anthraquinonyl)-N'-benzyloxamide",
+        "OXAMIDE, N-(2-ANTHRAQUINONYL)-N'-BENZYL-",
+        "92573-43-8",
+        "DTXSID00239050",
+        "Ethanediamide, N-(9,10-dihydro-9,10-dioxo-2-anthracenyl)-N'-(phenylmethyl)-",
+        "RefChem:367134",
+        "DTXCID20161541",
+        "N~1~-Benzyl-N~2~-(9,10-dioxo-9,10-dihydroanthracen-2-yl)ethanediamide"
+      ]
+    },
+    "WQZGKKKJIJFFOK-VFUOTHLCSA-N": {
+      "canonical_smiles": "OC[C@H]1O[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O",
+      "inchikey": "WQZGKKKJIJFFOK-VFUOTHLCSA-N",
+      "iupac_name": "(2R,3R,4S,5S,6R)-6-(hydroxymethyl)oxane-2,3,4,5-tetrol",
+      "synonyms": [
+        "beta-D-glucose",
+        "beta-D-glucopyranose",
+        "492-61-5",
+        "beta-glucose",
+        "CHEBI:15903",
+        "J4R00M814D",
+        "Beta-D-glucose anhydrous",
+        "Beta-d-glucose, anhydrous",
+        "DTXSID70883403",
+        "RefChem:143637"
+      ]
+    },
+    "WRWOYKPAJDIBLG-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(C)(C)c1cc(C(=O)O)ccc1C(=O)O",
+      "inchikey": "WRWOYKPAJDIBLG-UHFFFAOYSA-N",
+      "iupac_name": "2-tert-butylterephthalic acid",
+      "synonyms": [
+        "NSC127000",
+        "SCHEMBL1355541",
+        "NSC-127000"
+      ]
+    },
+    "WSAAVOASHKNBCU-UHFFFAOYSA-N": {
+      "canonical_smiles": "COCC1OC(Oc2ccc(-c3cc(=O)c4c(OC)c(C5OC(COC)C(OC)C(OC)C5OC)c(OC)cc4o3)cc2)C(OC)C(OC)C1OC",
+      "inchikey": "WSAAVOASHKNBCU-UHFFFAOYSA-N",
+      "iupac_name": "5,7-dimethoxy-6-[3,4,5-trimethoxy-6-(methoxymethyl)oxan-2-yl]-2-[4-[3,4,5-trimethoxy-6-(methoxymethyl)oxan-2-yl]oxyphenyl]chromen-4-one",
+      "synonyms": [
+        "Permethyl 4'-O-glucosylisovitexin",
+        "WSAAVOASHKNBCU-UHFFFAOYSA-N"
+      ]
+    },
+    "WSEQXVZVJXJVFP-UHFFFAOYSA-N": {
+      "canonical_smiles": "CN(C)CCCC1(c2ccc(F)cc2)OCc2cc(C#N)ccc21",
+      "inchikey": "WSEQXVZVJXJVFP-UHFFFAOYSA-N",
+      "iupac_name": "1-[3-(dimethylamino)propyl]-1-(4-fluorophenyl)-3H-2-benzofuran-5-carbonitrile",
+      "synonyms": [
+        "citalopram",
+        "59729-33-8",
+        "Nitalapram",
+        "Cipram",
+        "Citalopramum",
+        "Citadur",
+        "1-[3-(dimethylamino)propyl]-1-(4-fluorophenyl)-1,3-dihydro-2-benzofuran-5-carbonitrile",
+        "1-[3-(dimethylamino)propyl]-1-(4-fluorophenyl)-3H-2-benzofuran-5-carbonitrile",
+        "0DHU5B8D6V",
+        "Lu 10-171"
+      ]
+    },
+    "WTKZEGDFNFYCGP-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1cn[nH]c1",
+      "inchikey": "WTKZEGDFNFYCGP-UHFFFAOYSA-N",
+      "iupac_name": "1H-pyrazole",
+      "synonyms": [
+        "pyrazole",
+        "1H-Pyrazole",
+        "288-13-1",
+        "1,2-diazole",
+        "Pyrazol",
+        "1H-pyrazol",
+        "3QD5KJZ7ZJ",
+        "DTXSID2059774",
+        "NSC45410",
+        "NSC-45410"
+      ]
+    },
+    "WUDKQPQAAUQCLT-UHFFFAOYSA-N": {
+      "canonical_smiles": "FC(F)(F)c1nc2c(Cl)cccc2[nH]1",
+      "inchikey": "WUDKQPQAAUQCLT-UHFFFAOYSA-N",
+      "iupac_name": "4-chloro-2-(trifluoromethyl)-1H-benzimidazole",
+      "synonyms": [
+        "2338-31-0",
+        "BENZIMIDAZOLE, 4-CHLORO-2-(TRIFLUOROMETHYL)-",
+        "BRN 0525680",
+        "4-Chloro-2-(trifluoromethyl)benzimidazole",
+        "DTXSID50177938",
+        "RefChem:325909",
+        "DTXCID10100429",
+        "4-Chloro-2-(trifluoromethyl)-1H-benzo[d]imidazole",
+        "4-chloro-2-(trifluoromethyl)-1H-benzimidazole",
+        "2-(Trifluoromethyl)-4-chloro-1H-benzimidazole"
+      ]
+    },
+    "WUTYZMFRCNBCHQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1OC2(CS1)CN1CCC2CC1",
+      "inchikey": "WUTYZMFRCNBCHQ-UHFFFAOYSA-N",
+      "iupac_name": "2-methylspiro[1,3-oxathiolane-5,3'-1-azabicyclo[2.2.2]octane]",
+      "synonyms": [
+        "124620-88-8",
+        "2-methylspiro[1,3-oxathiolane-5,3'-1-azabicyclo[2.2.2]octane]",
+        "2'-Methyl-4-azaspiro[bicyclo[2.2.2]octane-2,5'-[1,3]oxathiolane]",
+        "5'-METHYL-4-AZASPIRO[BICYCLO[2.2.2]OCTANE-2,2'-[1,4]OXATHIOLANE]",
+        "2-methylspiro(1,3-oxathiolane-5,3'-quinuclidine)",
+        "2-Methylspiro[1,3-oxathiolane-5,3'-quinuclidine]",
+        "2-methylspiro(1,3-oxathiolan-5,3')quinuclidine",
+        "SCHEMBL299760",
+        "CHEMBL168815",
+        "GTPL9658"
+      ]
+    },
+    "WXRLHIWOBAJHOC-UHFFFAOYSA-N": {
+      "canonical_smiles": "Nc1nc(N)nc(C=Cc2ccc(Cl)cc2)n1",
+      "inchikey": "WXRLHIWOBAJHOC-UHFFFAOYSA-N",
+      "iupac_name": "6-[2-(4-chlorophenyl)ethenyl]-1,3,5-triazine-2,4-diamine",
+      "synonyms": [
+        "6-[2-(4-chlorophenyl)ethenyl]-1,3,5-triazine-2,4-diamine",
+        "SB73611",
+        "DS-015696"
+      ]
+    },
+    "WZMCHFHHRACTST-PRHODGIISA-N": {
+      "canonical_smiles": "C[C@H]1C(=O)O[C@H](c2ccc(Br)cc2)C(C)(C)C1=O",
+      "inchikey": "WZMCHFHHRACTST-PRHODGIISA-N",
+      "iupac_name": "(3R,6R)-6-(4-bromophenyl)-3,5,5-trimethyloxane-2,4-dione",
+      "synonyms": []
+    },
+    "XBPCUCUWBYBCDP-UHFFFAOYSA-N": {
+      "canonical_smiles": "C1CCC(NC2CCCCC2)CC1",
+      "inchikey": "XBPCUCUWBYBCDP-UHFFFAOYSA-N",
+      "iupac_name": "N-cyclohexylcyclohexanamine",
+      "synonyms": [
+        "DICYCLOHEXYLAMINE",
+        "101-83-7",
+        "N-Cyclohexylcyclohexanamine",
+        "Cyclohexanamine, N-cyclohexyl-",
+        "DCHA",
+        "N,N-Dicyclohexylamine",
+        "Dodecahydrodiphenylamine",
+        "Dicyklohexylamin",
+        "N-Cyclohexyl-cyclohexylamine",
+        "1A93RJW924"
+      ]
+    },
+    "XDCMHOFEBFTMNL-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCc1c(O)cccc1O",
+      "inchikey": "XDCMHOFEBFTMNL-UHFFFAOYSA-N",
+      "iupac_name": "2-propylbenzene-1,3-diol",
+      "synonyms": [
+        "1,3-Benzenediol, propyl-",
+        "68146-94-1",
+        "RefChem:1052671",
+        "DTXSID301020234",
+        "2-propylbenzene-1,3-diol",
+        "13331-19-6",
+        "2-n-Propylresorcinol",
+        "1,3-Benzenediol, 2-propyl-",
+        "2-PROPYLRESORCINOL",
+        "MFCD00100568"
+      ]
+    },
+    "XDEGNMIESCLECD-UHFFFAOYSA-N": {
+      "canonical_smiles": "Nc1[nH]cnc(=O)c1NC(=O)c1ccc(N(CCCl)CCCl)cc1",
+      "inchikey": "XDEGNMIESCLECD-UHFFFAOYSA-N",
+      "iupac_name": "N-(6-amino-4-oxo-1H-pyrimidin-5-yl)-4-[bis(2-chloroethyl)amino]benzamide",
+      "synonyms": [
+        "NSC90339",
+        "NCIOpen2_009772",
+        "NSC-90339"
+      ]
+    },
+    "XEFRNCLPPFDWAC-UHFFFAOYSA-N": {
+      "canonical_smiles": "COc1cc(N)cc(OC)c1OC",
+      "inchikey": "XEFRNCLPPFDWAC-UHFFFAOYSA-N",
+      "iupac_name": "3,4,5-trimethoxyaniline",
+      "synonyms": [
+        "3,4,5-TRIMETHOXYANILINE",
+        "24313-88-0",
+        "Benzenamine, 3,4,5-trimethoxy-",
+        "Aniline, 3,4,5-trimethoxy-",
+        "EINECS 246-154-4",
+        "NSC 37006",
+        "AI3-52691",
+        "DTXSID8066979",
+        "RefChem:90930",
+        "DTXCID7037058"
+      ]
+    },
+    "XHSQDZXAVJRBMX-UHFFFAOYSA-N": {
+      "canonical_smiles": "OCC1OC(n2cnc3cc(Cl)c(Cl)cc32)C(O)C1O",
+      "inchikey": "XHSQDZXAVJRBMX-UHFFFAOYSA-N",
+      "iupac_name": "2-(5,6-dichlorobenzimidazol-1-yl)-5-(hydroxymethyl)oxolane-3,4-diol",
+      "synonyms": [
+        "(2R,3R,4S,5R)-2-(5,6-dichlorobenzimidazol-1-yl)-5-(hydroxymethyl)oxolane-3,4-diol",
+        "MLS003171503",
+        "2-(5,6-dichlorobenzimidazol-1-yl)-5-(hydroxymethyl)oxolane-3,4-diol",
+        "5,6-Dichloro-1-beta-D-ribofuranosylbenzimidazole",
+        "C12H12Cl2N2O4",
+        "DRB;",
+        "NSC401575",
+        "5,6-dichlororibofuranosylbenzimidazole",
+        "NSC-401575",
+        "Kinome_3639"
+      ]
+    },
+    "XIKFVJMQXWJVQW-UHFFFAOYSA-M": {
+      "canonical_smiles": "O=C(NNCS(=O)(=O)[O-])c1ccncc1.[Na+]",
+      "inchikey": "XIKFVJMQXWJVQW-UHFFFAOYSA-M",
+      "iupac_name": "sodium [2-(pyridine-4-carbonyl)hydrazinyl]methanesulfonate",
+      "synonyms": [
+        "isoniazid sodium methanesulfonate",
+        "DTXSID7046885",
+        "DTXCID5026885",
+        "RefChem:1087590",
+        "Neoiscotin",
+        "3804-89-5",
+        "Methaniazide sodium",
+        "2'-(Sulphomethyl)isonicotinohydrazide, monosodium salt",
+        "Isoniazid methanesulfonate sodium",
+        "Neo-tizide sodium salt"
+      ]
+    },
+    "XMGQYMWWDOXHJM-SNVBAGLBSA-N": {
+      "canonical_smiles": "C=C(C)[C@@H]1CC=C(C)CC1",
+      "inchikey": "XMGQYMWWDOXHJM-SNVBAGLBSA-N",
+      "iupac_name": "(4S)-1-methyl-4-prop-1-en-2-ylcyclohexene",
+      "synonyms": [
+        "(-)-Limonene",
+        "l-Limonene",
+        "beta-Limonene",
+        "Limonene, (-)-",
+        "Limonene, L-",
+        "P-Mentha-1,8-diene, (S)-(-)-",
+        "UNII-47MAJ1Y2NE",
+        "47MAJ1Y2NE",
+        "Cyclohexene, 1-methyl-4-(1-methylethenyl)-, (S)-",
+        "EINECS 227-815-6"
+      ]
+    },
+    "XMUAAQABSIOKGI-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(CC1=NNC(=O)C1)NN=Cc1cccc(O)c1",
+      "inchikey": "XMUAAQABSIOKGI-UHFFFAOYSA-N",
+      "iupac_name": "N-[(3-hydroxyphenyl)methylideneamino]-2-(5-oxo-1,4-dihydropyrazol-3-yl)acetamide",
+      "synonyms": []
+    },
+    "XPDVQPODLRGWPL-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(O)c1ccc(S(=O)(=O)N(Cl)Cl)cc1",
+      "inchikey": "XPDVQPODLRGWPL-UHFFFAOYSA-N",
+      "iupac_name": "4-(dichlorosulfamoyl)benzoic acid",
+      "synonyms": [
+        "halazone",
+        "80-13-7",
+        "Halazon",
+        "Pantocide",
+        "4-(Dichlorosulfamoyl)benzoic Acid",
+        "Cloritines",
+        "Pantosid",
+        "Pantotsid",
+        "Pentocid",
+        "Zeptabs"
+      ]
+    },
+    "XQUUEPZHFLTUCJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(=O)Nc1ccc(CC(N)C(=O)OC(C)(C)C)cc1I",
+      "inchikey": "XQUUEPZHFLTUCJ-UHFFFAOYSA-N",
+      "iupac_name": "tert-butyl 3-(4-acetamido-3-iodophenyl)-2-aminopropanoate",
+      "synonyms": [
+        "Phenylalanine, 4-acetylamino-3-iodo-, t-butyl ester",
+        "XQUUEPZHFLTUCJ-UHFFFAOYSA-N",
+        "tert-Butyl 3-[4-(acetylamino)-3-iodophenyl]-2-aminopropanoate #"
+      ]
+    },
+    "XRXMNWGCKISMOH-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(O)c1ccccc1Br",
+      "inchikey": "XRXMNWGCKISMOH-UHFFFAOYSA-N",
+      "iupac_name": "2-bromobenzoic acid",
+      "synonyms": [
+        "2-BROMOBENZOIC ACID",
+        "88-65-3",
+        "o-Bromobenzoic acid",
+        "Benzoic acid, 2-bromo-",
+        "Benzoic acid, o-bromo-",
+        "AZ789TZS4L",
+        "NSC-6976",
+        "DTXSID3038690",
+        "RefChem:467214",
+        "DTXCID1018690"
+      ]
+    },
+    "XSCHRSMBECNVNS-UHFFFAOYSA-N": {
+      "canonical_smiles": "c1ccc2nccnc2c1",
+      "inchikey": "XSCHRSMBECNVNS-UHFFFAOYSA-N",
+      "iupac_name": "quinoxaline",
+      "synonyms": [
+        "QUINOXALINE",
+        "91-19-0",
+        "1,4-Benzodiazine",
+        "Benzoparadiazine",
+        "Benzopyrazine",
+        "Phenopiazine",
+        "Phenpiazine",
+        "Quinazine",
+        "1,4-Diazanaphthalene",
+        "Benzo[a]pyrazine"
+      ]
+    },
+    "XTWBNKWREPGTEI-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(O)C12C3(Cl)C4(Cl)C(O)(O)C5(Cl)C3(Cl)C1(Cl)C5(Cl)C42Cl",
+      "inchikey": "XTWBNKWREPGTEI-UHFFFAOYSA-N",
+      "iupac_name": "1,2,3,5,6,7,8-heptachloro-9,9-dihydroxypentacyclo[4.3.0.02,5.03,8.04,7]nonane-4-carboxylic acid",
+      "synonyms": [
+        "NSC102911",
+        "NSC-102911"
+      ]
+    },
+    "XUFQPHANEAPEMJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)cs1",
+      "inchikey": "XUFQPHANEAPEMJ-UHFFFAOYSA-N",
+      "iupac_name": "3-[[2-(diaminomethylideneamino)-1,3-thiazol-4-yl]methylsulfanyl]-N'-sulfamoylpropanimidamide",
+      "synonyms": [
+        "Brolin",
+        "Gastro",
+        "Famotidine-13C3",
+        "Apogastine",
+        "Gastrodomina",
+        "Gastrosidin",
+        "Antodine",
+        "Bestidine",
+        "Blocacid",
+        "Confobos"
+      ]
+    },
+    "XUJQPDQURBZEGJ-KXQOOQHDSA-N": {
+      "canonical_smiles": "CN(C(=O)c1cc2ccccc2cc1C(=O)[C@@H](c1cccc2ccccc12)P(=O)(O)O)C1CCN(C(=O)c2ccc3ccccc3c2)CC1",
+      "inchikey": "XUJQPDQURBZEGJ-KXQOOQHDSA-N",
+      "iupac_name": "[(1R)-2-[3-[methyl-[1-(naphthalene-2-carbonyl)piperidin-4-yl]carbamoyl]naphthalen-2-yl]-1-naphthalen-1-yl-2-oxoethyl]phosphonic acid",
+      "synonyms": [
+        "2-[3-({METHYL[1-(2-NAPHTHOYL)PIPERIDIN-4-YL]AMINO}CARBONYL)-2-NAPHTHYL]-1-(1-NAPHTHYL)-2-OXOETHYLPHOSPHONIC ACID",
+        "((1R)-2-(3-(methyl(1-(naphthalene-2-carbonyl)piperidin-4-yl)carbamoyl)naphthalen-2-yl)-1-(naphthalen-1-yl)-2-oxoethyl)phosphonic acid",
+        "[(1R)-2-(3-{methyl[1-(naphthalene-2-carbonyl)piperidin-4-yl]carbamoyl}naphthalen-2-yl)-1-(naphthalen-1-yl)-2-oxoethyl]phosphonic acid",
+        "2-(3-((Methyl(1-(2-Naphthoyl)Piperidin-4-Yl)Amino)Carbonyl)-2-Naphthyl)-1-(1-Naphthyl)-2-Oxoethylphosphonic Acid",
+        "RefChem:454831",
+        "OHH",
+        "1t31",
+        "1t32",
+        "DB04016",
+        "PD006556"
+      ]
+    },
+    "XUKUURHRXDUEBC-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O",
+      "inchikey": "XUKUURHRXDUEBC-UHFFFAOYSA-N",
+      "iupac_name": "7-[2-(4-fluorophenyl)-3-phenyl-4-(phenylcarbamoyl)-5-propan-2-ylpyrrol-1-yl]-3,5-dihydroxyheptanoic acid",
+      "synonyms": [
+        "Atorvastatin(Relative)",
+        "842103-12-2",
+        "110862-48-1",
+        "7-[2-(4-fluorophenyl)-3-phenyl-4-(phenylcarbamoyl)-5-propan-2-ylpyrrol-1-yl]-3,5-dihydroxyheptanoic acid",
+        "Atorvastatin EP Impurity B",
+        "C33H35FN2O5",
+        "Sotis",
+        "(3S,5R)-atorvastatin",
+        "MLS006011909",
+        "SCHEMBL537781"
+      ]
+    },
+    "XVNWCVRBPQJSMJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CN(C)CCC1CCCc2c1n(C)c1ccccc21",
+      "inchikey": "XVNWCVRBPQJSMJ-UHFFFAOYSA-N",
+      "iupac_name": "N,N-dimethyl-2-(9-methyl-1,2,3,4-tetrahydrocarbazol-1-yl)ethanamine",
+      "synonyms": [
+        "CHEMBL3305834"
+      ]
+    },
+    "XZZNDPSIHUTMOC-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=P(Oc1ccccc1)(Oc1ccccc1)Oc1ccccc1",
+      "inchikey": "XZZNDPSIHUTMOC-UHFFFAOYSA-N",
+      "iupac_name": "triphenyl phosphate",
+      "synonyms": [
+        "TRIPHENYL PHOSPHATE",
+        "115-86-6",
+        "Triphenylphosphate",
+        "Phosphoric acid, triphenyl ester",
+        "Disflamoll TP",
+        "Celluflex TPP",
+        "Phosflex TPP",
+        "Triphenoxyphosphine oxide",
+        "Trifenylfosfat",
+        "Phenyl phosphate ((PhO)3PO)"
+      ]
+    },
+    "YCIMNLLNPGFGHC-UHFFFAOYSA-N": {
+      "canonical_smiles": "Oc1ccccc1O",
+      "inchikey": "YCIMNLLNPGFGHC-UHFFFAOYSA-N",
+      "iupac_name": "benzene-1,2-diol",
+      "synonyms": [
+        "pyrocatechol",
+        "catechol",
+        "120-80-9",
+        "1,2-dihydroxybenzene",
+        "1,2-benzenediol",
+        "benzene-1,2-diol",
+        "pyrocatechin",
+        "2-hydroxyphenol",
+        "o-Dihydroxybenzene",
+        "o-Hydroxyphenol"
+      ]
+    },
+    "YCKRFEBXJFABIS-CWVNLOTRSA-N": {
+      "canonical_smiles": "C=C(C)[C@H]1Cc2c(cc3c(c2O)C(=O)[C@H](O)[C@H](c2ccc(O)cc2O)O3)O1",
+      "inchikey": "YCKRFEBXJFABIS-CWVNLOTRSA-N",
+      "iupac_name": "(2R,6R,7S)-7-(2,4-dihydroxyphenyl)-4,6-dihydroxy-2-prop-1-en-2-yl-2,3,6,7-tetrahydrofuro[3,2-g]chromen-5-one",
+      "synonyms": [
+        "Shuterone B",
+        "105454-03-3",
+        "RefChem:182773",
+        "(2R,6R,7S)-7-(2,4-dihydroxyphenyl)-4,6-dihydroxy-2-prop-1-en-2-yl-2,3,6,7-tetrahydrofuro[3,2-g]chromen-5-one",
+        "(2R)-7alpha-(2,4-Dihydroxyphenyl)-2,3,6,7-tetrahydro-4,6alpha-dihydroxy-2beta-(1-methylethenyl)-5H-furo[3,2-g]["
+      ]
+    },
+    "YGCMUHWPXXEZCR-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCCCC(CCCC)c1ccccn1",
+      "inchikey": "YGCMUHWPXXEZCR-UHFFFAOYSA-N",
+      "iupac_name": "2-nonan-5-ylpyridine",
+      "synonyms": [
+        "Pyridine, 2-(1-butylpentyl)-",
+        "2961-49-1",
+        "2-(1-n-Butylpentyl)pyridine",
+        "DTXSID10183792",
+        "NSC 163992",
+        "RefChem:177576",
+        "DTXCID50106283",
+        "YGCMUHWPXXEZCR-UHFFFAOYSA-N",
+        "2-nonan-5-ylpyridine",
+        "2-(5-Nonyl)pyridine"
+      ]
+    },
+    "YGGTVPCTAKYCSQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "COc1cc(N)c2ncccc2c1",
+      "inchikey": "YGGTVPCTAKYCSQ-UHFFFAOYSA-N",
+      "iupac_name": "6-methoxyquinolin-8-amine",
+      "synonyms": [
+        "8-Amino-6-methoxyquinoline",
+        "90-52-8",
+        "6-methoxyquinolin-8-amine",
+        "6-Methoxy-8-aminoquinoline",
+        "Amichin",
+        "8-Quinolinamine, 6-methoxy-",
+        "6-Methoxy-8-quinolinamine",
+        "6-Methoxy-8-quinolylamine",
+        "QUINOLINE, 8-AMINO-6-METHOXY-",
+        "8-Quinolineamine, 6-methoxy-"
+      ]
+    },
+    "YHUMTHWQGWPJOQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C1C(Cl)=CC(=NCl)C=C1Cl",
+      "inchikey": "YHUMTHWQGWPJOQ-UHFFFAOYSA-N",
+      "iupac_name": "2,6-dichloro-4-chloroiminocyclohexa-2,5-dien-1-one",
+      "synonyms": [
+        "2,6-Dichloroquinone-4-chloroimide",
+        "101-38-2",
+        "Gibbs reagent",
+        "2,6-Dichloro-4-(chloroimino)cyclohexa-2,5-dienone",
+        "2,5-Cyclohexadien-1-one, 2,6-dichloro-4-(chloroimino)-",
+        "2,6-Dichloroquinone chloroimide",
+        "2,6-Dichloroquinonechloroimine",
+        "N,2,6-Trichlorobenzoquinone imine",
+        "2,6-Dichloroquinone-4-chloroimine",
+        "2,6-Dichlorobenzoquinone chloroimide"
+      ]
+    },
+    "YIPIGUILXICGAU-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1ccc(SCC(=O)NC2CCCCC2)cc1",
+      "inchikey": "YIPIGUILXICGAU-UHFFFAOYSA-N",
+      "iupac_name": "N-cyclohexyl-2-(4-methylphenyl)sulfanylacetamide",
+      "synonyms": [
+        "N-cyclohexyl-2-[(4-methylphenyl)sulfanyl]acetamide",
+        "Oprea1_306148",
+        "Oprea1_575500",
+        "STL139786",
+        "AKOS000384819",
+        "N-cyclohexyl-2-[(4-methylphenyl)thio]acetamide",
+        "AG-690/15441126"
+      ]
+    },
+    "YJXDGWUNRYLINJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(=O)OC1CC2C(C)(C)C(=O)C=CC2(C)C2CCC3(C)C(c4ccoc4)OC(=O)C4OC43C12C",
+      "inchikey": "YJXDGWUNRYLINJ-UHFFFAOYSA-N",
+      "iupac_name": "[7-(furan-3-yl)-1,8,12,16,16-pentamethyl-5,15-dioxo-3,6-dioxapentacyclo[9.8.0.02,4.02,8.012,17]nonadec-13-en-19-yl] acetate",
+      "synonyms": [
+        "Gedunine",
+        "RefChem:1085737",
+        "(7-(furan-3-yl)-1,8,12,16,16-pentamethyl-5,15-dioxo-3,6-dioxapentacyclo(9.8.0.02,4.02,8.012,17)nonadec-13-en-19-yl) acetate",
+        "MLS002706531",
+        "NSC113497",
+        "CHEMBL2004035",
+        "SCHEMBL17603575",
+        "YJXDGWUNRYLINJ-UHFFFAOYSA-N",
+        "16,17-Seco-24-nor-5.alpha.,13.alpha.,14.beta.,17.alpha.-chola-1,20,22-trien-16-oic acid, 14,15.beta.:21,23-diepoxy-7.alpha.,17-dihydroxy-4,4,8-trimethyl-3-oxo-, 16,17-lactone, acetate",
+        "D-Homo-24-nor-17-oxachola-1,20,22-triene-3,16-dione, 7-(acetyloxy)-14,15:21,23-diepoxy-4,4,8-trimethyl-, (5.alpha.,7.alpha.,13.alpha.,14.beta.,15.beta.,17a.alpha.)-"
+      ]
+    },
+    "YMWUJEATGCHHMB-UHFFFAOYSA-N": {
+      "canonical_smiles": "ClCCl",
+      "inchikey": "YMWUJEATGCHHMB-UHFFFAOYSA-N",
+      "iupac_name": "dichloromethane",
+      "synonyms": [
+        "DICHLOROMETHANE",
+        "Methylene chloride",
+        "75-09-2",
+        "Methylene dichloride",
+        "Methane, dichloro-",
+        "Methylene bichloride",
+        "Methane dichloride",
+        "Solaesthin",
+        "Solmethine",
+        "Narkotil"
+      ]
+    },
+    "YNAVUWVOSKDBBP-UHFFFAOYSA-N": {
+      "canonical_smiles": "C1COCCN1",
+      "inchikey": "YNAVUWVOSKDBBP-UHFFFAOYSA-N",
+      "iupac_name": "morpholine",
+      "synonyms": [
+        "MORPHOLINE",
+        "110-91-8",
+        "1-Oxa-4-azacyclohexane",
+        "Diethylene oximide",
+        "Tetrahydro-1,4-oxazine",
+        "Diethylenimide oxide",
+        "Diethyleneimide oxide",
+        "Diethylene imidoxide",
+        "Drewamine",
+        "Tetrahydro-2H-1,4-oxazine"
+      ]
+    },
+    "YNFWZKLFAYROMP-UHFFFAOYSA-N": {
+      "canonical_smiles": "ClCc1cc2cccc3ccc4cc5ccccc5c1c4c32",
+      "inchikey": "YNFWZKLFAYROMP-UHFFFAOYSA-N",
+      "iupac_name": "11-(chloromethyl)benzo[a]pyrene",
+      "synonyms": [
+        "11-Chloromethylbenzo(a)pyrene",
+        "94500-54-6",
+        "11-CHLOROMETHYLBENZO[A]PYRENE",
+        "QT5RFB27R5",
+        "BENZO(a)PYRENE, 11-(CHLOROMETHYL)-",
+        "DTXSID20241514",
+        "Benzo[a]pyrene, 11-(chloromethyl)-",
+        "RefChem:77797",
+        "DTXCID50164005",
+        "CCRIS 2525"
+      ]
+    },
+    "YNOXCRMFGMSKIJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(C(=O)O)C(O)(CC(=O)O)C(=O)O",
+      "inchikey": "YNOXCRMFGMSKIJ-UHFFFAOYSA-N",
+      "iupac_name": "2-hydroxybutane-1,2,3-tricarboxylic acid",
+      "synonyms": [
+        "2-Methylcitric acid",
+        "6061-96-7",
+        "methylcitric acid",
+        "2-hydroxybutane-1,2,3-tricarboxylic acid",
+        "2-hydroxy-1-methylpropane-1,2,3-tricarboxylic acid",
+        "CHEBI:30835",
+        "DTXSID30863685",
+        "RefChem:88290",
+        "DTXCID50812271",
+        "3-Carboxy-3-hydroxy-2-methylpentanedioic acid"
+      ]
+    },
+    "YPZGBVAUXWNMNW-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCc1cc(COCc2ccc(C)cc2)c(=O)[nH]c1C",
+      "inchikey": "YPZGBVAUXWNMNW-UHFFFAOYSA-N",
+      "iupac_name": "5-ethyl-6-methyl-3-[(4-methylphenyl)methoxymethyl]-1H-pyridin-2-one",
+      "synonyms": [
+        "5-ethyl-6-methyl-3-(p-tolylmethoxymethyl)-1H-pyridin-2-one",
+        "5-ethyl-6-methyl-3-{[(4-methylphenyl)methoxy]methyl}hydropyridin-2-one"
+      ]
+    },
+    "YUAZBWVRWVITRB-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1ccc(NC(=O)CSc2nnc(C3CC3)n2C)cc1C",
+      "inchikey": "YUAZBWVRWVITRB-UHFFFAOYSA-N",
+      "iupac_name": "2-[(5-cyclopropyl-4-methyl-1,2,4-triazol-3-yl)sulfanyl]-N-(3,4-dimethylphenyl)acetamide",
+      "synonyms": [
+        "ASN 05988654",
+        "AKOS000696648"
+      ]
+    },
+    "YVVBECLPRBAATK-UHFFFAOYSA-N": {
+      "canonical_smiles": "COC(=O)c1cc2ccccc2cc1O",
+      "inchikey": "YVVBECLPRBAATK-UHFFFAOYSA-N",
+      "iupac_name": "methyl 3-hydroxynaphthalene-2-carboxylate",
+      "synonyms": [
+        "Methyl 3-hydroxy-2-naphthoate",
+        "883-99-8",
+        "2-Naphthalenecarboxylic acid, 3-hydroxy-, methyl ester",
+        "3-HYDROXY-2-NAPHTHOIC ACID METHYL ESTER",
+        "2-Hydroxy-3-naphthoic acid methyl ester",
+        "Methyl 2-hydroxy-3-naphthoate",
+        "Methyl 3-hydroxy-2-naphthalenecarboxylate",
+        "2-Naphthoic acid, 3-hydroxy-, methyl ester",
+        "QCA37S018N",
+        "EINECS 212-936-9"
+      ]
+    },
+    "YWRVUMNRBIOXJQ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC12CCC(CC1O)C2",
+      "inchikey": "YWRVUMNRBIOXJQ-UHFFFAOYSA-N",
+      "iupac_name": "1-methylbicyclo[2.2.1]heptan-2-ol",
+      "synonyms": [
+        "1-Methylbicyclo[2.2.1]heptan-2-ol",
+        "Bicyclo[2.2.1]heptan-2-ol, 1-methyl-",
+        "54339-50-3",
+        "1-methyl-2-norbornanol",
+        "1-methyl- 2-norbornanol",
+        "SCHEMBL6674261",
+        "DTXSID60339606",
+        "methylbicyclo[2,2,1] heptan-2-ol",
+        "1-Methylbicyclo[2.2.1]heptan-2-ol #",
+        "1-Methylbicyclo[2.2.1]heptan-exo-2-ol"
+      ]
+    },
+    "YXFVVABEGXRONW-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1ccccc1",
+      "inchikey": "YXFVVABEGXRONW-UHFFFAOYSA-N",
+      "iupac_name": "toluene",
+      "synonyms": [
+        "toluene",
+        "methylbenzene",
+        "toluol",
+        "108-88-3",
+        "Phenylmethane",
+        "methacide",
+        "methylbenzol",
+        "antisal 1a",
+        "Benzene, methyl-",
+        "Toluen"
+      ]
+    },
+    "YZOFLYUAQDJWKV-UHFFFAOYSA-N": {
+      "canonical_smiles": "N#CC(C#N)=Cc1cc(O)c(O)c(O)c1",
+      "inchikey": "YZOFLYUAQDJWKV-UHFFFAOYSA-N",
+      "iupac_name": "2-[(3,4,5-trihydroxyphenyl)methylidene]propanedinitrile",
+      "synonyms": [
+        "Tyrphostin 25",
+        "Tyrphostin A25",
+        "118409-58-8",
+        "Tyrphostin-25",
+        "AG-82",
+        "RG-50875",
+        "DTXSID4045216",
+        "(3,4,5-Trihydroxybenzylidene)-malononitrile",
+        "NSC-676484",
+        "C878BF87UY"
+      ]
+    },
+    "ZAFYATHCZYHLPB-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1ccc(-c2nc3ccc(C)cn3c2CC(=O)N(C)C)cc1",
+      "inchikey": "ZAFYATHCZYHLPB-UHFFFAOYSA-N",
+      "iupac_name": "N,N-dimethyl-2-[6-methyl-2-(4-methylphenyl)imidazo[1,2-a]pyridin-3-yl]acetamide",
+      "synonyms": [
+        "zolpidem",
+        "82626-48-0",
+        "Zolpidemum",
+        "Sanval",
+        "Zolpidem civ",
+        "N,N-Dimethyl-2-[6-methyl-2-(4-methylphenyl)imidazo[1,2-a]pyridin-3-yl]acetamide",
+        "DTXSID7045946",
+        "N,N,6-Trimethyl-2-(4-methylphenyl)imidazo(1,2-a)pyridine-3-acetamide",
+        "7K383OQI23",
+        "DTXCID5025946"
+      ]
+    },
+    "ZBWLEOLVPZGHOJ-UHFFFAOYSA-N": {
+      "canonical_smiles": "CCN(CC)CC(=O)c1ccc2c(c1)Cc1cc(C(=O)CN(CC)CC)ccc1-2",
+      "inchikey": "ZBWLEOLVPZGHOJ-UHFFFAOYSA-N",
+      "iupac_name": "2-(diethylamino)-1-[7-[2-(diethylamino)acetyl]-9H-fluoren-2-yl]ethanone",
+      "synonyms": [
+        "0UO8LCQ6CV",
+        "66686-30-4",
+        "Rmi 11002",
+        "RMI 11002 DA",
+        "1,1'-(9H-Fluorene-2,7-diyl)bis(2-(diethylamino)ethanone)",
+        "RefChem:930803",
+        "RMI 11002DA",
+        "ethanone, 1,1'-(9H-fluroene-2,7-diyl)bis(2-(diethylamino)),",
+        "2-(diethylamino)-1-[7-[2-(diethylamino)acetyl]-9H-fluoren-2-yl]ethanone",
+        "Ethanone, 1,1'-(9H-fluorene-2,7-diyl)bis[2-(diethylamino)-"
+      ]
+    },
+    "ZDSKLRBCSUCIGK-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(Cn1ccc(=O)cc1O)N1CCOCC1",
+      "inchikey": "ZDSKLRBCSUCIGK-UHFFFAOYSA-N",
+      "iupac_name": "2-hydroxy-1-(2-morpholin-4-yl-2-oxoethyl)pyridin-4-one",
+      "synonyms": [
+        "5177-44-6",
+        "NSC171795",
+        "DTXSID60715946",
+        "4-Hydroxy-1-[2-(morpholin-4-yl)-2-oxoethyl]pyridin-2(1H)-one",
+        "NSC-171795"
+      ]
+    },
+    "ZDXPYRJPNDTMRX-UHFFFAOYSA-N": {
+      "canonical_smiles": "NC(=O)CCC(N)C(=O)O",
+      "inchikey": "ZDXPYRJPNDTMRX-UHFFFAOYSA-N",
+      "iupac_name": "2,5-diamino-5-oxopentanoic acid",
+      "synonyms": [
+        "DL-Glutamine",
+        "6899-04-3",
+        "585-21-7",
+        "Glutamine, DL-",
+        "NSC-97925",
+        "5L555N1902",
+        "DTXSID1044304",
+        "Glutamine DL-",
+        "RefChem:1083901",
+        "DTXCID9024304"
+      ]
+    },
+    "ZJQZWNLKRBUEKX-UHFFFAOYSA-N": {
+      "canonical_smiles": "O=C(O)c1cc(Nc2ccccc2)c(C(=O)O)cc1Nc1ccccc1",
+      "inchikey": "ZJQZWNLKRBUEKX-UHFFFAOYSA-N",
+      "iupac_name": "2,5-dianilinoterephthalic acid",
+      "synonyms": [
+        "2,5-Dianilinoterephthalic acid",
+        "1,4-Benzenedicarboxylic acid, 2,5-bis(phenylamino)-",
+        "EINECS 233-302-8",
+        "DTXSID7064948",
+        "EC 233-302-8",
+        "RefChem:82758",
+        "DTXCID5032600",
+        "233-302-8",
+        "10109-95-2",
+        "2,5-bis(phenylamino)terephthalic acid"
+      ]
+    },
+    "ZMXDDKWLCZADIW-UHFFFAOYSA-N": {
+      "canonical_smiles": "CN(C)C=O",
+      "inchikey": "ZMXDDKWLCZADIW-UHFFFAOYSA-N",
+      "iupac_name": "N,N-dimethylformamide",
+      "synonyms": [
+        "N,N-DIMETHYLFORMAMIDE",
+        "Dimethylformamide",
+        "68-12-2",
+        "Dimethyl formamide",
+        "N-Formyldimethylamine",
+        "Formamide, N,N-dimethyl-",
+        "Dimethylformamid",
+        "DMFA",
+        "N,N-Dimethyl formamide",
+        "Formyldimethylamine"
+      ]
+    },
+    "ZUFMJVZMPFYAPX-UHFFFAOYSA-N": {
+      "canonical_smiles": "C[NH+](C)C1CCC=CC2=C1CCCC2.[Cl-]",
+      "inchikey": "ZUFMJVZMPFYAPX-UHFFFAOYSA-N",
+      "iupac_name": "2,3,4,7,8,9-hexahydro-1H-benzo[7]annulen-9-yl(dimethyl)azanium chloride",
+      "synonyms": [
+        "5-Dimethylamino-6,7,8,9-tetrahydro-5H-benzocycloheptene hydrochloride",
+        "18045-46-0",
+        "6,7,8,9-Tetrahydro-N,N-dimethyl-5H-benzocyclohepten-5-amine hydrochloride",
+        "5H-BENZOCYCLOHEPTEN-5-AMINE, 6,7,8,9-TETRAHYDRO-N,N-DIMETHYL-, HYDROCHLORIDE",
+        "RefChem:305319"
+      ]
+    },
+    "ZVDKLGVCHAFJNB-UHFFFAOYSA-N": {
+      "canonical_smiles": "N=C1N=CN=C2N=C(c3ccc(C(=O)c4cccc(N(O)O)c4)cc3)N=C12",
+      "inchikey": "ZVDKLGVCHAFJNB-UHFFFAOYSA-N",
+      "iupac_name": "[3-(dihydroxyamino)phenyl]-[4-(6-iminopurin-8-yl)phenyl]methanone",
+      "synonyms": [
+        "NSC210305",
+        "NSC-210305"
+      ]
+    },
+    "ZVEJRZRAUYJYCO-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC1c2ccccc2-c2ccccc21",
+      "inchikey": "ZVEJRZRAUYJYCO-UHFFFAOYSA-N",
+      "iupac_name": "9-methyl-9H-fluorene",
+      "synonyms": [
+        "9-Methylfluorene",
+        "2523-37-7",
+        "9-METHYL-9H-FLUORENE",
+        "Fluorene, 9-methyl-",
+        "95M10BKB07",
+        "NSC-10161",
+        "DTXSID5073957",
+        "RefChem:108021",
+        "DTXCID4037241",
+        "219-750-7"
+      ]
+    },
+    "ZXDOCBCPCRMPSH-UHFFFAOYSA-N": {
+      "canonical_smiles": "CC(=NNC(=O)COc1ccc(Cl)cc1Cl)c1ccco1",
+      "inchikey": "ZXDOCBCPCRMPSH-UHFFFAOYSA-N",
+      "iupac_name": "2-(2,4-dichlorophenoxy)-N-[1-(furan-2-yl)ethylideneamino]acetamide",
+      "synonyms": []
+    },
+    "ZXINBANGDJRFHU-UHFFFAOYSA-N": {
+      "canonical_smiles": "Cc1cccc(N=Cc2cc(Br)ccc2O)n1",
+      "inchikey": "ZXINBANGDJRFHU-UHFFFAOYSA-N",
+      "iupac_name": "4-bromo-2-[(6-methyl-2-pyridinyl)iminomethyl]phenol",
+      "synonyms": []
+    }
+  },
+  "n_rows": 300,
+  "version": 1
+}

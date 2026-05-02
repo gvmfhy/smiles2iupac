@@ -1,0 +1,93 @@
+{
+  "_comment": "Tier 0/1/2/3 pass rates from the first run. CI fails if Tier 2 drops more than 1pp below this baseline. Update intentionally when accuracy changes \u2014 see docs/ACCURACY.md.",
+  "dataset_version": "sha256:fcf900eca778f629",
+  "dataset_size": 850,
+  "cassetted_subset_size": 300,
+  "captured_at": "2026-05-02T19:05:00Z",
+  "overall": {
+    "n": 300,
+    "tier_0": 0.95,
+    "tier_1": 0.95,
+    "tier_2": 0.95,
+    "tier_3": 0.22
+  },
+  "per_category": {
+    "carbohydrate_steroid": {
+      "n": 11,
+      "tier_0": 1.0,
+      "tier_1": 1.0,
+      "tier_2": 1.0,
+      "tier_3": 0.273
+    },
+    "drug": {
+      "n": 53,
+      "tier_0": 1.0,
+      "tier_1": 1.0,
+      "tier_2": 1.0,
+      "tier_3": 0.245
+    },
+    "heterocycle": {
+      "n": 35,
+      "tier_0": 1.0,
+      "tier_1": 1.0,
+      "tier_2": 1.0,
+      "tier_3": 0.171
+    },
+    "isotope_radical_ion": {
+      "n": 17,
+      "tier_0": 1.0,
+      "tier_1": 1.0,
+      "tier_2": 1.0,
+      "tier_3": 0.235
+    },
+    "large": {
+      "n": 35,
+      "tier_0": 0.943,
+      "tier_1": 0.943,
+      "tier_2": 0.943,
+      "tier_3": 0.257
+    },
+    "pathological": {
+      "n": 25,
+      "tier_0": 0.96,
+      "tier_1": 0.96,
+      "tier_2": 0.96,
+      "tier_3": 0.24
+    },
+    "salt_zwitterion": {
+      "n": 18,
+      "tier_0": 0.444,
+      "tier_1": 0.444,
+      "tier_2": 0.444,
+      "tier_3": 0.111
+    },
+    "solvent_aliphatic": {
+      "n": 36,
+      "tier_0": 1.0,
+      "tier_1": 1.0,
+      "tier_2": 1.0,
+      "tier_3": 0.194
+    },
+    "stereo": {
+      "n": 51,
+      "tier_0": 1.0,
+      "tier_1": 1.0,
+      "tier_2": 1.0,
+      "tier_3": 0.294
+    },
+    "tautomer": {
+      "n": 8,
+      "tier_0": 1.0,
+      "tier_1": 1.0,
+      "tier_2": 1.0,
+      "tier_3": 0.125
+    },
+    "unusual_element": {
+      "n": 11,
+      "tier_0": 0.818,
+      "tier_1": 0.818,
+      "tier_2": 0.818,
+      "tier_3": 0.0
+    }
+  }
+}
