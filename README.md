@@ -108,6 +108,29 @@ Every successful conversion yields a fully-populated `Result`:
 - **Heavy-atom limit** — molecules above 999 atoms are out of scope (configurable per-call)
 - **InChIKey-keyed PubChem** — RDKit and PubChem canonicalize SMILES differently; the InChIKey lookup catches molecules that SMILES-keyed lookups miss
 
+### Known gaps (from real benchmarking)
+
+- **Complex cyclic peptides** (e.g. cyclosporine) — PubChem's standardizer rejects with `BadRequest`; STOUT helps if `[ml]` extras are installed
+- **Occasional PubChem index gaps** (e.g. doxycycline at the canonical SMILES seen) — falls through to STOUT when enabled
+
+## Benchmark
+
+From `notebooks/benchmarking.ipynb`, run against 262 diverse SMILES (drugs, metabolites, heterocycles, materials, salts, stereo, edge cases):
+
+| Metric | Value |
+|---|---|
+| PubChem exact-match rate | **99.2%** (260/262) |
+| Median latency (PubChem path) | 620 ms |
+| p95 latency (PubChem path) | 1.15 s |
+| Median latency (cache hit) | **0.32 ms** (≈1900× speedup) |
+| Misses | 2 (cyclosporine standardizer error, doxycycline index gap) |
+
+Re-run any time:
+
+```bash
+jupyter nbconvert --to notebook --execute notebooks/benchmarking.ipynb
+```
+
 ## How it compares
 
 | Feature | This tool | stout.decimer.ai | ChemAxon Naming |
