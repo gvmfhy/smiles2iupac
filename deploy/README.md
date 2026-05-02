@@ -19,17 +19,24 @@ runs start in seconds. `/health` is wired for orchestrator probes.
 Free tier, 16 GB RAM CPU Space. Auto-redeploys on push to `main` via
 `.github/workflows/deploy-hf.yml`.
 
-**One-time setup:**
+**One-time setup (already done):**
 
-1. Create the Space at <https://huggingface.co/new-space> as `gvmfhy/smiles2iupac`,
-   SDK = **Docker**, hardware = CPU basic (free).
-2. In the GitHub repo, add secret `HF_TOKEN` (Settings → Secrets and variables →
-   Actions). Generate the token at <https://huggingface.co/settings/tokens> with
-   **write** scope.
-3. Push to `main`. The workflow force-pushes the GitHub repo to the Space.
+1. ✅ Space exists at <https://huggingface.co/spaces/agwgwa/smiles2iupac>
+   (SDK = Docker, hardware = CPU basic free tier).
+2. To use the GitHub Actions auto-deploy: add secret `HF_TOKEN` with **write** scope
+   (Settings → Secrets and variables → Actions). Generate at
+   <https://huggingface.co/settings/tokens>. Then change the workflow's
+   `on:` block to add `push: branches: [main]`.
+3. Alternatively (recommended for the first deploy), push directly from local:
+
+   ```bash
+   hf auth login --add-to-git-credential   # paste fresh token at the prompt
+   git remote add hf https://huggingface.co/spaces/agwgwa/smiles2iupac
+   git push hf main
+   ```
 
 HF Spaces detects the root `Dockerfile` automatically — no extra config needed.
-The Space URL will be `https://gvmfhy-smiles2iupac.hf.space`.
+The Space URL is <https://agwgwa-smiles2iupac.hf.space>.
 
 ## Render (CPU-only fallback)
 

@@ -246,7 +246,7 @@ Comparison reflects what's *built* in this repo vs what's currently public-facin
 
 `deploy/` — Dockerfile (OpenJDK 17 + Python 3.11 + STOUT model bake-in) and HF Spaces deployment notes. The Dockerfile builds locally; nothing is deployed publicly yet.
 
-`.github/workflows/` — `ci.yml` (pytest + ruff, runs on every PR). `deploy-hf.yml` and `healthcheck.yml` are committed but `workflow_dispatch`-only (manual) until the HF Space exists; they reference `gvmfhy/smiles2iupac` which has not been created.
+`.github/workflows/` — `ci.yml` (pytest + ruff, runs on every PR). `deploy-hf.yml` and `healthcheck.yml` are committed but `workflow_dispatch`-only (manual) until an `HF_TOKEN` secret is added; they target the Space at `agwgwa/smiles2iupac`.
 
 ## Run the web app locally
 

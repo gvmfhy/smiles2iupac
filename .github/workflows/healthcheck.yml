@@ -1,7 +1,7 @@
-# Free uptime monitor: would ping HF Spaces /health every 10 minutes.
-# DISABLED until the HF Space at https://gvmfhy-smiles2iupac.hf.space exists.
-# Re-enable by uncommenting the `schedule` block below; failures will then
-# appear in the Actions tab as a free uptime monitor.
+# Free uptime monitor: pings HF Spaces /health every 10 minutes.
+# Currently manual-only — re-enable the cron schedule below once the
+# Space at https://agwgwa-smiles2iupac.hf.space is built and serving.
+# Failures show up in the Actions tab as a free uptime monitor.
 name: Healthcheck
 
 on:
@@ -18,7 +18,7 @@ jobs:
       - name: Ping HF Space
         run: |
           set -euo pipefail
-          URL="https://gvmfhy-smiles2iupac.hf.space/health"
+          URL="https://agwgwa-smiles2iupac.hf.space/health"
           # -f fails on non-2xx; -sS hides progress but shows errors; --max-time guards against hangs
           response=$(curl -fsS --max-time 30 "$URL")
           echo "Response: $response"

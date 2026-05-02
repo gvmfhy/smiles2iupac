@@ -1,11 +1,14 @@
-# Deploys to Hugging Face Spaces. MANUAL TRIGGER ONLY until the Space exists.
+# Deploys to Hugging Face Spaces. MANUAL TRIGGER ONLY for now.
 #
-# Before this workflow can succeed:
-#   1. Create the Space at https://huggingface.co/new-space (gvmfhy/smiles2iupac, SDK=Docker)
-#   2. Add repo secret HF_TOKEN with write scope (Settings → Secrets → Actions)
-#   3. Generate token: https://huggingface.co/settings/tokens
+# Space exists at https://huggingface.co/spaces/agwgwa/smiles2iupac (SDK=Docker).
+# To enable this workflow:
+#   1. Add repo secret HF_TOKEN with write scope (Settings → Secrets → Actions)
+#      Generate token at: https://huggingface.co/settings/tokens
+#   2. Change `on:` to add `push: branches: [main]` for auto-deploy on push.
 #
-# After step 1 + 2, change `on:` to add `push: branches: [main]` to enable auto-deploy.
+# Note: the recommended deploy path right now is local `hf upload` from the
+# project dir after `hf auth login` — this workflow is the future-automation
+# scaffold and isn't required for the initial deploy.
 name: Deploy to Hugging Face Spaces
 
 on:
@@ -26,4 +29,6 @@ jobs:
         run: |
           git config user.email "120282195+gvmfhy@users.noreply.github.com"
           git config user.name "Austin Morrissey"
-          git push --force "https://gvmfhy:$HF_TOKEN@huggingface.co/spaces/gvmfhy/smiles2iupac" main
+          # HF auth uses the user that owns the token; agwgwa is the HF
+          # account that owns the target Space.
+          git push --force "https://agwgwa:$HF_TOKEN@huggingface.co/spaces/agwgwa/smiles2iupac" main
