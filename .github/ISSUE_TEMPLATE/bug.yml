@@ -1,0 +1,56 @@
+name: Bug report (crash, broken behavior, install failure)
+description: Something isn't working — a crash, an unexpected error, or a feature that doesn't behave as documented.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For *wrong-name* issues use the "Naming issue" template instead — it has the right fields.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: One paragraph describing the problem. What did you do, what did you expect, what did you get?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: |
+        Smallest set of commands or code that triggers the bug. If it involves CLI:
+        `s2i 'SOME_SMILES'` is usually enough. If Python: 5–10 lines.
+      render: bash
+      placeholder: |
+        s2i 'CCO' --use-stout
+    validations:
+      required: true
+
+  - type: textarea
+    id: traceback
+    attributes:
+      label: Traceback or error output
+      description: Full stack trace if you got one.
+      render: text
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: |
+        Output of `pip show smiles2iupac | grep Version` or the commit hash you're on.
+
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: "Python version, OS, install path (uv pip install -e '.[all]' / pip / Docker)"
+      placeholder: "Python 3.12, macOS arm64, uv pip install -e '.[all]'"
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else

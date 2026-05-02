@@ -1,0 +1,65 @@
+name: Naming issue (wrong / missing / confusing IUPAC name)
+description: The tool returned a name that's wrong, missing, or surprising for a specific SMILES.
+title: "[naming] "
+labels: ["naming-issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report — these are the most actionable bugs in this project.
+        The result returned by `s2i` includes a `verify` link to PubChem; pasting both
+        helps us reproduce instantly.
+
+  - type: input
+    id: smiles
+    attributes:
+      label: Input SMILES
+      description: The exact SMILES you gave the tool (including any salts, stereo, etc.)
+      placeholder: "CC(=O)Oc1ccccc1C(=O)O"
+    validations:
+      required: true
+
+  - type: input
+    id: returned
+    attributes:
+      label: Name returned
+      description: The full output from `s2i`, or the `name` field from the JSON/MCP response.
+      placeholder: "2-acetyloxybenzoic acid"
+    validations:
+      required: true
+
+  - type: input
+    id: expected
+    attributes:
+      label: Expected name (or "no name")
+      description: What you think the right answer is — best effort. "I don't know but this is wrong" is also valid.
+      placeholder: "acetylsalicylic acid"
+    validations:
+      required: false
+
+  - type: textarea
+    id: trace
+    attributes:
+      label: Pipeline trace (output of `s2i <smiles> --trace`)
+      description: |
+        Shows what each layer of the pipeline did. Critical for figuring out
+        whether the bug is in classification, cache, PubChem, or post-processing.
+      render: text
+      placeholder: |
+        Pipeline reasoning:
+          1. ...
+          2. ...
+
+  - type: input
+    id: verify
+    attributes:
+      label: PubChem verify URL
+      description: |
+        The `verify:` line from the result. Helps us see PubChem's view of the same molecule.
+      placeholder: "https://pubchem.ncbi.nlm.nih.gov/#query=..."
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description: Source citing the expected name? Use case context? Reaction context the molecule appears in?

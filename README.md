@@ -2,6 +2,7 @@
 
 > The reliable, free, open-source SMILES → IUPAC name converter that should have existed years ago.
 
+[![CI](https://github.com/gvmfhy/smiles2iupac/actions/workflows/ci.yml/badge.svg)](https://github.com/gvmfhy/smiles2iupac/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/python-3.10--3.12-blue.svg)](https://www.python.org/downloads/)
 [![Status](https://img.shields.io/badge/status-alpha-orange.svg)]()
@@ -27,7 +28,7 @@ Every result is tagged with **provenance** and a **confidence score**. PubChem h
 ## Quick start
 
 ```bash
-git clone <this-repo>          # not yet on GitHub or PyPI
+git clone https://github.com/gvmfhy/smiles2iupac.git
 cd smiles2iupac
 uv venv && uv pip install -e .  # or: python -m venv .venv && pip install -e .
 .venv/bin/s2i 'CCO'
@@ -90,10 +91,10 @@ print(lookup("caffeine"))  # 'Cn1c(=O)c2c(ncn2C)n(C)c1=O'
 
 ## Install
 
-The package is **not yet on PyPI**. Install from a development checkout:
+The package is **not yet on PyPI**. Install from the GitHub repo:
 
 ```bash
-git clone <this-repo>
+git clone https://github.com/gvmfhy/smiles2iupac.git
 cd smiles2iupac
 uv venv && uv pip install -e .              # core only (PubChem + cache + CLI)
 uv pip install -e '.[ml]'                   # add OPSIN validation
@@ -301,7 +302,7 @@ Once published to PyPI, the simpler form `"command": "s2i-mcp"` will work after 
 ## Development
 
 ```bash
-git clone <this-repo>           # repo not yet pushed publicly
+git clone https://github.com/gvmfhy/smiles2iupac.git
 cd smiles2iupac
 uv venv && uv pip install -e '.[all]'
 pytest                                           # 140 tests
