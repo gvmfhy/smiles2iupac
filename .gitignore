@@ -35,3 +35,4 @@ htmlcov/
 
 # Notebooks
 .ipynb_checkpoints/
+.gstack/

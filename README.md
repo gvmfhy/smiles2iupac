@@ -88,6 +88,7 @@ print(lookup("caffeine"))  # 'Cn1c(=O)c2c(ncn2C)n(C)c1=O'
 pip install smiles2iupac                  # core: PubChem + cache + CLI
 pip install 'smiles2iupac[ml]'            # adds OPSIN validation; STOUT requires Python 3.10/3.11
 pip install 'smiles2iupac[web]'           # adds Gradio + FastAPI for the local web app
+pip install 'smiles2iupac[mcp]'           # adds MCP server entry point (s2i-mcp)
 pip install 'smiles2iupac[all]'           # everything
 ```
 
@@ -95,6 +96,7 @@ pip install 'smiles2iupac[all]'           # everything
 |---|---|---|---|
 | (core) | PubChem lookup, cache, CLI, enrichment | 3.10–3.12 | none |
 | `[web]` | Gradio UI + FastAPI mounted at `:7860` | 3.10–3.12 | none |
+| `[mcp]` | MCP server (`s2i-mcp`) for Claude Desktop / Cursor / Cline | 3.10–3.12 | none |
 | `[ml]` | OPSIN round-trip validation (`py2opsin`) | 3.10–3.12 | Java 17+ JRE |
 | `[ml]` + STOUT | STOUT v2 generation for novel structures | **3.10 or 3.11 only** | Java 17+ JRE |
 
@@ -243,6 +245,54 @@ python -m app.gradio_app
 ```bash
 curl 'http://localhost:7860/convert?smiles=CCO' | jq .name
 # "ethanol"
+```
+
+## Use as an MCP server (Claude Desktop, Cursor, Cline)
+
+This tool also exposes itself as a [Model Context Protocol](https://modelcontextprotocol.io) server, so MCP-aware LLM clients can call it directly. Useful when you want grounded chemistry naming inside a chat instead of letting the LLM hallucinate IUPAC names.
+
+```bash
+pip install 'smiles2iupac[mcp]'
+```
+
+Add to Claude Desktop's `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "smiles2iupac": {
+      "command": "s2i-mcp"
+    }
+  }
+}
+```
+
+(Restart Claude Desktop. Then ask: "What's the IUPAC name for `CC(=O)Oc1ccccc1C(=O)O`?" — Claude will call our tool and return `2-acetyloxybenzoic acid` with provenance and a verify URL.)
+
+**Tools exposed:**
+
+| Tool | Purpose |
+|---|---|
+| `smiles_to_iupac` | Forward conversion. Returns name + confidence + source + InChIKey + reasoning trace + PubChem verify URL |
+| `iupac_to_smiles` | Reverse lookup. OPSIN first (offline, stereo-aware) → PubChem fallback (common names) |
+| `classify_smiles` | Pre-flight check: is it a salt? mixture? reaction? Returns parent + counter-ions |
+| `enrich_smiles` | Pure-RDKit metadata: InChI / InChIKey / formula / MW / SVG. No network. |
+
+For a development checkout (no install):
+
+```json
+{
+  "mcpServers": {
+    "smiles2iupac": {
+      "command": "uv",
+      "args": [
+        "run", "--directory", "/path/to/smiles2iupac",
+        "--extra", "mcp",
+        "python", "-m", "smiles2iupac.mcp_server"
+      ]
+    }
+  }
+}
 ```
 
 ## Development
