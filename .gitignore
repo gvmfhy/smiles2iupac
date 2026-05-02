@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+.eggs/
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Project
+*.db
+*.sqlite
+*.sqlite3
+.smiles2iupac/
+models/*.onnx
+opsin*.jar
+.coverage
+htmlcov/
+
+# Notebooks
+.ipynb_checkpoints/

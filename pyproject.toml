@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "smiles2iupac"
+version = "0.1.0"
+description = "Reliable, free, open-source SMILES to IUPAC name converter"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Austin Morrissey"},
+]
+requires-python = ">=3.12"
+keywords = ["chemistry", "cheminformatics", "smiles", "iupac", "rdkit", "stout"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+
+dependencies = [
+    "rdkit>=2024.9.1",
+    "pydantic>=2.6",
+    "click>=8.1",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+ml = [
+    "STOUT-pypi>=2.0.0",
+    "py2opsin>=1.1.0",
+]
+web = [
+    "gradio>=4.0",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.27",
+    "python-multipart>=0.0.9",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.4",
+]
+all = [
+    "smiles2iupac[ml,web,dev]",
+]
+
+[project.scripts]
+s2i = "smiles2iupac.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gvmfhy/smiles2iupac"
+Issues = "https://github.com/gvmfhy/smiles2iupac/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/smiles2iupac"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
