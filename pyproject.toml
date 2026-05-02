@@ -11,12 +11,14 @@ license = {file = "LICENSE"}
 authors = [
     {name = "Austin Morrissey"},
 ]
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 keywords = ["chemistry", "cheminformatics", "smiles", "iupac", "rdkit", "stout"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Chemistry",
 ]
@@ -29,8 +31,11 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+# STOUT-pypi 2.0.5 (latest) hard-pins tensorflow==2.10.1 which has no Python 3.12
+# wheels — gated to 3.10/3.11 only. py2opsin works on all supported Pythons; the
+# pipeline gracefully degrades when STOUT isn't installed (StoutError → falls back).
 ml = [
-    "STOUT-pypi>=2.0.0",
+    "STOUT-pypi>=2.0.0; python_version < '3.12'",
     "py2opsin>=1.1.0",
 ]
 web = [
@@ -64,4 +69,4 @@ addopts = "-v --tb=short"
 
 [tool.ruff]
 line-length = 100
-target-version = "py312"
+target-version = "py310"

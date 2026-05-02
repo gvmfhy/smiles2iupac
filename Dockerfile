@@ -1,8 +1,13 @@
 # smiles2iupac production image — used by HF Spaces (root Dockerfile auto-detected)
 # and Render. Local: `docker build -t s2i . && docker run -p 7860:7860 s2i`.
+#
+# Python 3.11 is intentional: STOUT-pypi 2.0.5 pins tensorflow==2.10.1 which has
+# no Python 3.12 wheels. Bumping past 3.11 here breaks the [ml] install. Once
+# STOUT-pypi releases an unpinned/newer-TF version, this can move to 3.12-slim.
+#
 # slim is glibc-based; RDKit, TensorFlow, and gradio all ship manylinux2014 wheels
 # that need glibc — alpine (musl) would force source builds.
-FROM python:3.12-slim
+FROM python:3.11-slim
 
 # OPSIN is a Java library; py2opsin shells out to a JVM. headless JRE keeps
 # the layer small (no X11/AWT). 17 is the current Debian-stable LTS.

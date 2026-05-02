@@ -67,12 +67,19 @@ print(result.inchikey)     # 'BSYNRYMUTXBXSQ-UHFFFAOYSA-N'
 
 ```bash
 pip install smiles2iupac                  # core: PubChem + cache + CLI
-pip install 'smiles2iupac[ml]'            # adds STOUT v2 + OPSIN (requires Java JRE for OPSIN)
+pip install 'smiles2iupac[ml]'            # adds OPSIN validation; STOUT requires Python 3.10/3.11
 pip install 'smiles2iupac[web]'           # adds Gradio + FastAPI for the local web app
 pip install 'smiles2iupac[all]'           # everything
 ```
 
-The `[ml]` extras pull in TensorFlow via STOUT-pypi (~2GB) and require a Java 17+ runtime for OPSIN. Skip them if you only need PubChem coverage.
+| Extra | What you get | Python | OS deps |
+|---|---|---|---|
+| (core) | PubChem lookup, cache, CLI, enrichment | 3.10–3.12 | none |
+| `[web]` | Gradio UI + FastAPI mounted at `:7860` | 3.10–3.12 | none |
+| `[ml]` | OPSIN round-trip validation (`py2opsin`) | 3.10–3.12 | Java 17+ JRE |
+| `[ml]` + STOUT | STOUT v2 generation for novel structures | **3.10 or 3.11 only** | Java 17+ JRE |
+
+**STOUT note:** `STOUT-pypi` 2.0.5 (latest) hard-pins `tensorflow==2.10.1` which has no Python 3.12 wheels. The `[ml]` extras install OPSIN on any supported Python; STOUT is gated by environment marker so it only resolves on 3.10/3.11 (where TF 2.10 wheels exist). The pipeline degrades gracefully — without STOUT installed, the PubChem path still gives 99.2% coverage on common chemistry. Production Docker (`Dockerfile`) uses `python:3.11-slim` so STOUT works there.
 
 ## Why this exists
 
