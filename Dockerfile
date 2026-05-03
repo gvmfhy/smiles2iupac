@@ -15,14 +15,18 @@ FROM python:3.10-slim
 # OPSIN is a Java library; py2opsin shells out to a JVM. default-jre-headless
 # tracks whatever Debian release the base image is on (bookworm: openjdk-17,
 # trixie: openjdk-21). OPSIN runs on Java 8+, so any current JRE works.
-# Pinning a specific major version breaks when python:3.11-slim updates its
-# Debian base — which is what just happened (trixie removed openjdk-17).
+# Pinning a specific major version breaks when python:3.10-slim updates its
+# Debian base.
 # curl is for the HEALTHCHECK below; ca-certificates lets pip/PubChem reach HTTPS.
+# libxrender1 + libxext6 are X11 libs that RDKit's rdMolDraw2D links against
+# (even for headless PNG/SVG rendering); python:slim strips them out.
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
         default-jre-headless \
         curl \
         ca-certificates \
+        libxrender1 \
+        libxext6 \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
