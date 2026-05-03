@@ -34,9 +34,12 @@ dependencies = [
 # STOUT-pypi 2.0.5 (latest) hard-pins tensorflow==2.10.1 which has no Python 3.12
 # wheels — gated to 3.10/3.11 only. py2opsin works on all supported Pythons; the
 # pipeline gracefully degrades when STOUT isn't installed (StoutError → falls back).
+# numpy<2 is required because TF 2.10 was compiled against the numpy 1.x C ABI;
+# numpy 2.0 changed pywrap_bfloat16 and TF imports crash with a TypeError otherwise.
 ml = [
     "STOUT-pypi>=2.0.0; python_version < '3.12'",
     "py2opsin>=1.1.0",
+    "numpy<2; python_version < '3.12'",
 ]
 web = [
     "gradio>=4.0",
