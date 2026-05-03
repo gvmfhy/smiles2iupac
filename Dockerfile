@@ -11,12 +11,15 @@
 # that need glibc — alpine (musl) would force source builds.
 FROM python:3.11-slim
 
-# OPSIN is a Java library; py2opsin shells out to a JVM. headless JRE keeps
-# the layer small (no X11/AWT). 17 is the current Debian-stable LTS.
+# OPSIN is a Java library; py2opsin shells out to a JVM. default-jre-headless
+# tracks whatever Debian release the base image is on (bookworm: openjdk-17,
+# trixie: openjdk-21). OPSIN runs on Java 8+, so any current JRE works.
+# Pinning a specific major version breaks when python:3.11-slim updates its
+# Debian base — which is what just happened (trixie removed openjdk-17).
 # curl is for the HEALTHCHECK below; ca-certificates lets pip/PubChem reach HTTPS.
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
-        openjdk-17-jre-headless \
+        default-jre-headless \
         curl \
         ca-certificates \
  && rm -rf /var/lib/apt/lists/*
