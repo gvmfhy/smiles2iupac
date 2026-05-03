@@ -109,7 +109,9 @@ with gr.Blocks(title="smiles2iupac") as demo:
     gr.Markdown(
         "# smiles2iupac\n"
         "Reliable SMILES -> IUPAC name conversion. "
-        "Cache + PubChem lookup with provenance and confidence scoring."
+        "Cache + PubChem lookup with provenance and confidence scoring.  \n"
+        "[Source on GitHub](https://github.com/gvmfhy/smiles2iupac) · "
+        "[API docs](https://agwgwa-smiles2iupac.hf.space/docs)"
     )
     with gr.Row():
         smiles_in = gr.Textbox(
