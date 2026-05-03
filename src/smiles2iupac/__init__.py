@@ -1,4 +1,4 @@
-"""smiles2iupac — reliable SMILES to IUPAC name conversion."""
+"""smiles2iupac — SMILES to IUPAC name conversion via PubChem + OPSIN cross-validation."""
 
 from .pipeline import Pipeline, convert, lookup
 from .result import Result, Source

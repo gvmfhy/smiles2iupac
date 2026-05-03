@@ -27,7 +27,7 @@ pipeline = Pipeline(use_pubchem=True)
 
 app = FastAPI(
     title="smiles2iupac",
-    description="Reliable SMILES -> IUPAC name conversion",
+    description="SMILES -> IUPAC name conversion (PubChem + OPSIN cross-validation)",
     version=__version__,
 )
 

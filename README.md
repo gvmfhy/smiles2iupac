@@ -7,7 +7,7 @@ sdk: docker
 app_port: 7860
 pinned: false
 license: mit
-short_description: Reliable SMILES to IUPAC name conversion
+short_description: SMILES to IUPAC name conversion (PubChem + OPSIN)
 ---
 
 <!-- The YAML block above is HF Spaces config; it must be the very first thing
@@ -16,7 +16,7 @@ short_description: Reliable SMILES to IUPAC name conversion
 
 # smiles2iupac
 
-> The reliable, free, open-source SMILES → IUPAC name converter that should have existed years ago.
+> Free, open-source SMILES → IUPAC naming where every returned name is cross-validated by two independent IUPAC implementations.
 
 [![CI](https://github.com/gvmfhy/smiles2iupac/actions/workflows/ci.yml/badge.svg)](https://github.com/gvmfhy/smiles2iupac/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -129,7 +129,7 @@ uv pip install -e '.[all]'                  # everything
 
 ## Why this exists
 
-As of 2026, no reliable, free, open-source SMILES → IUPAC tool exists online with an API, validation layer, batch mode, and dependable uptime. PubChem's PUG-REST is free and authoritative for ~120M compounds but has no naming UI, no batching, no round-trip validation, and rate limits. ML-based tools (STOUT v2, the Steinbeck group's 97.49% accuracy model) exist as research artifacts but aren't packaged as a reliable service today — STOUT's upstream weights URL returns 404 as of this writing. This repo combines OPSIN (Cambridge's gold-standard IUPAC parser, used in reverse for round-trip validation) with PubChem InChIKey lookup behind a single CLI / library / web app / MCP / FastAPI surface — the reliable part of the stack, packaged the way it should already exist.
+As of 2026, no free, open-source SMILES → IUPAC tool exists online with an API, validation layer, batch mode, and steady uptime. PubChem's PUG-REST is free and authoritative for ~120M compounds but has no naming UI, no batching, no round-trip validation, and rate limits. ML-based tools (STOUT v2, the Steinbeck group's 97.49% accuracy model) exist as research artifacts but aren't packaged as a service today — STOUT's upstream weights URL returns 404 as of this writing. This repo combines OPSIN (Cambridge's gold-standard IUPAC parser, used in reverse for round-trip validation) with PubChem InChIKey lookup behind a single CLI / library / web app / MCP / FastAPI surface — the cross-validated part of the stack, packaged the way it should already exist.
 
 ## What you get back
 
@@ -237,7 +237,7 @@ Comparison reflects what's *built* in this repo vs what's currently public-facin
 | Salt stripping + reasoning trace | ✅ | ❌ | ✅ |
 | Self-hosted REST API | ✅ FastAPI at `:7860` | ❌ | ✅ |
 | Public hosted URL (planned) | scaffolded for HF Spaces | ✅ (often offline) | commercial |
-| Reliability monitoring (planned) | scaffolded healthcheck workflow | ❌ | N/A |
+| Uptime monitoring (planned) | scaffolded healthcheck workflow | ❌ | N/A |
 
 ## Roadmap
 

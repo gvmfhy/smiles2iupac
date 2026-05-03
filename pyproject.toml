@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "smiles2iupac"
 version = "0.1.0"
-description = "Reliable, free, open-source SMILES to IUPAC name converter"
+description = "Free, open-source SMILES to IUPAC name converter (PubChem + OPSIN cross-validation)"
 readme = "README.md"
 license = {file = "LICENSE"}
 authors = [

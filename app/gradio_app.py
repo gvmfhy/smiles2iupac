@@ -108,7 +108,7 @@ def _convert(smiles: str) -> tuple[str, str]:
 with gr.Blocks(title="smiles2iupac") as demo:
     gr.Markdown(
         "# smiles2iupac\n"
-        "Reliable SMILES -> IUPAC name conversion. "
+        "SMILES -> IUPAC name conversion via PubChem + OPSIN cross-validation. "
         "Cache + PubChem lookup with provenance and confidence scoring.  \n"
         "[Source on GitHub](https://github.com/gvmfhy/smiles2iupac) · "
         "[API docs](https://agwgwa-smiles2iupac.hf.space/docs)"
