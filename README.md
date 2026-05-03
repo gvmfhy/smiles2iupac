@@ -22,8 +22,11 @@ short_description: Reliable SMILES to IUPAC name conversion
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/python-3.10--3.12-blue.svg)](https://www.python.org/downloads/)
 [![Status](https://img.shields.io/badge/status-alpha-orange.svg)]()
+[![HF Space](https://img.shields.io/badge/🤗-Live%20Demo-blue.svg)](https://agwgwa-smiles2iupac.hf.space)
 
-> **Status:** alpha. Built and validated locally; not yet published to PyPI and not yet deployed to a public URL. The library, CLI, web app, and MCP server all work from a development checkout — see [Install](#install) for the actual working commands.
+> **Status:** alpha. Live demo at <https://agwgwa-smiles2iupac.hf.space>. Not yet published to PyPI. The library, CLI, web app, and MCP server all work from a development checkout — see [Install](#install) for local commands.
+>
+> **Currently shipping:** PubChem InChIKey lookup + RDKit canonicalization + OPSIN round-trip validation. STOUT ML generation is scaffolded but disabled — upstream weights URL (`storage.googleapis.com/decimer_weights/models.zip`) returns 404 as of 2026-05-03, so the deployed pipeline returns "not found" for structures PubChem doesn't recognize rather than ML guesses. Every name returned is structurally verified by two independent IUPAC implementations (PubChem's ChemAxon naming + Cambridge's OPSIN parser).
 
 ## What
 
@@ -32,14 +35,12 @@ A library, CLI, and web app that converts SMILES strings to IUPAC nomenclature u
 ```
 SMILES → classify → cheap-enrich → SQLite cache → PubChem (InChIKey-keyed)
                                                        ↓ miss
-                                                  STOUT v2 generation
-                                                       ↓
-                                                  OPSIN round-trip validation
+                                                  OPSIN round-trip on PubChem name
                                                        ↓
                                               { name, confidence, source, ... }
 ```
 
-Every result is tagged with **provenance** and a **confidence score**. PubChem hits are 1.0; STOUT outputs are scored by InChIKey-tier round-trip — full match (0.95), skeleton-only (0.50, stereo lost), or no match (0.20, likely wrong).
+Every result is tagged with **provenance** and a **confidence score**. PubChem hits are 1.0. STOUT v2 ML generation is scaffolded for a future "novel structures" tier (`pip install smiles2iupac[stout]` once upstream weights are restored), but is **not active in the live deployment**.
 
 ## Quick start
 
@@ -260,7 +261,7 @@ Comparison reflects what's *built* in this repo vs what's currently public-facin
 
 `app/` — Gradio UI + FastAPI mounted at `:7860`. Endpoints: `GET /health`, `GET /convert?smiles=...`, `POST /batch` (NDJSON streaming).
 
-`deploy/` — Dockerfile (OpenJDK 17 + Python 3.11 + STOUT model bake-in) and HF Spaces deployment notes. The Dockerfile builds locally; nothing is deployed publicly yet.
+`deploy/` — Dockerfile (default-jre-headless + Python 3.10-slim + RDKit X11 libs) and HF Spaces deployment notes. The Space is live at <https://agwgwa-smiles2iupac.hf.space>. STOUT model bake step is excluded; see [Status](#status) for context.
 
 `.github/workflows/` — `ci.yml` (pytest + ruff, runs on every PR). `deploy-hf.yml` and `healthcheck.yml` are committed but `workflow_dispatch`-only (manual) until an `HF_TOKEN` secret is added; they target the Space at `agwgwa/smiles2iupac`.
 
