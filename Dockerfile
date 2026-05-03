@@ -10,7 +10,7 @@
 #
 # slim is glibc-based; RDKit, TensorFlow, and gradio all ship manylinux2014 wheels
 # that need glibc — alpine (musl) would force source builds.
-FROM python:3.10-slim
+FROM python:3.14-slim
 
 # OPSIN is a Java library; py2opsin shells out to a JVM. default-jre-headless
 # tracks whatever Debian release the base image is on (bookworm: openjdk-17,
