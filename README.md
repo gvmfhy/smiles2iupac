@@ -24,9 +24,9 @@ short_description: Reliable SMILES to IUPAC name conversion
 [![Status](https://img.shields.io/badge/status-alpha-orange.svg)]()
 [![HF Space](https://img.shields.io/badge/🤗-Live%20Demo-blue.svg)](https://agwgwa-smiles2iupac.hf.space)
 
-> **Status:** alpha. Live demo at <https://agwgwa-smiles2iupac.hf.space>. Not yet published to PyPI. The library, CLI, web app, and MCP server all work from a development checkout — see [Install](#install) for local commands.
+> **Status:** alpha. Live at <https://agwgwa-smiles2iupac.hf.space>. Not yet on PyPI.
 >
-> **Currently shipping:** PubChem InChIKey lookup + RDKit canonicalization + OPSIN round-trip validation. STOUT ML generation is scaffolded but disabled — upstream weights URL (`storage.googleapis.com/decimer_weights/models.zip`) returns 404 as of 2026-05-03, so the deployed pipeline returns "not found" for structures PubChem doesn't recognize rather than ML guesses. Every name returned is structurally verified by two independent IUPAC implementations (PubChem's ChemAxon naming + Cambridge's OPSIN parser).
+> Every returned name is structurally verified by **two independent IUPAC implementations** — PubChem's ChemAxon naming, then OPSIN's Cambridge parser round-trip — so coverage is bounded by PubChem (~120M compounds) but correctness is high. Structures PubChem doesn't recognize get an honest "not found" rather than an unverifiable guess.
 
 ## What
 
@@ -40,7 +40,7 @@ SMILES → classify → cheap-enrich → SQLite cache → PubChem (InChIKey-keye
                                               { name, confidence, source, ... }
 ```
 
-Every result is tagged with **provenance** and a **confidence score**. PubChem hits are 1.0. STOUT v2 ML generation is scaffolded for a future "novel structures" tier (`pip install smiles2iupac[stout]` once upstream weights are restored), but is **not active in the live deployment**.
+Every result is tagged with **provenance** and a **confidence score**. PubChem hits are 1.0; cache hits are 1.0; nothing is returned with low confidence today. ML-based generation for structures PubChem doesn't recognize is a documented future tier — see [Roadmap](#roadmap).
 
 ## Quick start
 
@@ -126,13 +126,10 @@ uv pip install -e '.[all]'                  # everything
 | `[web]` | Gradio UI + FastAPI mounted at `:7860` | 3.10–3.12 | none |
 | `[mcp]` | MCP server (`s2i-mcp`) for Claude Desktop / Cursor / Cline | 3.10–3.12 | none |
 | `[ml]` | OPSIN round-trip validation (`py2opsin`) | 3.10–3.12 | Java 17+ JRE |
-| `[ml]` + STOUT | STOUT v2 generation for novel structures | **3.10 or 3.11 only** | Java 17+ JRE |
-
-**STOUT note:** `STOUT-pypi` 2.0.5 (latest) hard-pins `tensorflow==2.10.1` which has no Python 3.12 wheels. The `[ml]` extras install OPSIN on any supported Python; STOUT is gated by environment marker so it only resolves on 3.10/3.11 (where TF 2.10 wheels exist). The pipeline degrades gracefully — without STOUT installed, the PubChem path still hit-rates 99.2% on common chemistry (see Benchmark below). The Dockerfile uses `python:3.11-slim` so STOUT works there.
 
 ## Why this exists
 
-As of 2026, no reliable, free, open-source SMILES → IUPAC tool exists online. The capability does — STOUT v2 from the Steinbeck group hits 97.49% exact match — but the deployment was buried inside the DECIMER OCR platform with no public API, no validation layer, no batch mode, and unreliable uptime. This repo wraps the world-class open-source components (STOUT + OPSIN + PubChem + RDKit) into the tool that should already exist.
+As of 2026, no reliable, free, open-source SMILES → IUPAC tool exists online with an API, validation layer, batch mode, and dependable uptime. PubChem's PUG-REST is free and authoritative for ~120M compounds but has no naming UI, no batching, no round-trip validation, and rate limits. ML-based tools (STOUT v2, the Steinbeck group's 97.49% accuracy model) exist as research artifacts but aren't packaged as a reliable service today — STOUT's upstream weights URL returns 404 as of this writing. This repo combines OPSIN (Cambridge's gold-standard IUPAC parser, used in reverse for round-trip validation) with PubChem InChIKey lookup behind a single CLI / library / web app / MCP / FastAPI surface — the reliable part of the stack, packaged the way it should already exist.
 
 ## What you get back
 
@@ -142,7 +139,7 @@ Every successful conversion yields a fully-populated `Result`:
 |---|---|---|
 | `name` | ✓ on success | The IUPAC name |
 | `confidence` | ✓ | 0.0–1.0; tier based on source + validation |
-| `source` | ✓ | `pubchem` / `stout_validated` / `stout_unvalidated` / `stout_low_confidence` / `cache` |
+| `source` | ✓ | `pubchem` / `cache` |
 | `canonical_smiles` | ✓ | RDKit-canonicalized |
 | `inchi` / `inchikey` | ✓ | Standard InChI + 27-char InChIKey |
 | `formula` | ✓ | Hill notation |
@@ -160,14 +157,15 @@ Every successful conversion yields a fully-populated `Result`:
 - **Mixtures** — name the largest component; flag the rest in `warnings`
 - **Reactions (`A>>B`)** — rejected with `kind="reaction"` and a clear error
 - **Polymers / wildcards (`*`, `[*]`)** — rejected with `kind="polymer"`
-- **Stereochemistry** — preserved through OPSIN round-trip; if STOUT loses it, you'll see `STOUT_UNVALIDATED` and a warning rather than a silently-wrong name
+- **Stereochemistry** — preserved through OPSIN round-trip; the InChIKey-keyed PubChem lookup matches both stereo (full-key) and skeleton (block-1) tiers
 - **Heavy-atom limit** — molecules above 999 atoms are out of scope (configurable per-call)
 - **InChIKey-keyed PubChem** — RDKit and PubChem canonicalize SMILES differently; the InChIKey lookup catches molecules that SMILES-keyed lookups miss
 
 ### Known gaps (from real benchmarking)
 
-- **Complex cyclic peptides** (e.g. cyclosporine) — PubChem's standardizer rejects with `BadRequest`; STOUT helps if `[ml]` extras are installed
-- **Occasional PubChem index gaps** (e.g. doxycycline at the canonical SMILES seen) — falls through to STOUT when enabled
+- **Complex cyclic peptides** (e.g. cyclosporine) — PubChem's standardizer rejects with `BadRequest`; returns no name today
+- **Occasional PubChem index gaps** (e.g. doxycycline at the canonical SMILES seen) — returns no name today
+- **Genuinely novel structures** — anything outside PubChem's ~120M-compound index returns "not found" rather than a guess. Closing this gap is the main item on the [Roadmap](#roadmap).
 
 ## Benchmark
 
@@ -241,18 +239,23 @@ Comparison reflects what's *built* in this repo vs what's currently public-facin
 | Public hosted URL (planned) | scaffolded for HF Spaces | ✅ (often offline) | commercial |
 | Reliability monitoring (planned) | scaffolded healthcheck workflow | ❌ | N/A |
 
+## Roadmap
+
+- **ML-based generation tier for novel structures.** STOUT v2 was the original plan; its upstream weights download (`storage.googleapis.com/decimer_weights/models.zip`) returns 404 as of May 2026, so we shipped the verified-only path first. Options when we revisit: wait for upstream to restore weights, fork and re-host weights, or evaluate alternatives (e.g. fine-tuned LLMs against the same reference dataset).
+- **PyPI release** so `pip install smiles2iupac` Just Works without a checkout.
+- **Re-enable the cron healthcheck workflow** now that the Space is up.
+
 ## Architecture
 
 `src/smiles2iupac/`
 
 | Module | Purpose |
 |---|---|
-| `pipeline.py` | Orchestrator — chains classify → cache → PubChem → STOUT+OPSIN → enrich |
+| `pipeline.py` | Orchestrator — chains classify → cache → PubChem → OPSIN round-trip → enrich |
 | `validator.py` | RDKit canonicalization + heavy-atom support check |
 | `validator_strict.py` | Reaction/polymer rejection, salt stripping, classification |
 | `cache.py` | SQLite cache at `~/.smiles2iupac/cache.db` |
 | `pubchem.py` | PUG-REST client (token-bucket 5 req/s, exp backoff, InChIKey-first) |
-| `stout_engine.py` | STOUT v2 wrapper (lazy-loaded) |
 | `opsin_check.py` | py2opsin round-trip with 14/27-char InChIKey tiering |
 | `enrich.py` | InChI / InChIKey / formula / MW / SVG / CAS helpers |
 | `result.py` | Pydantic Result + Source enum |
@@ -261,7 +264,7 @@ Comparison reflects what's *built* in this repo vs what's currently public-facin
 
 `app/` — Gradio UI + FastAPI mounted at `:7860`. Endpoints: `GET /health`, `GET /convert?smiles=...`, `POST /batch` (NDJSON streaming).
 
-`deploy/` — Dockerfile (default-jre-headless + Python 3.10-slim + RDKit X11 libs) and HF Spaces deployment notes. The Space is live at <https://agwgwa-smiles2iupac.hf.space>. STOUT model bake step is excluded; see [Status](#status) for context.
+`deploy/` — Dockerfile (default-jre-headless + Python 3.10-slim + RDKit X11 libs) and HF Spaces deployment notes. The Space is live at <https://agwgwa-smiles2iupac.hf.space>.
 
 `.github/workflows/` — `ci.yml` (pytest + ruff, runs on every PR). `deploy-hf.yml` and `healthcheck.yml` are committed but `workflow_dispatch`-only (manual) until an `HF_TOKEN` secret is added; they target the Space at `agwgwa/smiles2iupac`.
 
@@ -334,7 +337,6 @@ MIT. See [LICENSE](LICENSE).
 ## Credits
 
 Built on:
-- [STOUT v2](https://github.com/Kohulan/Smiles-TO-iUpac-Translator) (Steinbeck group, MIT)
 - [OPSIN](https://opsin.ch.cam.ac.uk/) via [py2opsin](https://pypi.org/project/py2opsin/) (Cambridge, MIT)
 - [RDKit](https://www.rdkit.org/) (BSD)
 - [PubChem PUG-REST](https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest) (NIH, public-domain)
