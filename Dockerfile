@@ -27,6 +27,9 @@ RUN apt-get update \
         ca-certificates \
         libxrender1 \
         libxext6 \
+        libexpat1 \
+        libfreetype6 \
+        libfontconfig1 \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
