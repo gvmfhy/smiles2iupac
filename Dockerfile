@@ -3,13 +3,14 @@
 # No public deployment exists yet — see deploy/README.md for setup steps.
 # Local test: `docker build -t s2i . && docker run -p 7860:7860 s2i`.
 #
-# Python 3.11 is intentional: STOUT-pypi 2.0.5 pins tensorflow==2.10.1 which has
-# no Python 3.12 wheels. Bumping past 3.11 here breaks the [ml] install. Once
-# STOUT-pypi releases an unpinned/newer-TF version, this can move to 3.12-slim.
+# Python 3.10 is intentional: STOUT-pypi 2.0.5 pins tensorflow==2.10.1, and
+# TF 2.10 only publishes wheels for Python 3.7-3.10 (Python 3.11 support landed
+# in TF 2.12). 3.11-slim looked plausible but pip can't resolve the TF dep there.
+# Once STOUT-pypi releases an unpinned/newer-TF version, this can move forward.
 #
 # slim is glibc-based; RDKit, TensorFlow, and gradio all ship manylinux2014 wheels
 # that need glibc — alpine (musl) would force source builds.
-FROM python:3.11-slim
+FROM python:3.10-slim
 
 # OPSIN is a Java library; py2opsin shells out to a JVM. default-jre-headless
 # tracks whatever Debian release the base image is on (bookworm: openjdk-17,
