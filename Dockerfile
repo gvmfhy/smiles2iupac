@@ -36,18 +36,14 @@ RUN useradd --create-home --shell /bin/bash --uid 1000 app
 COPY --chown=app:app pyproject.toml README.md LICENSE /app/
 COPY --chown=app:app src/ /app/src/
 
-# Upgrade pip to get the resolver fixes; install ml + web extras (TensorFlow,
-# STOUT, gradio, fastapi). dev extras are intentionally excluded — no pytest in prod.
+# Upgrade pip; install [ml] (py2opsin/OPSIN) + [web] (gradio, fastapi, uvicorn).
+# STOUT generation is intentionally NOT installed — upstream weights URL is 404
+# as of 2026-05-03 (see pyproject [stout] extra comment). Pipeline falls back
+# cleanly to PubChem+OPSIN. dev extras excluded; no pytest in prod.
 RUN pip install --no-cache-dir --upgrade pip \
  && pip install --no-cache-dir -e .[ml,web]
 
 USER app
-
-# Bake STOUT model weights into the image. First call pulls ~500MB from the
-# Steinbeck group's release; baking them avoids a multi-minute cold start on
-# every container boot (HF Spaces sleeps idle Spaces and rebuilds frequently).
-# If this layer fails, comment out and document; weights will lazy-download instead.
-RUN python -c "from STOUT import translate_forward; translate_forward('CCO')"
 
 # App code last — most-frequently-changed layer, so it sits on top of the stable
 # dependency + model layers. Edits to app/ rebuild only this layer (~seconds).

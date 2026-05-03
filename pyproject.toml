@@ -31,14 +31,19 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-# STOUT-pypi 2.0.5 (latest) hard-pins tensorflow==2.10.1 which has no Python 3.12
-# wheels — gated to 3.10/3.11 only. py2opsin works on all supported Pythons; the
-# pipeline gracefully degrades when STOUT isn't installed (StoutError → falls back).
-# numpy<2 is required because TF 2.10 was compiled against the numpy 1.x C ABI;
-# numpy 2.0 changed pywrap_bfloat16 and TF imports crash with a TypeError otherwise.
+# [ml] keeps OPSIN validation always available (py2opsin works on all Pythons,
+# JRE handled by Dockerfile/host). STOUT generation is split into its own [stout]
+# extra because the upstream weights URL (storage.googleapis.com/decimer_weights)
+# currently 404s — see https://github.com/Kohulan/Smiles-TO-iUpac-Translator
+# Pipeline catches StoutError and falls back to PubChem-only when STOUT is absent.
 ml = [
-    "STOUT-pypi>=2.0.0; python_version < '3.12'",
     "py2opsin>=1.1.0",
+]
+# Opt-in extra. TF 2.10 needs numpy<2 (numpy 2.0 broke pywrap_bfloat16 ABI), and
+# only ships wheels for Python 3.7-3.10. Install only when STOUT weights are
+# locally cached or the upstream URL is restored.
+stout = [
+    "STOUT-pypi>=2.0.0; python_version < '3.12'",
     "numpy<2; python_version < '3.12'",
 ]
 web = [
