@@ -12,7 +12,7 @@ authors = [
     {name = "Austin Morrissey"},
 ]
 requires-python = ">=3.10"
-keywords = ["chemistry", "cheminformatics", "smiles", "iupac", "rdkit", "stout"]
+keywords = ["chemistry", "cheminformatics", "smiles", "iupac", "rdkit", "opsin", "pubchem"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
@@ -31,20 +31,11 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-# [ml] keeps OPSIN validation always available (py2opsin works on all Pythons,
-# JRE handled by Dockerfile/host). STOUT generation is split into its own [stout]
-# extra because the upstream weights URL (storage.googleapis.com/decimer_weights)
-# currently 404s — see https://github.com/Kohulan/Smiles-TO-iUpac-Translator
-# Pipeline catches StoutError and falls back to PubChem-only when STOUT is absent.
+# [ml] = OPSIN validation via py2opsin (Java JRE required at runtime, handled
+# by Dockerfile/host). The "ml" name is historical — we no longer ship any
+# ML-based components.
 ml = [
     "py2opsin>=1.1.0",
-]
-# Opt-in extra. TF 2.10 needs numpy<2 (numpy 2.0 broke pywrap_bfloat16 ABI), and
-# only ships wheels for Python 3.7-3.10. Install only when STOUT weights are
-# locally cached or the upstream URL is restored.
-stout = [
-    "STOUT-pypi>=2.0.0; python_version < '3.12'",
-    "numpy<2; python_version < '3.12'",
 ]
 web = [
     "gradio>=4.0",

@@ -6,8 +6,8 @@ chars 0..13 (the slice `[:14]`) are block 1 — molecular skeleton (constitution
 Chars 15..24 are block 2 — stereochemistry + isotopes + protonation flags.
 Char 26 is a final standardization marker. Matching block 1 means structurally
 identical (same atoms, same connectivity); matching the full key means stereo-
-identical too. This drives the STOUT_VALIDATED / STOUT_UNVALIDATED /
-STOUT_LOW_CONFIDENCE confidence tiering in the pipeline.
+identical too. Used today to verify PubChem-returned names parse back to the
+same structure (the test_accuracy_offline Tier 2 oracle).
 """
 
 from pydantic import BaseModel

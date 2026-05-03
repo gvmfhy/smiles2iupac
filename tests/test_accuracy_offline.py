@@ -101,7 +101,7 @@ def test_accuracy_against_reference(tmp_cache: Cache, capsys):
                 return c.get("synonyms", [])
         return []
 
-    pipeline = Pipeline(cache=tmp_cache, use_pubchem=True, use_stout=False)
+    pipeline = Pipeline(cache=tmp_cache, use_pubchem=True)
     scored: list[tuple[str, TierScore]] = []
 
     with patch(

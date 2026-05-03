@@ -17,9 +17,6 @@ class Source(str, Enum):
 
     CACHE = "cache"
     PUBCHEM = "pubchem"
-    STOUT_VALIDATED = "stout_validated"
-    STOUT_UNVALIDATED = "stout_unvalidated"
-    STOUT_LOW_CONFIDENCE = "stout_low_confidence"
     NONE = "none"
 
 

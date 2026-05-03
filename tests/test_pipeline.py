@@ -76,8 +76,8 @@ def test_pubchem_inchikey_misses_falls_back_to_smiles(tmp_cache: Cache):
     assert smiles_mock.called
 
 
-def test_pubchem_miss_no_stout(tmp_cache: Cache):
-    pipeline = Pipeline(cache=tmp_cache, use_pubchem=True, use_stout=False)
+def test_pubchem_miss_returns_no_name(tmp_cache: Cache):
+    pipeline = Pipeline(cache=tmp_cache, use_pubchem=True)
     with patch("smiles2iupac.pipeline.iupac_via_inchikey", return_value=None), \
          patch("smiles2iupac.pipeline.smiles_to_iupac", return_value=None):
         r = pipeline.convert("CCC(C)(C)C(=O)O")
@@ -144,46 +144,6 @@ def test_include_svg_flag_populates_svg(tmp_cache: Cache):
     r = pipeline.convert("CCO")
     assert r.structure_svg is not None
     assert "<svg" in r.structure_svg
-
-
-def test_stout_validated_path(tmp_cache: Cache):
-    """STOUT generates a name; OPSIN round-trip confirms full match → STOUT_VALIDATED."""
-    pipeline = Pipeline(cache=tmp_cache, use_pubchem=False, use_stout=True)
-    fake_rt = type("RT", (), {
-        "full_match": True, "skeleton_match": True, "parsed_ok": True,
-    })()
-    with patch("smiles2iupac.pipeline.stout_iupac", return_value="ethanol"), \
-         patch("smiles2iupac.pipeline.round_trip", return_value=fake_rt):
-        r = pipeline.convert("CCO")
-    assert r.ok is True
-    assert r.source == Source.STOUT_VALIDATED
-    assert r.confidence == 0.95
-
-
-def test_stout_skeleton_only_match_warns(tmp_cache: Cache):
-    """OPSIN round-trip skeleton match (stereo lost) → STOUT_UNVALIDATED with warning."""
-    pipeline = Pipeline(cache=tmp_cache, use_pubchem=False, use_stout=True)
-    fake_rt = type("RT", (), {
-        "full_match": False, "skeleton_match": True, "parsed_ok": True,
-    })()
-    with patch("smiles2iupac.pipeline.stout_iupac", return_value="some-name"), \
-         patch("smiles2iupac.pipeline.round_trip", return_value=fake_rt):
-        r = pipeline.convert("C[C@H](O)CC")
-    assert r.source == Source.STOUT_UNVALIDATED
-    assert any("stereo" in w.lower() for w in r.warnings)
-
-
-def test_stout_no_match_low_confidence(tmp_cache: Cache):
-    """OPSIN round-trip → different structure → STOUT_LOW_CONFIDENCE."""
-    pipeline = Pipeline(cache=tmp_cache, use_pubchem=False, use_stout=True)
-    fake_rt = type("RT", (), {
-        "full_match": False, "skeleton_match": False, "parsed_ok": True,
-    })()
-    with patch("smiles2iupac.pipeline.stout_iupac", return_value="wrong-name"), \
-         patch("smiles2iupac.pipeline.round_trip", return_value=fake_rt):
-        r = pipeline.convert("CCO")
-    assert r.source == Source.STOUT_LOW_CONFIDENCE
-    assert r.confidence == 0.20
 
 
 def test_enantiomers_dont_collide_in_cache(tmp_cache: Cache):
@@ -258,14 +218,3 @@ def test_pubchem_url_is_none_when_no_inchikey(tmp_cache: Cache):
     assert r.pubchem_url is None
 
 
-def test_stout_unavailable_when_opsin_missing(tmp_cache: Cache):
-    """If OPSIN can't be imported, STOUT result is unvalidated."""
-    from smiles2iupac.opsin_check import OpsinError
-
-    pipeline = Pipeline(cache=tmp_cache, use_pubchem=False, use_stout=True)
-    with patch("smiles2iupac.pipeline.stout_iupac", return_value="ethanol"), \
-         patch("smiles2iupac.pipeline.round_trip", side_effect=OpsinError("no opsin")):
-        r = pipeline.convert("CCO")
-    assert r.ok is True
-    assert r.source == Source.STOUT_UNVALIDATED
-    assert any("opsin" in w.lower() for w in r.warnings)

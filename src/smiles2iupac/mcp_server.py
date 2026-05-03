@@ -57,7 +57,7 @@ mcp._mcp_server.version = __version__
 # Shared pipeline so the SQLite cache warms up across calls within a session.
 # Per-call kwargs (include_svg, fetch_synonyms) are passed at convert time, not
 # mutated on the instance — same race-condition-safe pattern as the FastAPI app.
-_pipeline = Pipeline(use_pubchem=True, use_stout=False)
+_pipeline = Pipeline(use_pubchem=True)
 
 
 @mcp.tool()
@@ -79,8 +79,8 @@ def smiles_to_iupac(
             Off by default (extra request per call).
 
     Returns:
-        Result dict with: name, confidence (0-1), source (pubchem|cache|stout
-        variants), canonical_smiles, inchi, inchikey, formula, mol_weight,
+        Result dict with: name, confidence (0-1), source (pubchem|cache|none),
+        canonical_smiles, inchi, inchikey, formula, mol_weight,
         kind (molecule|salt|mixture|...), warnings, trace (step-by-step
         pipeline reasoning), pubchem_url (one-click verify link), error.
 

@@ -41,11 +41,6 @@ from .pipeline import Pipeline
 @click.option("--info", is_flag=True, help="Show pipeline info and cache stats.")
 @click.option("--no-pubchem", is_flag=True, help="Skip PubChem lookup (cache only).")
 @click.option(
-    "--use-stout",
-    is_flag=True,
-    help="Enable STOUT v2 generation for molecules not found in PubChem (requires [ml] extras).",
-)
-@click.option(
     "--synonyms", is_flag=True, help="Include common-name synonyms as alternatives."
 )
 @click.option(
@@ -74,7 +69,6 @@ def main(
     column: str,
     info: bool,
     no_pubchem: bool,
-    use_stout: bool,
     synonyms: bool,
     include_svg: bool,
     include_cas: bool,
@@ -107,7 +101,6 @@ def main(
 
     pipeline = Pipeline(
         use_pubchem=not no_pubchem,
-        use_stout=use_stout,
         fetch_synonyms=synonyms,
         include_svg=include_svg,
         include_cas=include_cas,

@@ -6,14 +6,13 @@ Layers, in order:
     3. Cheap enrichment (InChI, InChIKey, formula, MW).
     4. Cache lookup (canonical SMILES → name).
     5. PubChem lookup — InChIKey first, SMILES fallback.
-    6. STOUT v2 generation + OPSIN round-trip validation (opt-in via use_stout).
-    7. Optional enrichment (structure SVG, CAS) gated by flags.
+    6. Optional enrichment (structure SVG, CAS) gated by flags.
 """
 
 from . import enrich
 from .cache import Cache
 from .confidence import CONFIDENCE
-from .opsin_check import OpsinError, parse_iupac_name, round_trip
+from .opsin_check import OpsinError, parse_iupac_name
 from .pubchem import (
     PubChemError,
     iupac_via_inchikey,
@@ -22,7 +21,6 @@ from .pubchem import (
     smiles_to_synonyms,
 )
 from .result import Result, Source
-from .stout_engine import StoutError, stout_iupac
 from .validator import is_supported
 from .validator_strict import classify
 
@@ -34,14 +32,12 @@ class Pipeline:
         self,
         cache: Cache | None = None,
         use_pubchem: bool = True,
-        use_stout: bool = False,
         fetch_synonyms: bool = False,
         include_svg: bool = False,
         include_cas: bool = False,
     ):
         self.cache = cache if cache is not None else Cache()
         self.use_pubchem = use_pubchem
-        self.use_stout = use_stout
         self.fetch_synonyms = fetch_synonyms
         self.include_svg = include_svg
         self.include_cas = include_cas
@@ -143,12 +139,9 @@ class Pipeline:
                         pass
                 return self._opt_enrich(result, canonical, eff_svg, eff_cas)
 
-        if self.use_stout:
-            return self._stout_layer(canonical, result, eff_svg, eff_cas)
-
         if not result.error:
-            result.error = "no name found (pubchem miss; STOUT not enabled)"
-            result.trace.append("No name found — PubChem missed and STOUT disabled")
+            result.error = "no name found (pubchem returned no match)"
+            result.trace.append("No name found — PubChem returned no match")
         return result
 
     def _pubchem_lookup_with_trace(self, inchikey: str | None, canonical: str, result: Result) -> str | None:
@@ -170,52 +163,6 @@ class Pipeline:
             result.trace.append(f"PubChem unavailable: {e}")
             result.error = f"pubchem unavailable: {e}"
             return None
-
-    def _stout_layer(
-        self, canonical: str, result: Result, eff_svg: bool, eff_cas: bool
-    ) -> Result:
-        result.trace.append("Querying STOUT v2 (novel-structure ML model)")
-        try:
-            stout_name = stout_iupac(canonical)
-        except StoutError as e:
-            result.trace.append(f"STOUT unavailable: {e}")
-            result.error = f"stout unavailable: {e}"
-            return result
-        if not stout_name:
-            result.trace.append("STOUT could not generate a name")
-            result.error = "STOUT could not generate a name"
-            return result
-        result.trace.append(f"STOUT generated: {stout_name!r}")
-
-        try:
-            rt = round_trip(stout_name, canonical)
-        except OpsinError:
-            source = Source.STOUT_UNVALIDATED
-            result.warnings.append("OPSIN unavailable; name not round-trip-validated")
-            result.trace.append("OPSIN unavailable; cannot validate")
-        else:
-            if rt.full_match:
-                source = Source.STOUT_VALIDATED
-                result.trace.append("OPSIN round-trip: full match (skeleton + stereo verified)")
-            elif rt.skeleton_match:
-                source = Source.STOUT_UNVALIDATED
-                result.warnings.append("OPSIN round-trip: skeleton matches but stereo differs")
-                result.trace.append("OPSIN round-trip: skeleton match, stereo lost")
-            elif rt.parsed_ok:
-                source = Source.STOUT_LOW_CONFIDENCE
-                result.warnings.append("OPSIN round-trip: name parses to a different structure")
-                result.trace.append("OPSIN round-trip: structure mismatch (low confidence)")
-            else:
-                source = Source.STOUT_UNVALIDATED
-                result.warnings.append("OPSIN could not parse generated name")
-                result.trace.append("OPSIN could not parse the generated name")
-
-        conf = CONFIDENCE[source]
-        self.cache.store(canonical, stout_name, source.value, conf)
-        result.name = stout_name
-        result.source = source
-        result.confidence = conf
-        return self._opt_enrich(result, canonical, eff_svg, eff_cas)
 
     def _opt_enrich(
         self, result: Result, canonical: str, eff_svg: bool, eff_cas: bool

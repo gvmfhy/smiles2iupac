@@ -23,8 +23,7 @@ from smiles2iupac import __version__
 from smiles2iupac.pipeline import Pipeline
 
 # One pipeline per process — shared across requests so the cache warms up.
-# Defaults match what the web/UI typically wants: PubChem on, STOUT off.
-pipeline = Pipeline(use_pubchem=True, use_stout=False)
+pipeline = Pipeline(use_pubchem=True)
 
 app = FastAPI(
     title="smiles2iupac",

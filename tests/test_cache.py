@@ -14,8 +14,8 @@ def test_store_and_lookup(tmp_cache: Cache):
 
 def test_overwrite_replaces_existing(tmp_cache: Cache):
     tmp_cache.store("CCO", "ethanol", "pubchem", 1.0)
-    tmp_cache.store("CCO", "ethanol", "stout_validated", 0.95)
-    assert tmp_cache.lookup("CCO") == ("ethanol", "stout_validated", 0.95)
+    tmp_cache.store("CCO", "ethyl alcohol", "cache", 0.95)
+    assert tmp_cache.lookup("CCO") == ("ethyl alcohol", "cache", 0.95)
 
 
 def test_size_counter(tmp_cache: Cache):
